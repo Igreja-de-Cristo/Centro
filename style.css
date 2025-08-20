@@ -1,0 +1,149 @@
+/* Reset básico */
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #333;
+    background-color: #f0f4f8;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    background-color: #3c91e6;
+    color: yellow;
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+nav {
+    background-color: #34495e; /* Fundo cinza escuro de ponta a ponta */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f6d55c;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 25px 50px 25px;
+    background: #fff;
+    min-height: 60vh;
+}
+
+section {
+    width: 100%;
+    max-width: 1400px;
+    background: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    padding: 25px 25px;
+    margin-bottom: 35px;
+}
+
+section h2 {
+    color: #3c91e6;
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+section ul {
+    margin-top: 12px;
+    padding-left: 30px;
+}
+
+section ul li {
+    margin-bottom: 10px;
+    list-style: disc;
+}
+
+footer {
+    background: #3c91e6;
+    color: #fff;
+    text-align: center;
+    padding: 28px 10px 14px;
+}
+
+.footer-content a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    font-size: 1em;
+    color: #f0f4f8;
+    font-weight: 600;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Aumenta o espaço entre os ícones */
+    margin-bottom: 15px; /* Adiciona espaço entre os ícones e o texto de direitos autorais */
+    margin-top: 20px;
+}
+
+.social-icons img {
+    width: 32px; /* Define a largura dos ícones */
+    height: 32px; /* Define a altura dos ícones */
+    transition: transform 0.2s ease-in-out; /* Adiciona uma transição suave no hover */
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1); /* Efeito de zoom sutil ao passar o mouse */
+}
+
+.footer-content p {
+    font-size: 1em;
+    color: #fff;
+    font-weight: 600;
+}
+
+@media (max-width: 680px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    section {
+        padding: 18px 8px;
+    }
+    nav ul {
+        gap: 10px;
+    }
+}
