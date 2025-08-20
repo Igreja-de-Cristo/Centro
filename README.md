@@ -22,7 +22,7 @@ O site foi construído utilizando as seguintes tecnologias:
 
 ### Como Visualizar o Projeto
 
-Você pode acessar o site publicado através do seguinte link:
+Você pode acessar o site publicado através do seguinte link: https://igrejadecristo-centro.netlify.app/
 
 
 
