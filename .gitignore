@@ -1,0 +1,59 @@
+# Arquivos Python desnecessários para hosting
+*.py
+*.pyc
+__pycache__/
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Arquivos de sistema
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Arquivos de desenvolvimento
+*.log
+*.sqlite
+*.db
+
+# Pastas temporárias
+temp/
+tmp/
+cache/
+
+# Arquivos de backup
+*.bak
+*.backup
+*~
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (se usar no futuro)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Netlify
+.netlify/

@@ -1,8 +1,12 @@
-# 🏛️ Igreja de Cristo do Centro - Sistema Simplificado
+# � Igreja de Cristo do Centro - Site Oficial
 
-## 🎯 Sistema com Google Forms (SUPER SIMPLES!)
-
-Um sistema **ultra-simplificado** onde os usuários se inscrevem através dos **Google Forms** que você já criou! Sem backend complexo, sem banco de dados, sem complicações.
+## 📋 Projeto PRONTO PARA DEPLOY
+Site oficial da Igreja de Cristo do Centro em Manaus/AM com:
+- ✅ **Sistema de Informativos** para eventos e avisos
+- ✅ **Integração Google Forms** para inscrições
+- ✅ **Design Responsivo** mobile-first
+- ✅ **Painel Administrativo** sem login necessário
+- ✅ **100% Frontend** - sem backend necessário
 
 ---
 
