@@ -410,11 +410,11 @@ a:focus {
     position: relative;
 }
 
-/* Menu hamburger melhorado - Versão 2.0 - Cache busting */
+/* Menu hamburger melhorado - Versão 3.0 - FORCE VISIBLE */
 .mobile-menu-toggle {
     display: none;
-    background: white;
-    border: 3px solid #1a365d;
+    background: white !important;
+    border: 3px solid #1a365d !important;
     padding: 0.75rem;
     cursor: pointer;
     flex-direction: column;
@@ -423,7 +423,7 @@ a:focus {
     right: 1rem;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 9999;
+    z-index: 9999 !important;
     border-radius: 10px;
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
@@ -2674,5 +2674,60 @@ a:focus {
         break-inside: avoid;
         border: 1px solid #ccc;
         margin-bottom: 1rem;
+    }
+}
+
+/* ======================================
+   FORÇA MENU HAMBURGER - REGRA FINAL
+   ====================================== */
+
+/* FORÇA o menu hamburger a aparecer em dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex !important;
+        position: fixed !important;
+        top: 1rem !important;
+        right: 1rem !important;
+        background: white !important;
+        border: 3px solid #1a365d !important;
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 10px !important;
+        z-index: 9999 !important;
+        justify-content: center !important;
+        align-items: center !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
+        cursor: pointer !important;
+        flex-direction: column !important;
+        gap: 5px !important;
+        transform: none !important;
+    }
+    
+    .mobile-menu-toggle .hamburger {
+        background-color: #1a365d !important;
+        width: 26px !important;
+        height: 4px !important;
+        border-radius: 2px !important;
+        transition: all 0.3s ease !important;
+        display: block !important;
+    }
+    
+    /* FORÇA navegação principal a ser oculta em mobile */
+    .nav-menu {
+        display: none !important;
+    }
+    
+    .nav-menu.active {
+        display: flex !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        background: #1a365d !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        z-index: 9998 !important;
     }
 }
