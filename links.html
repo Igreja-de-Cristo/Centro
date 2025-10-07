@@ -3,57 +3,431 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <li><a href="admin-informativos.html" class="nav-link">📢 Admin</a></li>
+            </ul>TF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Links úteis da Igreja de Cristo do Centro - Recursos bíblicos, estudos online e materiais cristãos.">
+    <meta name="keywords" content="links úteis, recursos bíblicos, estudos cristãos, igreja cristo centro">
+    
+    <link rel="icon" type="image/svg+xml" href="./assets/logo-igreja.svg">
+    <link rel="canonical" href="https://igrejadecristo-centro.netlify.app/links.html">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
-    <title>Links Parceiros - Igreja de Cristo do Centro</title>
+    
+    <title>Links Úteis - Igreja de Cristo do Centro</title>
 </head>
 <body>
-    <header>
-        <h1>Bem Vindo à Igreja de Cristo do Centro</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
-                <li><a href="reunioes.html">Reuniões</a></li>
-                <li><a href="cursos.html">Cursos</a></li>
-                <li><a href="links.html">Links</a></li>
-            </ul>
-        </nav>
+    <a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
+    
+    <header class="site-header" role="banner">
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="./assets/logo-igreja.svg" alt="Igreja de Cristo do Centro" class="logo-img">
+                <div class="logo-text">
+                    <h1>Igreja de Cristo do Centro</h1>
+                    <span class="logo-subtitle">Manaus - AM</span>
+                </div>
+            </div>
+            
+            <div class="header-contact">
+                <div class="contact-item">
+                    <i class="icon-phone" aria-hidden="true">📞</i>
+                    <span>(92) 99114-6877</span>
+                </div>
+                <div class="contact-item">
+                    <i class="icon-location" aria-hidden="true">📍</i>
+                    <span>Av. Sete de Setembro, 1801</span>
+                </div>
+            </div>
+        </div>
     </header>
-
-    <main>
-        <section>
-            <h2>Links Importantes</h2>
-            <p>Abaixo estão alguns links de parceiros que recomendamos:</p>
-            <ul>
-                <li><a href="https://igrejadecristo.net/" target="_blank">Igreja de Cristo</a></li>
-                <li><a href="http://www.biblecourses.com/Portuguese/?AspxAutoDetectCookieSupport=1" target="_blank">Cursos Bíblicos Online</a></li>
+    
+    <nav class="main-navigation" role="navigation" aria-label="Navegação principal">
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="sr-only">Menu</span>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Início</a></li>
+                <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
+                <li><a href="reunioes.html" class="nav-link">Reuniões</a></li>
+                <li><a href="cursos.html" class="nav-link">Cursos</a></li>
+                <li><a href="contato.html" class="nav-link">Contato</a></li>
+                <li><a href="links.html" class="nav-link active" aria-current="page">Links</a></li>
             </ul>
+        </div>
+    </nav>
+    
+    <main id="main-content" class="main-content" role="main">
+        <section class="page-hero">
+            <div class="container">
+                <h1>Links Úteis</h1>
+                <p class="hero-description">Recursos, ferramentas e materiais para aprofundar seu estudo bíblico</p>
+            </div>
+        </section>
+        
+        <section class="links-content">
+            <div class="container">
+                <section class="links-category">
+                    <h2>🔗 Sites Relacionados</h2>
+                    <div class="links-grid">
+                        <div class="link-card">
+                            <div class="link-header">
+                                <h3>Igreja de Cristo - Curitiba</h3>
+                                <span class="link-tag">Congregação Irmã</span>
+                            </div>
+                            <p>Site da congregação irmã em Curitiba com excelente conteúdo doutrinário e recursos de estudo.</p>
+                            <a href="https://www.igrejadecristo-curitiba.org.br/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                                Visitar Site
+                            </a>
+                        </div>
+                        
+                        <div class="link-card">
+                            <div class="link-header">
+                                <h3>Igreja de Cristo - Nacional</h3>
+                                <span class="link-tag">Portal Nacional</span>
+                            </div>
+                            <p>Portal nacional das Igrejas de Cristo no Brasil com artigos, sermões e recursos educacionais.</p>
+                            <a href="https://igrejadecristo.net/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                                Visitar Site
+                            </a>
+                        </div>
+                        
+                        <div class="link-card">
+                            <div class="link-header">
+                                <h3>Escola Bíblica Virtual</h3>
+                                <span class="link-tag">Educação</span>
+                            </div>
+                            <p>Cursos bíblicos avançados e formação teológica baseada nas Escrituras.</p>
+                            <a href="#" onclick="alert('Link será disponibilizado em breve')" class="btn btn-outline">
+                                Acessar Escola
+                            </a>
+                        </div>
+                        
+                        <div class="link-card">
+                            <div class="link-header">
+                                <h3>Biblioteca Digital</h3>
+                                <span class="link-tag">Recursos</span>
+                            </div>
+                            <p>Acervo digital de livros, comentários bíblicos e materiais de estudo cristão.</p>
+                            <a href="#" onclick="alert('Em desenvolvimento')" class="btn btn-outline">
+                                Acessar Biblioteca
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="links-category">
+                    <h2>📚 Recursos Bíblicos Online</h2>
+                    <div class="links-grid">
+                        <div class="link-card">
+                            <div class="link-header">
+                                <h3>Bíblia Online</h3>
+                                <span class="link-tag">Texto Sagrado</span>
+                            </div>
+                            <p>Acesso rápido às Escrituras em várias traduções e versões em português.</p>
+                            <div class="sub-links">
+                                <a href="https://www.bibliaonline.com.br/" target="_blank" rel="noopener noreferrer">Bíblia Online</a>
+                                <a href="https://www.bible.com/pt" target="_blank" rel="noopener noreferrer">YouVersion</a>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card">
+                            <div class="link-header">
+                                <h3>Ferramentas de Estudo</h3>
+                                <span class="link-tag">Pesquisa</span>
+                            </div>
+                            <p>Concordâncias, dicionários bíblicos e ferramentas para estudo aprofundado.</p>
+                            <div class="sub-links">
+                                <a href="https://www.biblestudytools.com/" target="_blank" rel="noopener noreferrer">Bible Study Tools</a>
+                                <a href="https://biblehub.com/" target="_blank" rel="noopener noreferrer">Bible Hub</a>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card">
+                            <div class="link-header">
+                                <h3>Comentários Bíblicos</h3>
+                                <span class="link-tag">Explicação</span>
+                            </div>
+                            <p>Comentários versículo por versículo de estudiosos respeitados das Escrituras.</p>
+                            <div class="sub-links">
+                                <a href="#" onclick="requestResource('comentarios')">Solicitar Acesso</a>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card">
+                            <div class="link-header">
+                                <h3>Mapas e Geografia</h3>
+                                <span class="link-tag">História</span>
+                            </div>
+                            <p>Mapas bíblicos e informações geográficas dos tempos bíblicos.</p>
+                            <div class="sub-links">
+                                <a href="https://www.biblestudytools.com/bible-maps/" target="_blank" rel="noopener noreferrer">Mapas Bíblicos</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="links-category">
+                    <h2>🎓 Materiais de Curso</h2>
+                    <div class="course-materials">
+                        <div class="material-section">
+                            <h3>📖 Curso DBF (Deixe a Bíblia Falar)</h3>
+                            <p>Materiais e recursos do nosso principal curso bíblico:</p>
+                            <div class="material-links">
+                                <div class="material-item">
+                                    <span class="material-icon">📄</span>
+                                    <div class="material-info">
+                                        <strong>Apostila Completa (PDF)</strong>
+                                        <p>Material completo das 12 lições do curso</p>
+                                    </div>
+                                    <button onclick="requestMaterial('dbf-apostila')" class="btn btn-outline">Solicitar</button>
+                                </div>
+                                
+                                <div class="material-item">
+                                    <span class="material-icon">📝</span>
+                                    <div class="material-info">
+                                        <strong>Exercícios e Questionários</strong>
+                                        <p>Atividades para fixação do conteúdo</p>
+                                    </div>
+                                    <button onclick="requestMaterial('dbf-exercicios')" class="btn btn-outline">Solicitar</button>
+                                </div>
+                                
+                                <div class="material-item">
+                                    <span class="material-icon">🎯</span>
+                                    <div class="material-info">
+                                        <strong>Guia do Professor</strong>
+                                        <p>Material de apoio para facilitadores</p>
+                                    </div>
+                                    <button onclick="requestMaterial('dbf-professor')" class="btn btn-outline">Solicitar</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="material-section">
+                            <h3>🔍 Curso "O que a Bíblia diz"</h3>
+                            <p>Estudos temáticos sobre questões doutrinárias:</p>
+                            <div class="material-links">
+                                <div class="material-item">
+                                    <span class="material-icon">📋</span>
+                                    <div class="material-info">
+                                        <strong>Temas Disponíveis</strong>
+                                        <p>Lista completa dos estudos temáticos</p>
+                                    </div>
+                                    <button onclick="requestMaterial('temas-lista')" class="btn btn-outline">Ver Lista</button>
+                                </div>
+                                
+                                <div class="material-item">
+                                    <span class="material-icon">📚</span>
+                                    <div class="material-info">
+                                        <strong>Estudos em PDF</strong>
+                                        <p>Materiais temáticos individuais</p>
+                                    </div>
+                                    <button onclick="requestMaterial('estudos-tematicos')" class="btn btn-outline">Solicitar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="links-category">
+                    <h2>🎵 Recursos de Adoração</h2>
+                    <div class="links-grid">
+                        <div class="link-card">
+                            <div class="link-header">
+                                <h3>Hinário Digital</h3>
+                                <span class="link-tag">Cânticos</span>
+                            </div>
+                            <p>Coleção de hinos e cânticos espirituais para adoração congregacional.</p>
+                            <button onclick="requestResource('hinario')" class="btn btn-outline">
+                                Solicitar Hinário
+                            </button>
+                        </div>
+                        
+                        <div class="link-card">
+                            <div class="link-header">
+                                <h3>Partituras</h3>
+                                <span class="link-tag">Música</span>
+                            </div>
+                            <p>Partituras dos cânticos para aqueles que tocam instrumentos ou dirigem cânticos.</p>
+                            <button onclick="requestResource('partituras')" class="btn btn-outline">
+                                Solicitar Partituras
+                            </button>
+                        </div>
+                        
+                        <div class="link-card">
+                            <div class="link-header">
+                                <h3>Áudios de Ensino</h3>
+                                <span class="link-tag">Gravações</span>
+                            </div>
+                            <p>Gravações de aulas e ensinamentos sobre como dirigir cânticos bíblicos.</p>
+                            <button onclick="requestResource('audios-ensino')" class="btn btn-outline">
+                                Solicitar Áudios
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="links-category">
+                    <h2>📱 Aplicativos Recomendados</h2>
+                    <div class="apps-grid">
+                        <div class="app-card">
+                            <div class="app-icon">📖</div>
+                            <h3>Bíblia YouVersion</h3>
+                            <p>Aplicativo gratuito com várias traduções da Bíblia e planos de leitura.</p>
+                            <div class="app-stores">
+                                <a href="https://apps.apple.com/br/app/b%C3%ADblia/id282935706" target="_blank" rel="noopener noreferrer">iOS</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.sirma.mobile.bible.android" target="_blank" rel="noopener noreferrer">Android</a>
+                            </div>
+                        </div>
+                        
+                        <div class="app-card">
+                            <div class="app-icon">🔍</div>
+                            <h3>Strong's Concordance</h3>
+                            <p>Ferramenta para estudo das palavras originais em hebraico e grego.</p>
+                            <div class="app-stores">
+                                <a href="#" onclick="alert('Pesquise na loja de apps')">iOS</a>
+                                <a href="#" onclick="alert('Pesquise na loja de apps')">Android</a>
+                            </div>
+                        </div>
+                        
+                        <div class="app-card">
+                            <div class="app-icon">📚</div>
+                            <h3>Bible Study Tools</h3>
+                            <p>Conjunto completo de ferramentas para estudo bíblico profundo.</p>
+                            <div class="app-stores">
+                                <a href="#" onclick="alert('Acesse pelo navegador')">Web</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="contact-section">
+                    <h2>📞 Solicitar Recursos</h2>
+                    <div class="contact-info">
+                        <p>Para solicitar qualquer material ou recurso mencionado nesta página, entre em contato conosco:</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <strong>WhatsApp:</strong>
+                                <a href="https://wa.me/5592991146877?text=Gostaria%20de%20solicitar%20recursos%20do%20site" 
+                                   target="_blank" rel="noopener noreferrer">
+                                   (92) 99114-6877
+                                </a>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <strong>E-mail:</strong>
+                                <a href="mailto:contato@igrejadecristo-centro.com">
+                                   contato@igrejadecristo-centro.com
+                                </a>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <strong>Presencialmente:</strong>
+                                <span>Av. Sete de Setembro, 1801 - Centro, Manaus/AM</span>
+                            </div>
+                        </div>
+                        
+                        <p class="note">
+                            <strong>Nota:</strong> Todos os nossos recursos são gratuitos. Alguns materiais podem estar em desenvolvimento e serão disponibilizados em breve.
+                        </p>
+                    </div>
+                </section>
+            </div>
         </section>
     </main>
     
-    <footer>
+    <footer class="site-footer" role="contentinfo">
         <div class="footer-content">
-            <p>Endereço: 
-                <a href="https://www.google.com/maps?q=Av.+Sete+de+Setembro,+1801+-+Bairro+Centro,+Manaus/AM" target="_blank" rel="noopener noreferrer">
-                    Av. Sete de Setembro, 1801 - Centro, Manaus/AM
-                </a>
-            </p>
-            <div class="social-icons">
-                <a href="https://wa.me/5592991146877" target="_blank" rel="noopener noreferrer">
-                    <img src="./img/Vector.svg" alt="WhatsApp">
-                </a>
-                <a href="https://www.instagram.com/igrejadecristodasete/" target="_blank" rel="noopener noreferrer">
-                    <img src="./img/Vector 3.svg" alt="Instagram">
-                </a>
-                <a href="https://www.youtube.com/@igrejadecristonocentro-manaus" target="_blank" rel="noopener noreferrer">
-                    <img src="./img/ri_youtube-fill.svg" alt="YouTube">
-                </a>
+            <div class="footer-section">
+                <h3>Igreja de Cristo do Centro</h3>
+                <p>Uma comunidade cristã comprometida com os ensinos de Jesus Cristo e a autoridade das Escrituras.</p>
             </div>
-            <p>© 2025 Igreja de Cristo do Centro</p>
+            
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <div class="contact-info">
+                    <p>📍 Av. Sete de Setembro, 1801 - Centro</p>
+                    <p>📱 (92) 99114-6877</p>
+                    <p>📱 (92) 98835-7459 (DBF)</p>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/igrejadecristodasete/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <img src="./assets/instagran-icon.svg" alt="Instagram" loading="lazy">
+                    </a>
+                    <a href="https://www.youtube.com/@igrejadecristonocentro-manaus" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <img src="./assets/youtube-icon.svg" alt="YouTube" loading="lazy">
+                    </a>
+                    <a href="https://wa.me/5592991146877" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <img src="./assets/whatsapp-icon.svg" alt="WhatsApp" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Igreja de Cristo do Centro. Todos os direitos reservados.</p>
         </div>
     </footer>
+    
+    <button class="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
+        ↑
+    </button>
+    
+    <script src="script.js"></script>
+    <script>
+        // Funções específicas da página de links
+        function requestMaterial(material) {
+            const materials = {
+                'dbf-apostila': 'Gostaria de receber a apostila completa do curso DBF em PDF',
+                'dbf-exercicios': 'Gostaria de receber os exercícios e questionários do curso DBF',
+                'dbf-professor': 'Gostaria de receber o guia do professor do curso DBF',
+                'temas-lista': 'Gostaria de receber a lista completa de temas do curso "O que a Bíblia diz"',
+                'estudos-tematicos': 'Gostaria de receber os estudos temáticos em PDF'
+            };
+            
+            const message = materials[material] || 'Gostaria de solicitar material do site';
+            const whatsappUrl = `https://wa.me/5592991146877?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+        
+        function requestResource(resource) {
+            const resources = {
+                'comentarios': 'Gostaria de ter acesso aos comentários bíblicos',
+                'hinario': 'Gostaria de receber o hinário digital',
+                'partituras': 'Gostaria de receber as partituras dos cânticos',
+                'audios-ensino': 'Gostaria de receber os áudios de ensino sobre cânticos'
+            };
+            
+            const message = resources[resource] || 'Gostaria de solicitar recursos do site';
+            const whatsappUrl = `https://wa.me/5592991146877?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+        
+        // Tracking de cliques nos links externos
+        document.querySelectorAll('a[target="_blank"]').forEach(link => {
+            link.addEventListener('click', function() {
+                const linkText = this.textContent.trim();
+                const linkUrl = this.href;
+                
+                // Analytics tracking (placeholder)
+                console.log(`External link clicked: ${linkText} - ${linkUrl}`);
+            });
+        });
+    </script>
 </body>
 </html>

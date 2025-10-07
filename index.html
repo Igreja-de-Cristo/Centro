@@ -3,54 +3,393 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Igreja de Cristo do Centro - Manaus/AM. Comunidade cristã bíblica, cursos gratuitos, reuniões e crescimento espiritual baseado no Novo Testamento.">
+    <meta name="keywords" content="igreja, cristo, manaus, cursos bíblicos, reuniões, cristianismo, novo testamento">
+    <meta name="author" content="Igreja de Cristo do Centro">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://igrejadecristo-centro.netlify.app/">
+    <meta property="og:title" content="Igreja de Cristo do Centro - Manaus/AM">
+    <meta property="og:description" content="Comunidade cristã bíblica sem vínculos denominacionais, focada na Palavra de Deus e na verdadeira comunhão cristã.">
+    <meta property="og:image" content="https://igrejadecristo-centro.netlify.app/assets/logo-igreja.svg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://igrejadecristo-centro.netlify.app/">
+    <meta property="twitter:title" content="Igreja de Cristo do Centro - Manaus/AM">
+    <meta property="twitter:description" content="Comunidade cristã bíblica sem vínculos denominacionais, focada na Palavra de Deus e na verdadeira comunhão cristã.">
+    <meta property="twitter:image" content="https://igrejadecristo-centro.netlify.app/assets/logo-igreja.svg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./assets/logo-igreja.svg">
+    <link rel="canonical" href="https://igrejadecristo-centro.netlify.app/">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <title>Igreja de Cristo do Centro</title>
+    
+    <title>Igreja de Cristo do Centro - Manaus/AM</title>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Church",
+      "name": "Igreja de Cristo do Centro",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Sete de Setembro, 1801",
+        "addressLocality": "Manaus",
+        "addressRegion": "AM",
+        "postalCode": "69005-141",
+        "addressCountry": "BR"
+      },
+      "telephone": "+55-92-99114-6877",
+      "url": "https://igrejadecristo-centro.netlify.app/",
+      "sameAs": [
+        "https://www.instagram.com/igrejadecristodasete/",
+        "https://www.youtube.com/@igrejadecristonocentro-manaus"
+      ]
+    }
+    </script>
 </head>
 <body>
-    <header>
-        <h1>Bem Vindo à Igreja de Cristo do Centro</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
-                <li><a href="reunioes.html">Reuniões</a></li>
-                <li><a href="cursos.html">Cursos</a></li>
-                <li><a href="links.html">Links</a></li>
-            </ul>
-        </nav>
+    <!-- Skip Link para Acessibilidade -->
+    <a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
+    
+    <!-- Header -->
+    <header class="site-header" role="banner">
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="./assets/logo-igreja.svg" alt="Igreja de Cristo do Centro" class="logo-img">
+                <div class="logo-text">
+                    <h1>Igreja de Cristo do Centro</h1>
+                    <span class="logo-subtitle">Manaus - AM</span>
+                </div>
+            </div>
+            
+            <div class="header-contact">
+                <div class="contact-item">
+                    <i class="icon-phone" aria-hidden="true">📞</i>
+                    <span>(92) 99114-6877</span>
+                </div>
+                <div class="contact-item">
+                    <i class="icon-location" aria-hidden="true">📍</i>
+                    <span>Av. Sete de Setembro, 1801</span>
+                </div>
+            </div>
+        </div>
     </header>
+    
+    <!-- Navigation -->
+    <nav class="main-navigation" role="navigation" aria-label="Navegação principal">
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="sr-only">Menu</span>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio" class="nav-link active" aria-current="page">Início</a></li>
+                <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
+                <li><a href="reunioes.html" class="nav-link">Reuniões</a></li>
+                <li><a href="cursos.html" class="nav-link">Cursos</a></li>
+                <li><a href="contato.html" class="nav-link">Contato</a></li>
+                <li><a href="links.html" class="nav-link">Links</a></li>
+                <li><a href="admin-informativos.html" class="nav-link">📢 Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main">
+        <!-- Banner de Informativos -->
+        <section id="informativos-banner" class="informativos-banner"></section>
 
-    <main>
-        <section>
-            <h2>Sobre a Igreja</h2>
-            <p>Nossa Igreja foi fundada por Jesus Cristo e temos como alvo agradar a Deus...</p>
+        <!-- Hero Section -->
+        <section class="hero-section" id="inicio">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 class="hero-title">Bem-vindos à Nossa Comunidade Cristã</h2>
+                    <p class="hero-description">
+                        Uma igreja fundada por Jesus Cristo, comprometida em agradar a Deus e 
+                        servi-lo conforme os ensinos do Novo Testamento. Somos uma comunidade 
+                        bíblica sem vínculos denominacionais, focada na Palavra de Deus.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="sobre.html" class="btn btn-primary">Conheça Nossa Doutrina</a>
+                        <a href="reunioes.html" class="btn btn-secondary">Horários das Reuniões</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="./assets/logo-igreja.svg" alt="Logo da Igreja" loading="lazy">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <h2 class="section-title">Nossa Missão</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📖</div>
+                        <h3>Ensino Bíblico</h3>
+                        <p>Cursos e estudos baseados exclusivamente nas Escrituras Sagradas, sem tradições humanas.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h3>Comunhão Verdadeira</h3>
+                        <p>Uma família em Cristo, unida pelo amor e pela busca sincera da vontade de Deus.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🙏</div>
+                        <h3>Adoração Simples</h3>
+                        <p>Culto conforme o padrão do Novo Testamento, sem instrumentos musicais, focado no coração.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">❤️</div>
+                        <h3>Serviço Cristão</h3>
+                        <p>Comprometidos em servir a Deus e ao próximo através do amor e das boas obras.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Courses Section -->
+        <section class="courses-section">
+            <div class="container">
+                <h2 class="section-title">Cursos Bíblicos Gratuitos</h2>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-header">
+                            <h3>DBF - Deixe a Bíblia Falar</h3>
+                            <span class="course-type">Presencial</span>
+                        </div>
+                        <p>Curso completo sobre os fundamentos bíblicos cristãos. 12 semanas de estudo presencial com interação direta.</p>
+                        <div class="course-info">
+                            <span>⏱️ 12 semanas</span>
+                            <span>📍 Presencial</span>
+                        </div>
+                        <a href="cursos.html#dbf-presencial" class="btn btn-outline">Saiba Mais</a>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-header">
+                            <h3>DBF - Online</h3>
+                            <span class="course-type online">Online</span>
+                        </div>
+                        <p>Versão online do curso DBF. Estude no seu ritmo com material em PDF e certificado de conclusão.</p>
+                        <div class="course-info">
+                            <span>⏱️ 6 semanas</span>
+                            <span>💻 Online</span>
+                        </div>
+                        <a href="cursos.html#dbf-online" class="btn btn-outline">Iniciar Curso</a>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-header">
+                            <h3>O que a Bíblia diz</h3>
+                            <span class="course-type online">Online</span>
+                        </div>
+                        <p>Estudo temático sobre doutrinas bíblicas fundamentais. Descubra os ensinos das Escrituras.</p>
+                        <div class="course-info">
+                            <span>⏱️ 4 semanas</span>
+                            <span>💻 Online</span>
+                        </div>
+                        <a href="cursos.html#biblia-diz" class="btn btn-outline">Iniciar Curso</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Schedule Section -->
+        <section class="schedule-section">
+            <div class="container">
+                <h2 class="section-title">Horários das Reuniões</h2>
+                <div class="schedule-grid">
+                    <div class="schedule-card">
+                        <h3>Domingo</h3>
+                        <div class="schedule-time">
+                            <span class="time">09:00</span>
+                            <span class="activity">Escola Bíblica Dominical</span>
+                        </div>
+                        <div class="schedule-time">
+                            <span class="time">18:00</span>
+                            <span class="activity">Culto de Adoração</span>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-card">
+                        <h3>Quarta-feira</h3>
+                        <div class="schedule-time">
+                            <span class="time">19:30</span>
+                            <span class="activity">Estudo Bíblico</span>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-card">
+                        <h3>Sexta-feira</h3>
+                        <div class="schedule-time">
+                            <span class="time">19:30</span>
+                            <span class="activity">Reunião de Oração</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-
-    <footer>
+    
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
         <div class="footer-content">
-            <p>Endereço:
-                <a href="https://www.google.com/maps?q=Av.+Sete+de+Setembro,+1801+-+Bairro+Centro,+Manaus/AM" target="_blank" rel="noopener noreferrer">
-                    Av. Sete de Setembro, 1801 - Centro, Manaus/AM
-                </a>
-            </p>
-            <div class="social-icons">
-                <a href="https://wa.me/5592991146877" target="_blank" rel="noopener noreferrer">
-                    <img src="./img/Vector.svg" alt="WhatsApp">
-                </a>
-                <a href="https://www.instagram.com/igrejadecristodasete/" target="_blank" rel="noopener noreferrer">
-                    <img src="./img/Vector 3.svg" alt="Instagram">
-                </a>
-                <a href="https://www.youtube.com/@igrejadecristonocentro-manaus" target="_blank" rel="noopener noreferrer">
-                    <img src="./img/ri_youtube-fill.svg" alt="YouTube">
-                </a>
+            <div class="footer-section">
+                <h3>Igreja de Cristo do Centro</h3>
+                <p>Uma comunidade cristã comprometida com os ensinos de Jesus Cristo e a autoridade das Escrituras.</p>
             </div>
-            <p>© 2025 Igreja de Cristo do Centro</p>
+            
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <div class="contact-info">
+                    <p>📍 Av. Sete de Setembro, 1801 - Centro</p>
+                    <p>📱 (92) 99114-6877</p>
+                    <p>📱 (92) 98835-7459 (DBF)</p>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/igrejadecristodasete/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <img src="./assets/instagran-icon.svg" alt="Instagram" loading="lazy">
+                    </a>
+                    <a href="https://www.youtube.com/@igrejadecristonocentro-manaus" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <img src="./assets/youtube-icon.svg" alt="YouTube" loading="lazy">
+                    </a>
+                    <a href="https://wa.me/5592991146877" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <img src="./assets/whatsapp-icon.svg" alt="WhatsApp" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Igreja de Cristo do Centro. Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script src="scripts.js"></script>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
+        ↑
+    </button>
+    
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    
+    <!-- Script de Informativos -->
+    <script>
+        // Sistema de exibição de informativos no site
+        function carregarInformativos() {
+            const informativos = JSON.parse(localStorage.getItem('igreja_informativos') || '[]');
+            const informativos_ativos = informativos
+                .filter(info => info.ativo && !isExpirado(info))
+                .sort((a, b) => {
+                    // Ordenar por prioridade (alta, media, baixa) e depois por data
+                    const prioridades = { alta: 3, media: 2, baixa: 1 };
+                    return prioridades[b.prioridade] - prioridades[a.prioridade];
+                });
+
+            exibirInformativos(informativos_ativos);
+        }
+
+        function isExpirado(informativo) {
+            return informativo.dataExpiracao && new Date(informativo.dataExpiracao) < new Date();
+        }
+
+        function exibirInformativos(informativos) {
+            const banner = document.getElementById('informativos-banner');
+            
+            if (!informativos.length) {
+                banner.style.display = 'none';
+                return;
+            }
+
+            banner.style.display = 'block';
+            banner.innerHTML = `
+                <div class="informativos-container">
+                    <div class="informativos-header">
+                        <h2>📢 Informativos da Igreja</h2>
+                        <button onclick="fecharBanner()" class="fechar-banner" aria-label="Fechar">×</button>
+                    </div>
+                    <div class="informativos-lista">
+                        ${informativos.map(info => `
+                            <div class="informativo-item prioridade-${info.prioridade}">
+                                <div class="informativo-tipo">${getTipoIcon(info.tipo)}</div>
+                                <div class="informativo-conteudo">
+                                    <h3>${info.titulo}</h3>
+                                    ${info.descricao ? `<p>${info.descricao}</p>` : ''}
+                                    ${info.dataEvento ? `<div class="informativo-data">📅 ${formatarData(info.dataEvento)}</div>` : ''}
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function getTipoIcon(tipo) {
+            const icons = {
+                'evento': '🎉',
+                'anuncio': '📢',
+                'aviso': '⚠️',
+                'urgente': '🚨'
+            };
+            return icons[tipo] || '📋';
+        }
+
+        function formatarData(dataISO) {
+            return new Date(dataISO).toLocaleString('pt-BR', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+        }
+
+        function fecharBanner() {
+            document.getElementById('informativos-banner').style.display = 'none';
+            localStorage.setItem('banner_fechado', Date.now());
+        }
+
+        // Verificar se banner foi fechado recentemente (últimas 24h)
+        function deveMostrarBanner() {
+            const bannerFechado = localStorage.getItem('banner_fechado');
+            if (!bannerFechado) return true;
+            
+            const agora = Date.now();
+            const fechadoEm = parseInt(bannerFechado);
+            const umaHora = 1000 * 60 * 60; // 1 hora em ms
+            
+            return (agora - fechadoEm) > umaHora;
+        }
+
+        // Carregar informativos quando a página carrega
+        document.addEventListener('DOMContentLoaded', function() {
+            if (deveMostrarBanner()) {
+                carregarInformativos();
+            }
+        });
+    </script>
 </body>
 </html>
