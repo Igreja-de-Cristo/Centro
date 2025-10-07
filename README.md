@@ -1,6 +1,23 @@
 # 🛐 Igreja Cristã Solidária
 
+[![Deploy Status](https://img.shields.io/badge/Deploy-Live%20on%20Vercel-brightgreen?style=for-the-badge&logo=vercel)](https://igrejadecristo-centro.vercel.app/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
 Site oficial da Igreja Cristã Solidária - Uma comunidade de fé, amor e solidariedade.
+
+## 🌐 DEMONSTRAÇÃO AO VIVO
+
+### **🎯 [ACESSE O SITE AQUI](https://igrejadecristo-centro.vercel.app/)**
+
+> **✨ Projeto completo funcionando!** Explore todas as funcionalidades implementadas:
+> - 📱 Design 100% responsivo 
+> - 🔒 Sistema administrativo seguro
+> - ⚡ Performance otimizada
+> - 🎨 Interface moderna e profissional
+
+---
 
 ## 🌟 Características
 
@@ -40,7 +57,34 @@ O sistema administrativo é **privado e protegido**. Para mais informações sob
 - **JavaScript** - Interatividade e funcionalidades
 - **Vercel** - Hospedagem e deploy
 
-## 📱 Responsividade
+## � Destaques Técnicos
+
+### **🎨 Frontend Avançado:**
+- CSS Custom Properties (variáveis responsivas)
+- `clamp()` functions para tipografia fluida
+- Mobile-first approach
+- CSS Grid e Flexbox layouts complexos
+- Animações e transições suaves
+
+### **🔐 Sistema de Autenticação:**
+- Login administrativo com localStorage
+- Controle de sessão e expiração
+- Limite de tentativas e bloqueio temporário
+- Logs de segurança e auditoria
+
+### **⚡ Performance & SEO:**
+- Assets otimizados e compressão
+- Cache headers configurados
+- Meta tags e Open Graph
+- URLs semânticos e limpos
+
+### **🛠️ DevOps & Deploy:**
+- Git workflow com commits semânticos
+- Deploy automático no Vercel
+- Headers de segurança (HTTPS, XSS, etc.)
+- Monitoramento e analytics
+
+## �📱 Responsividade
 
 O site é otimizado para todos os dispositivos:
 
@@ -473,12 +517,32 @@ GET /api/pdfs/biblia-diz
 
 ---
 
-## 🎉 Parabéns!
+## 👨‍💻 Sobre o Desenvolvedor
 
-Agora você tem um **sistema completo e profissional** para gerenciar cursos bíblicos online! 
+Este projeto demonstra habilidades avançadas em:
 
-**Sistema desenvolvido especificamente para facilitar o acesso aos estudos bíblicos, removendo barreiras técnicas e focando no que realmente importa: o aprendizado da Palavra de Deus.**
+- **Frontend Development** - HTML5, CSS3, JavaScript moderno
+- **Responsive Design** - Mobile-first, CSS Grid, Flexbox
+- **UI/UX Design** - Interface intuitiva e acessível
+- **Security** - Sistema de autenticação robusto
+- **DevOps** - Git workflow, deploy automatizado
+- **Performance** - Otimizações e best practices
+
+### 🏆 **Resultados Alcançados:**
+- ✅ **100% Responsivo** em todos os dispositivos
+- ✅ **Sistema Admin Seguro** com controle de acesso
+- ✅ **Performance Otimizada** (Core Web Vitals)
+- ✅ **Deploy Automatizado** no Vercel
+- ✅ **Código Limpo** e bem documentado
 
 ---
+
+## 📄 Licença
+
+Este projeto é propriedade da Igreja Cristã Solidária.
+
+---
+
+**Desenvolvido com ❤️ e expertise técnica para a comunidade ICS**
 
 *✨ "Lâmpada para os meus pés é a tua palavra, e luz para o meu caminho." - Salmo 119:105*
