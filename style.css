@@ -410,6 +410,7 @@ a:focus {
     position: relative;
 }
 
+/* Menu hamburger melhorado - Versão 2.0 - Cache busting */
 .mobile-menu-toggle {
     display: none;
     background: white;
@@ -422,7 +423,7 @@ a:focus {
     right: 1rem;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 101;
+    z-index: 9999;
     border-radius: 10px;
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
@@ -1115,18 +1116,22 @@ a:focus {
     }
     
     .mobile-menu-toggle {
-        display: flex;
+        display: flex !important;
         background: white !important;
         border: 3px solid #1a365d !important;
         right: 1rem;
         top: 1rem;
         transform: none;
-        position: fixed;
+        position: fixed !important;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
         width: 50px;
         height: 50px;
         border-radius: 10px;
         justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+        z-index: 9999 !important;
         align-items: center;
         backdrop-filter: blur(10px);
         transition: all 0.3s ease;
