@@ -35,6 +35,7 @@
             color: white;
             padding: 2rem;
             text-align: center;
+            position: relative;
         }
 
         .header h1 {
@@ -45,6 +46,33 @@
         .header p {
             opacity: 0.9;
             font-size: 1rem;
+        }
+
+        .admin-info {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .logout-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            margin-left: 1rem;
+            transition: all 0.3s;
+        }
+
+        .logout-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
         }
 
         .content {
@@ -264,6 +292,10 @@
 <body>
     <div class="container">
         <div class="header">
+            <div class="admin-info">
+                👤 <span id="admin-user">Admin</span>
+                <button onclick="logout()" class="logout-btn">🚪 Sair</button>
+            </div>
             <h1>📢 Painel de Informativos</h1>
             <p>Gerencie eventos, avisos e anúncios da igreja</p>
         </div>
@@ -366,7 +398,57 @@
     </div>
 
     <script>
-        // Sistema de Informativos - LocalStorage
+        // ===== PROTEÇÃO DE ACESSO ADMINISTRATIVO =====
+        
+        // Verificar autenticação antes de carregar o painel
+        function checkAdminAuth() {
+            const session = localStorage.getItem('admin_session');
+            
+            if (!session) {
+                redirectToLogin();
+                return false;
+            }
+
+            try {
+                const data = JSON.parse(session);
+                
+                // Verificar se a sessão não expirou
+                if (Date.now() >= data.expires) {
+                    localStorage.removeItem('admin_session');
+                    alert('Sessão expirada. Faça login novamente.');
+                    redirectToLogin();
+                    return false;
+                }
+
+                // Atualizar informações do usuário logado
+                document.getElementById('admin-user').textContent = data.username;
+                return true;
+                
+            } catch (e) {
+                localStorage.removeItem('admin_session');
+                redirectToLogin();
+                return false;
+            }
+        }
+
+        function redirectToLogin() {
+            window.location.href = 'admin-login.html';
+        }
+
+        function logout() {
+            if (confirm('Tem certeza que deseja sair?')) {
+                localStorage.removeItem('admin_session');
+                redirectToLogin();
+            }
+        }
+
+        // Verificar autenticação antes de executar qualquer código
+        if (!checkAdminAuth()) {
+            // Se não estiver autenticado, não carrega o resto do script
+            throw new Error('Acesso negado');
+        }
+
+        // ===== SISTEMA DE INFORMATIVOS (só executa se autenticado) =====
         class InformativosManager {
             constructor() {
                 this.informativos = this.carregarInformativos();

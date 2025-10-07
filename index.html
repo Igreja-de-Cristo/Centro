@@ -106,7 +106,6 @@
                 <li><a href="cursos.html" class="nav-link">Cursos</a></li>
                 <li><a href="contato.html" class="nav-link">Contato</a></li>
                 <li><a href="links.html" class="nav-link">Links</a></li>
-                <li><a href="admin-informativos.html" class="nav-link">📢 Admin</a></li>
             </ul>
         </div>
     </nav>
@@ -388,6 +387,79 @@
         document.addEventListener('DOMContentLoaded', function() {
             if (deveMostrarBanner()) {
                 carregarInformativos();
+            }
+
+            // ===== ACESSO ADMINISTRATIVO SECRETO =====
+            let logoClickCount = 0;
+            const logo = document.querySelector('.logo-img');
+            
+            if (logo) {
+                logo.addEventListener('click', function() {
+                    logoClickCount++;
+                    
+                    if (logoClickCount === 5) {
+                        // Criar botão de acesso administrativo
+                        const adminBtn = document.createElement('button');
+                        adminBtn.innerHTML = '🔐 Acesso Admin';
+                        adminBtn.style.cssText = `
+                            position: fixed;
+                            bottom: 20px;
+                            right: 20px;
+                            background: linear-gradient(135deg, #2c5282, #3182ce);
+                            color: white;
+                            border: none;
+                            padding: 12px 20px;
+                            border-radius: 25px;
+                            font-weight: 600;
+                            cursor: pointer;
+                            box-shadow: 0 8px 25px rgba(49, 130, 206, 0.3);
+                            z-index: 1000;
+                            animation: fadeInScale 0.5s ease;
+                            font-family: inherit;
+                        `;
+                        
+                        // Adicionar animação CSS
+                        const style = document.createElement('style');
+                        style.textContent = `
+                            @keyframes fadeInScale {
+                                from { opacity: 0; transform: scale(0.5); }
+                                to { opacity: 1; transform: scale(1); }
+                            }
+                        `;
+                        document.head.appendChild(style);
+                        
+                        adminBtn.addEventListener('click', function() {
+                            window.location.href = 'admin-login.html';
+                        });
+                        
+                        adminBtn.addEventListener('mouseenter', function() {
+                            this.style.transform = 'scale(1.05)';
+                        });
+                        
+                        adminBtn.addEventListener('mouseleave', function() {
+                            this.style.transform = 'scale(1)';
+                        });
+                        
+                        document.body.appendChild(adminBtn);
+                        
+                        // Remover botão após 10 segundos
+                        setTimeout(() => {
+                            if (adminBtn.parentNode) {
+                                adminBtn.remove();
+                            }
+                            logoClickCount = 0;
+                        }, 10000);
+                        
+                        logoClickCount = 0;
+                    }
+                    
+                    // Reset contador após 3 segundos se não completar
+                    setTimeout(() => {
+                        if (logoClickCount < 5) {
+                            logoClickCount = 0;
+                        }
+                    }, 3000);
+                });
             }
         });
     </script>

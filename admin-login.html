@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔐 Acesso Administrativo - Igreja de Cristo do Centro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 50%, #3182ce 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .login-container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+            padding: 3rem;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-header {
+            margin-bottom: 2rem;
+        }
+
+        .login-header h1 {
+            color: #2c5282;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .login-header p {
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #4a5568;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            background: #f7fafc;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #3182ce;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+        }
+
+        .login-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #3182ce, #2c5282);
+            color: white;
+            border: none;
+            padding: 0.875rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 1rem;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(49, 130, 206, 0.3);
+        }
+
+        .login-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .error-message {
+            background: #fed7d7;
+            color: #c53030;
+            padding: 0.75rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .success-message {
+            background: #c6f6d5;
+            color: #2f855a;
+            padding: 0.75rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #718096;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #3182ce;
+        }
+
+        .security-info {
+            background: #edf2f7;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
+            color: #4a5568;
+        }
+
+        .attempts-warning {
+            background: #fef5e7;
+            color: #975a16;
+            padding: 0.75rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 2rem;
+                margin: 1rem;
+            }
+
+            .login-header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h1>🔐 Acesso Administrativo</h1>
+            <p>Área restrita para administradores</p>
+        </div>
+
+        <div id="error-message" class="error-message"></div>
+        <div id="success-message" class="success-message"></div>
+        <div id="attempts-warning" class="attempts-warning"></div>
+
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">👤 Usuário:</label>
+                <input type="text" id="username" name="username" required autocomplete="username">
+            </div>
+
+            <div class="form-group">
+                <label for="password">🔑 Senha:</label>
+                <input type="password" id="password" name="password" required autocomplete="current-password">
+            </div>
+
+            <button type="submit" id="login-btn" class="login-btn">
+                🚀 Acessar Painel
+            </button>
+        </form>
+
+        <div class="security-info">
+            <strong>🛡️ Segurança:</strong><br>
+            • Máximo 3 tentativas por sessão<br>
+            • Sessão expira em 2 horas<br>
+            • Acesso registrado para auditoria
+        </div>
+
+        <a href="index.html" class="back-link">← Voltar ao Site</a>
+    </div>
+
+    <script>
+        // Sistema de autenticação administrativa
+        class AdminAuth {
+            constructor() {
+                // Credenciais (em produção, use um sistema mais seguro)
+                this.credentials = {
+                    'admin': 'IgrejaAdmin2025!',
+                    'lucas': 'MinhaChave2025@'
+                };
+                
+                this.maxAttempts = 3;
+                this.sessionDuration = 2 * 60 * 60 * 1000; // 2 horas
+                this.init();
+            }
+
+            init() {
+                // Verificar se já está logado
+                if (this.isLoggedIn()) {
+                    this.redirectToAdmin();
+                    return;
+                }
+
+                // Configurar eventos
+                document.getElementById('login-form').addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    this.handleLogin();
+                });
+
+                // Verificar tentativas
+                this.checkAttempts();
+            }
+
+            handleLogin() {
+                const username = document.getElementById('username').value.trim();
+                const password = document.getElementById('password').value;
+                
+                if (!username || !password) {
+                    this.showError('Por favor, preencha todos os campos.');
+                    return;
+                }
+
+                // Verificar credenciais
+                if (this.credentials[username] && this.credentials[username] === password) {
+                    this.loginSuccess(username);
+                } else {
+                    this.loginFailed();
+                }
+            }
+
+            loginSuccess(username) {
+                // Salvar sessão
+                const loginData = {
+                    username: username,
+                    loginTime: Date.now(),
+                    expires: Date.now() + this.sessionDuration
+                };
+
+                localStorage.setItem('admin_session', JSON.stringify(loginData));
+                localStorage.removeItem('login_attempts');
+
+                // Registrar acesso
+                this.logAccess(username, true);
+
+                this.showSuccess('Login realizado com sucesso! Redirecionando...');
+                
+                setTimeout(() => {
+                    this.redirectToAdmin();
+                }, 1500);
+            }
+
+            loginFailed() {
+                let attempts = parseInt(localStorage.getItem('login_attempts') || '0');
+                attempts++;
+                localStorage.setItem('login_attempts', attempts.toString());
+
+                const remaining = this.maxAttempts - attempts;
+
+                if (remaining > 0) {
+                    this.showError(`Credenciais inválidas. ${remaining} tentativa(s) restante(s).`);
+                    
+                    if (remaining === 1) {
+                        this.showAttemptsWarning('⚠️ Última tentativa! Página será bloqueada após erro.');
+                    }
+                } else {
+                    this.blockAccess();
+                }
+
+                // Registrar tentativa falhada
+                this.logAccess('desconhecido', false);
+
+                // Limpar campos
+                document.getElementById('password').value = '';
+            }
+
+            blockAccess() {
+                this.showError('Muitas tentativas falhadas. Acesso bloqueado por 30 minutos.');
+                
+                // Bloquear por 30 minutos
+                localStorage.setItem('access_blocked_until', (Date.now() + 30 * 60 * 1000).toString());
+                
+                // Desabilitar formulário
+                document.getElementById('login-btn').disabled = true;
+                document.getElementById('username').disabled = true;
+                document.getElementById('password').disabled = true;
+
+                // Redirect após 5 segundos
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 5000);
+            }
+
+            checkAttempts() {
+                const blockedUntil = localStorage.getItem('access_blocked_until');
+                
+                if (blockedUntil && Date.now() < parseInt(blockedUntil)) {
+                    const remainingTime = Math.ceil((parseInt(blockedUntil) - Date.now()) / 60000);
+                    this.showError(`Acesso bloqueado. Tente novamente em ${remainingTime} minutos.`);
+                    
+                    // Desabilitar formulário
+                    document.getElementById('login-btn').disabled = true;
+                    document.getElementById('username').disabled = true;
+                    document.getElementById('password').disabled = true;
+                    return;
+                }
+
+                // Limpar bloqueio expirado
+                if (blockedUntil) {
+                    localStorage.removeItem('access_blocked_until');
+                    localStorage.removeItem('login_attempts');
+                }
+
+                const attempts = parseInt(localStorage.getItem('login_attempts') || '0');
+                if (attempts > 0) {
+                    const remaining = this.maxAttempts - attempts;
+                    this.showAttemptsWarning(`${attempts} tentativa(s) falhada(s). ${remaining} restante(s).`);
+                }
+            }
+
+            isLoggedIn() {
+                const session = localStorage.getItem('admin_session');
+                if (!session) return false;
+
+                try {
+                    const data = JSON.parse(session);
+                    return Date.now() < data.expires;
+                } catch {
+                    localStorage.removeItem('admin_session');
+                    return false;
+                }
+            }
+
+            redirectToAdmin() {
+                window.location.href = 'admin-informativos.html';
+            }
+
+            logAccess(username, success) {
+                const logs = JSON.parse(localStorage.getItem('admin_access_logs') || '[]');
+                
+                logs.push({
+                    username: username,
+                    success: success,
+                    timestamp: new Date().toISOString(),
+                    ip: 'local', // Em produção, capturar IP real
+                    userAgent: navigator.userAgent.substring(0, 100)
+                });
+
+                // Manter apenas últimos 50 logs
+                if (logs.length > 50) {
+                    logs.splice(0, logs.length - 50);
+                }
+
+                localStorage.setItem('admin_access_logs', JSON.stringify(logs));
+            }
+
+            showError(message) {
+                const errorDiv = document.getElementById('error-message');
+                errorDiv.textContent = message;
+                errorDiv.style.display = 'block';
+                
+                const successDiv = document.getElementById('success-message');
+                successDiv.style.display = 'none';
+            }
+
+            showSuccess(message) {
+                const successDiv = document.getElementById('success-message');
+                successDiv.textContent = message;
+                successDiv.style.display = 'block';
+                
+                const errorDiv = document.getElementById('error-message');
+                errorDiv.style.display = 'none';
+            }
+
+            showAttemptsWarning(message) {
+                const warningDiv = document.getElementById('attempts-warning');
+                warningDiv.textContent = message;
+                warningDiv.style.display = 'block';
+            }
+        }
+
+        // Inicializar sistema
+        new AdminAuth();
+
+        // Medidas de segurança adicionais
+        
+        // Prevenir inspecionar elemento (básico)
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Prevenir F12, Ctrl+Shift+I, etc.
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || 
+                (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+                (e.ctrlKey && e.shiftKey && e.key === 'C') ||
+                (e.ctrlKey && e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+
+        // Detectar DevTools (básico)
+        setInterval(() => {
+            if (window.outerHeight - window.innerHeight > 200 || 
+                window.outerWidth - window.innerWidth > 200) {
+                console.clear();
+                console.log('🔒 Área administrativa protegida');
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
