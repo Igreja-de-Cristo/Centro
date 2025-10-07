@@ -1,12 +1,75 @@
-# � Igreja de Cristo do Centro - Site Oficial
+# 🛐 Igreja Cristã Solidária
 
-## 📋 Projeto PRONTO PARA DEPLOY
-Site oficial da Igreja de Cristo do Centro em Manaus/AM com:
-- ✅ **Sistema de Informativos** para eventos e avisos
-- ✅ **Integração Google Forms** para inscrições
-- ✅ **Design Responsivo** mobile-first
-- ✅ **Painel Administrativo** sem login necessário
-- ✅ **100% Frontend** - sem backend necessário
+Site oficial da Igreja Cristã Solidária - Uma comunidade de fé, amor e solidariedade.
+
+## 🌟 Características
+
+- **📱 100% Responsivo** - Funciona perfeitamente em todos os dispositivos
+- **🔒 Sistema Admin Seguro** - Painel administrativo protegido por login
+- **⚡ Performance Otimizada** - Carregamento rápido e experiência fluida
+- **🎨 Design Moderno** - Interface limpa e profissional
+- **♿ Acessível** - Seguindo as melhores práticas de acessibilidade
+
+## � Deploy
+
+Este site está hospedado no **Vercel** com deploy automático a partir do GitHub.
+
+**URL de Produção:** `https://igreja-crista-solidaria.vercel.app`
+
+## 📋 Páginas
+
+### **Públicas:**
+- `index.html` - Página inicial
+- `sobre.html` - Sobre a igreja
+- `cursos.html` - Cursos e estudos
+- `reunioes.html` - Programação de reuniões
+- `links.html` - Links úteis
+
+### **Administrativas (Privadas):**
+- `admin-login.html` - Login administrativo
+- `admin-informativos.html` - Painel de informativos
+
+## 🔐 Acesso Administrativo
+
+O sistema administrativo é **privado e protegido**. Para mais informações sobre acesso, consulte o arquivo `ADMIN_SECRETO.md`.
+
+## 🛠️ Tecnologias
+
+- **HTML5** - Estrutura semântica
+- **CSS3** - Design responsivo com CSS Grid e Flexbox
+- **JavaScript** - Interatividade e funcionalidades
+- **Vercel** - Hospedagem e deploy
+
+## 📱 Responsividade
+
+O site é otimizado para todos os dispositivos:
+
+- 📱 **Smartphones** (320px+)
+- 📱 **Tablets** (481px-768px)
+- 💻 **Laptops** (769px-1024px)
+- 🖥️ **Desktops** (1025px-1440px)
+- 🖥️ **Ultra-wide** (1441px+)
+
+## 🔧 Desenvolvimento Local
+
+```bash
+# Clone o repositório
+git clone https://github.com/souzarlucas/Projeto_ICS.git
+
+# Entre na pasta
+cd Projeto_ICS
+
+# Abra o index.html no navegador
+open index.html
+```
+
+## 📄 Licença
+
+Este projeto é propriedade da Igreja Cristã Solidária.
+
+---
+
+**Desenvolvido com ❤️ para a comunidade ICS**
 
 ---
 
