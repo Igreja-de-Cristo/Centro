@@ -1,17 +1,21 @@
 {
   "version": 2,
-  "name": "igreja-cristã-solidária",
+  "name": "igreja-cristo-centro",
+  "framework": null,
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "installCommand": null,
   "builds": [
     {
-      "src": "*.html",
+      "src": "**/*.html",
       "use": "@vercel/static"
     },
     {
-      "src": "*.css",
+      "src": "**/*.css",
       "use": "@vercel/static"
     },
     {
-      "src": "*.js",
+      "src": "**/*.js",
       "use": "@vercel/static"
     },
     {
@@ -66,21 +70,26 @@
           "value": "1; mode=block"
         },
         {
-          "key": "Strict-Transport-Security",
-          "value": "max-age=31536000; includeSubDomains; preload"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
         }
       ]
     },
     {
-      "source": "/(.*\\.css|.*\\.js|.*\\.svg|.*\\.jpg|.*\\.png)",
+      "source": "/(.*\\.css|.*\\.js)",
       "headers": [
         {
           "key": "Cache-Control",
           "value": "public, max-age=60, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.svg|.*\\.jpg|.*\\.png|.*\\.ico)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
         }
       ]
     }

@@ -1,0 +1,33 @@
+{
+  "name": "igreja-cristo-centro",
+  "version": "3.0.0",
+  "description": "Site oficial da Igreja de Cristo do Centro - Manaus/AM",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Site estático - sem build necessário'",
+    "vercel-build": "echo 'Deploy de site estático HTML/CSS/JS'",
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "igreja",
+    "cristo",
+    "manaus",
+    "site-estatico",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Igreja de Cristo do Centro",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/souzarlucas/Projeto_ICS.git"
+  },
+  "homepage": "https://igrejadecristo-centro.vercel.app",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}

@@ -1,0 +1,20 @@
+# Arquivos desnecessários para deploy
+.git/
+.gitignore
+.DS_Store
+*.md
+node_modules/
+.env*
+.vscode/
+*.log
+*.tmp
+*.temp
+
+# Manter apenas arquivos essenciais
+!index.html
+!*.html
+!style.css
+!script.js
+!assets/
+!vercel.json
+!package.json
