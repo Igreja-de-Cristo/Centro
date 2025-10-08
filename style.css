@@ -1620,6 +1620,34 @@ a:focus {
     align-items: center;
 }
 
+.welcome-notice {
+    margin: 3rem 0;
+}
+
+.notice-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+}
+
+.notice-box h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.notice-box p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.notice-box p:last-child {
+    margin-bottom: 0;
+}
+
 .meeting-guidelines {
     margin: 4rem 0;
 }
