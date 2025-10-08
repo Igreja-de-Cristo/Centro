@@ -1,0 +1,12 @@
+# Cache Busting File
+# Data: 2025-10-07
+# Versão: 3.0
+# Mudanças: Menu hamburger + Horários atualizados
+# Força novo deploy no Vercel
+
+timestamp: 2025-10-07-18:41:00
+commit: 05c461a
+changes:
+  - Menu hamburger forçado a aparecer
+  - Horários atualizados: apenas domingo 09:00 e 10:00
+  - Cache busting implementado
