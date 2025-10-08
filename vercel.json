@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "name": "igreja-cristo-centro",
+  "name": "igreja-cristo-centro-v3",
   "framework": null,
   "buildCommand": null,
   "outputDirectory": ".",
   "installCommand": null,
+  "public": false,
   "builds": [
     {
       "src": "**/*.html",
