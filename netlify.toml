@@ -1,0 +1,92 @@
+[build]
+  # Comando de build (deixe vazio para sites estáticos simples)
+  command = ""
+  
+  # Diretório onde estão os arquivos do site
+  publish = "."
+
+[build.environment]
+  # Versão do Node.js (se necessário)
+  NODE_VERSION = "18"
+
+# Configurações de cabeçalhos para otimização
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Segurança
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # Cache para arquivos estáticos
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    # Cache menor para páginas HTML
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    # Sem cache para service workers
+    Cache-Control = "no-cache"
+
+# Redirecionamentos para URLs amigáveis
+[[redirects]]
+  from = "/cursos"
+  to = "/cursos.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/sobre"
+  to = "/sobre.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/reunioes"
+  to = "/reunioes.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/contato"
+  to = "/contato.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/links"
+  to = "/links.html"
+  status = 200
+  force = false
+
+# Redirecionamento para admin (mantém segurança)
+[[redirects]]
+  from = "/admin-login"
+  to = "/admin-login.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/admin-informativos"
+  to = "/admin-informativos.html"
+  status = 200
+  force = false
+
+# Página 404 personalizada (se existir)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
+
+# Headers específicos para admin (extra segurança)
+[[headers]]
+  for = "/admin-*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-cache, no-store, must-revalidate"
