@@ -609,6 +609,25 @@ a:focus {
     animation: pulse 2s infinite;
 }
 
+.btn-whatsapp-secretaria {
+    background: linear-gradient(135deg, #3182ce, #2c5282);
+    color: white;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(49, 130, 206, 0.3);
+}
+
+.btn-whatsapp-secretaria:hover,
+.btn-whatsapp-secretaria:focus {
+    background: linear-gradient(135deg, #2c5282, #2a4a6b);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(49, 130, 206, 0.4);
+    color: white;
+}
+
 @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.1); }
