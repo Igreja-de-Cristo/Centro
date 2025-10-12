@@ -434,6 +434,93 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 
+// ===== ESTUDOS BÍBLICOS AVANÇADOS =====
+
+// Função para baixar todas as lições
+function baixarTodasLicoes() {
+    const links = [
+        'https://drive.google.com/file/d/1PTmVqBWjsrjuhARZ_4XwSwM4eS7H5zkg/view?usp=drive_link',
+        'https://drive.google.com/file/d/1FYK002AteGAMw6VXGcUTlzreg4A2hHC_/view?usp=drive_link',
+        'https://drive.google.com/file/d/1AIgojoUiQBKSFy1aKNJQ13YBErxyGs9e/view?usp=drive_link',
+        'https://drive.google.com/file/d/1vvLsJ75mbmFnqKyz55f0BMU4OuHclaRo/view?usp=drive_link',
+        'https://drive.google.com/file/d/16eJUqhtnYYVcDC4Ie2O-mUtEtHIxglGg/view?usp=drive_link',
+        'https://drive.google.com/file/d/1OUmw9jEqDCiysT1OptT_vNnGHJglYeT3/view?usp=drive_link',
+        'https://drive.google.com/file/d/1m4XJ3ZnoWNLx5KZWQsrfLWAEdKGEaqj6/view?usp=drive_link',
+        'https://drive.google.com/file/d/18ltIzbBLwiIu9qGQy6XsL-5YG3w5q0Oc/view?usp=drive_link',
+        'https://drive.google.com/file/d/10YC-EQ2cuh-jYohM8qHu8t_0YldhforT/view?usp=drive_link',
+        'https://drive.google.com/file/d/1dDc6FgvTCaS3yJFPzH11MxYqF9GR6Dt3/view?usp=drive_link',
+        'https://drive.google.com/file/d/1_0JuBy96TTWYTuuMFwmU2JRF5864I1he/view?usp=drive_link',
+        'https://drive.google.com/file/d/1zpaRYyzIXBiEgaYCIac8kT7wDelVyPyi/view?usp=drive_link',
+        'https://drive.google.com/file/d/1IDpFiSgwAeDk5-MyxCYdJjeTV9_Tl9Uv/view?usp=drive_link',
+        'https://drive.google.com/file/d/1kAIVCvWiAYRLdXo5L05OEvM_caD6C7ck/view?usp=drive_link',
+        'https://drive.google.com/file/d/1Lp40FpxtPF6PPlezdSZVAThmpaeYlMB4/view?usp=drive_link',
+        'https://drive.google.com/file/d/1VZ_K_YKexifGkyyq8BXhxnUa3JXvFZp0/view?usp=drive_link'
+    ];
+    
+    // Abrir cada link em uma nova aba (máximo 5 por vez para não sobrecarregar)
+    const confirmacao = confirm('Isso abrirá 16 abas com todas as lições. Deseja continuar?');
+    
+    if (confirmacao) {
+        links.forEach((link, index) => {
+            setTimeout(() => {
+                window.open(link, '_blank');
+            }, index * 500); // Delay de 500ms entre cada abertura
+        });
+        
+        alert('📚 Todas as lições estão sendo abertas. Verifique suas abas!');
+    }
+}
+
+// Função para baixar fundamentos da fé cristã
+function baixarFundamentos() {
+    const links = [
+        'https://drive.google.com/file/d/1B5g1b6YymwN7Fi7RHQEG93nsbr0hpIlJ/view?usp=drive_link',
+        'https://drive.google.com/file/d/1zc4CDMcyEmWMNVzgeSobnKLZjIFaFils/view?usp=drive_link',
+        'https://drive.google.com/file/d/1po4pxMp8vMHJOHcu0V7ID0rm7xUPd0bB/view?usp=drive_link',
+        'https://drive.google.com/file/d/18w89iGYNqLewG1rr1C_9_8G3Wx4aHG7c/view?usp=drive_link',
+        'https://drive.google.com/file/d/1yhk-4FRfDySM__5T9JFMjSNHoBJ4nclC/view?usp=drive_link',
+        'https://drive.google.com/file/d/17C5NTk_kg8QOfl63jaP--wyBokowdLxk/view?usp=drive_link',
+        'https://drive.google.com/file/d/1iHXPnFk0pkBvrsOVw-LjQ3rskVzSaGux/view?usp=drive_link'
+    ];
+    
+    const confirmacao = confirm('Isso abrirá 7 abas com todos os fundamentos. Deseja continuar?');
+    
+    if (confirmacao) {
+        links.forEach((link, index) => {
+            setTimeout(() => {
+                window.open(link, '_blank');
+            }, index * 400); // Delay de 400ms entre cada abertura
+        });
+        
+        alert('📖 Todos os fundamentos estão sendo abertos. Verifique suas abas!');
+    }
+}
+
+// Função para baixar doutrinas essenciais
+function baixarDoutrinas() {
+    const links = [
+        'https://drive.google.com/file/d/1DazuVwv_7Ph69fbh60FEfkx6DTJ1Hx2f/view?usp=drive_link',
+        'https://drive.google.com/file/d/1sgtW4F0ToqRcNg2o2OmKjilUAtmdFC71/view?usp=drive_link',
+        'https://drive.google.com/file/d/1tgZH9cQ4Z-YJyaosvGfbjg1tjotlajeo/view?usp=drive_link',
+        'https://drive.google.com/file/d/1lxt8Y_qIOYx0NERx4zi1ICVC1BsKtVsu/view?usp=drive_link',
+        'https://drive.google.com/file/d/1Y7eNdDhQgVwEf8G5CUkEsu04mW10HYbO/view?usp=drive_link',
+        'https://drive.google.com/file/d/1iCNqqB_ZQaLGHVw4x8FzBXtNb9dsrkjG/view?usp=drive_link',
+        'https://drive.google.com/file/d/1SGuQwaczIAVfKw5nr7S2tYAafunEcJ_8/view?usp=drive_link'
+    ];
+    
+    const confirmacao = confirm('Isso abrirá 7 abas com todas as doutrinas essenciais. Deseja continuar?');
+    
+    if (confirmacao) {
+        links.forEach((link, index) => {
+            setTimeout(() => {
+                window.open(link, '_blank');
+            }, index * 400); // Delay de 400ms entre cada abertura
+        });
+        
+        alert('⛪ Todas as doutrinas estão sendo abertas. Verifique suas abas!');
+    }
+}
+
 // ===== UTILITY FUNCTIONS =====
 
 // Format phone number for display

@@ -1882,6 +1882,43 @@ a:focus {
     flex-wrap: wrap;
 }
 
+/* ===== ESTILOS PARA ESTUDOS AVANÇADOS ===== */
+.lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.lesson-item {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.lesson-item:hover {
+    background: #edf2f7;
+    border-color: #3182ce;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(49, 130, 206, 0.1);
+}
+
+.lesson-item h4 {
+    color: #2c5282;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 6px;
+}
+
 .additional-resources {
     margin: 4rem 0;
 }
