@@ -1899,6 +1899,17 @@ a:focus {
     transition: all 0.3s ease;
 }
 
+.lesson-item.unlocked {
+    background: #f0fff4;
+    border-color: #38a169;
+}
+
+.lesson-item.locked {
+    background: #fdf2f8;
+    border-color: #e53e3e;
+    opacity: 0.7;
+}
+
 .lesson-item:hover {
     background: #edf2f7;
     border-color: #3182ce;
@@ -1906,11 +1917,79 @@ a:focus {
     box-shadow: 0 4px 12px rgba(49, 130, 206, 0.1);
 }
 
+.lesson-item.locked:hover {
+    transform: none;
+    box-shadow: none;
+}
+
 .lesson-item h4 {
     color: #2c5282;
     margin-bottom: 1rem;
     font-size: 1rem;
     font-weight: 600;
+}
+
+.lesson-item.locked h4 {
+    color: #e53e3e;
+}
+
+.lesson-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.lock-message {
+    font-size: 0.8rem;
+    color: #e53e3e;
+    margin: 0;
+    font-style: italic;
+}
+
+.progress-system-info {
+    background: #e6fffa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #38b2ac;
+}
+
+.unlock-section {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.unlock-input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.quiz-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+}
+
+.quiz-btn:hover {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+}
+
+.progress-info {
+    background: #fff3cd;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #ffc107;
+    margin-top: 1rem;
+}
+
+.progress-info p {
+    margin: 0;
+    color: #856404;
 }
 
 .btn-small {
