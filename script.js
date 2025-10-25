@@ -439,7 +439,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // URLs dos Google Forms de cada lição - CONFIGURE AQUI!
 const LESSON_QUIZZES = {
     'igreja': {
-        1: 'https://docs.google.com/forms/d/e/1FAIpQLSdvEf10SCJbud-n--JRV6NMX2dJfFtMlTl7jGV4pcoNwiIVvw/viewform',
+        1: 'https://forms.gle/LurdBuwVzb4GrGk5A',
         2: 'https://forms.gle/SEU_FORM_IGREJA_LICAO_2',
         3: 'https://forms.gle/SEU_FORM_IGREJA_LICAO_3',
         4: 'https://forms.gle/SEU_FORM_IGREJA_LICAO_4',
