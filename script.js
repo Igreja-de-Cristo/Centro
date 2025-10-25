@@ -434,12 +434,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 
-// ===== SISTEMA DE PROGRESSÃO SEQUENCIAL DE CURSOS =====
+// ===== SISTEMA DE QUIZ DOS CURSOS =====
 
 // URLs dos Google Forms de cada lição - CONFIGURE AQUI!
 const LESSON_QUIZZES = {
     'igreja': {
-        1: 'https://forms.gle/SEU_FORM_IGREJA_LICAO_1',
+        1: 'https://docs.google.com/forms/d/e/1FAIpQLSdvEf10SCJbud-n--JRV6NMX2dJfFtMlTl7jGV4pcoNwiIVvw/viewform',
         2: 'https://forms.gle/SEU_FORM_IGREJA_LICAO_2',
         3: 'https://forms.gle/SEU_FORM_IGREJA_LICAO_3',
         4: 'https://forms.gle/SEU_FORM_IGREJA_LICAO_4',
@@ -476,171 +476,6 @@ const LESSON_QUIZZES = {
     }
 };
 
-// URLs dos PDFs para desbloqueio
-const LESSON_PDFS = {
-    'igreja': {
-        2: 'https://drive.google.com/file/d/1FYK002AteGAMw6VXGcUTlzreg4A2hHC_/view?usp=drive_link',
-        3: 'https://drive.google.com/file/d/1AIgojoUiQBKSFy1aKNJQ13YBErxyGs9e/view?usp=drive_link',
-        4: 'https://drive.google.com/file/d/1vvLsJ75mbmFnqKyz55f0BMU4OuHclaRo/view?usp=drive_link',
-        5: 'https://drive.google.com/file/d/16eJUqhtnYYVcDC4Ie2O-mUtEtHIxglGg/view?usp=drive_link',
-        6: 'https://drive.google.com/file/d/1OUmw9jEqDCiysT1OptT_vNnGHJglYeT3/view?usp=drive_link',
-        7: 'https://drive.google.com/file/d/1m4XJ3ZnoWNLx5KZWQsrfLWAEdKGEaqj6/view?usp=drive_link',
-        8: 'https://drive.google.com/file/d/18ltIzbBLwiIu9qGQy6XsL-5YG3w5q0Oc/view?usp=drive_link',
-        9: 'https://drive.google.com/file/d/10YC-EQ2cuh-jYohM8qHu8t_0YldhforT/view?usp=drive_link',
-        10: 'https://drive.google.com/file/d/1dDc6FgvTCaS3yJFPzH11MxYqF9GR6Dt3/view?usp=drive_link',
-        11: 'https://drive.google.com/file/d/1_0JuBy96TTWYTuuMFwmU2JRF5864I1he/view?usp=drive_link',
-        12: 'https://drive.google.com/file/d/1zpaRYyzIXBiEgaYCIac8kT7wDelVyPyi/view?usp=drive_link',
-        13: 'https://drive.google.com/file/d/1IDpFiSgwAeDk5-MyxCYdJjeTV9_Tl9Uv/view?usp=drive_link',
-        14: 'https://drive.google.com/file/d/1kAIVCvWiAYRLdXo5L05OEvM_caD6C7ck/view?usp=drive_link',
-        15: 'https://drive.google.com/file/d/1Lp40FpxtPF6PPlezdSZVAThmpaeYlMB4/view?usp=drive_link',
-        16: 'https://drive.google.com/file/d/1VZ_K_YKexifGkyyq8BXhxnUa3JXvFZp0/view?usp=drive_link'
-    },
-    'revelacoes': {
-        2: 'https://drive.google.com/file/d/1zc4CDMcyEmWMNVzgeSobnKLZjIFaFils/view?usp=drive_link',
-        3: 'https://drive.google.com/file/d/1po4pxMp8vMHJOHcu0V7ID0rm7xUPd0bB/view?usp=drive_link',
-        4: 'https://drive.google.com/file/d/18w89iGYNqLewG1rr1C_9_8G3Wx4aHG7c/view?usp=drive_link',
-        5: 'https://drive.google.com/file/d/1yhk-4FRfDySM__5T9JFMjSNHoBJ4nclC/view?usp=drive_link',
-        6: 'https://drive.google.com/file/d/17C5NTk_kg8QOfl63jaP--wyBokowdLxk/view?usp=drive_link',
-        7: 'https://drive.google.com/file/d/1iHXPnFk0pkBvrsOVw-LjQ3rskVzSaGux/view?usp=drive_link'
-    },
-    'cristao': {
-        2: 'https://drive.google.com/file/d/1sgtW4F0ToqRcNg2o2OmKjilUAtmdFC71/view?usp=drive_link',
-        3: 'https://drive.google.com/file/d/1tgZH9cQ4Z-YJyaosvGfbjg1tjotlajeo/view?usp=drive_link',
-        4: 'https://drive.google.com/file/d/1lxt8Y_qIOYx0NERx4zi1ICVC1BsKtVsu/view?usp=drive_link',
-        5: 'https://drive.google.com/file/d/1Y7eNdDhQgVwEf8G5CUkEsu04mW10HYbO/view?usp=drive_link',
-        6: 'https://drive.google.com/file/d/1iCNqqB_ZQaLGHVw4x8FzBXtNb9dsrkjG/view?usp=drive_link',
-        7: 'https://drive.google.com/file/d/1SGuQwaczIAVfKw5nr7S2tYAafunEcJ_8/view?usp=drive_link'
-    }
-};
-
-// Códigos de desbloqueio para cada lição
-const UNLOCK_CODES = {
-    'igreja': {
-        2: 'IGREJA2024',
-        3: 'BIBLIA2024',
-        4: 'CRISTO2024',
-        5: 'SALVA2024',
-        6: 'BATISMO2024',
-        7: 'ADORACAO2024',
-        8: 'SERVICO2024',
-        9: 'COMUNHAO2024',
-        10: 'ENSINO2024',
-        11: 'MISSAO2024',
-        12: 'UNIDADE2024',
-        13: 'AMOR2024',
-        14: 'PAZ2024',
-        15: 'ESPERANCA2024',
-        16: 'GLORIA2024'
-    },
-    'revelacoes': {
-        2: 'VERBO2024',
-        3: 'CORDEIRO2024',
-        4: 'PASTOR2024',
-        5: 'VIDA2024',
-        6: 'CAMINHO2024',
-        7: 'VERDADE2024'
-    },
-    'cristao': {
-        2: 'SIMPLES2024',
-        3: 'PURO2024',
-        4: 'ORIGINAL2024',
-        5: 'GENUINO2024',
-        6: 'ESSENCIAL2024',
-        7: 'CRISTAO2024'
-    }
-};
-
-// Função para desbloquear próxima lição
-function unlockNextLesson(course) {
-    const input = document.getElementById(`unlock-code-${course}`);
-    const code = input.value.trim().toUpperCase();
-    
-    if (!code) {
-        alert('❌ Digite o código de desbloqueio!');
-        return;
-    }
-    
-    // Encontrar qual lição desbloquear
-    const unlockedLessons = getUnlockedLessons(course);
-    const maxLessons = course === 'igreja' ? 16 : 7; // Igreja tem 16, outros têm 7
-    const nextLesson = unlockedLessons + 1;
-    
-    if (nextLesson > maxLessons) {
-        alert('🎉 Parabéns! Você já completou todo o curso!');
-        return;
-    }
-    
-    const correctCode = UNLOCK_CODES[course][nextLesson];
-    
-    if (code === correctCode) {
-        unlockLesson(course, nextLesson);
-        input.value = '';
-        
-        const courseName = course === 'igreja' ? 'A Igreja Bíblica' : 
-                          course === 'revelacoes' ? 'Revelações de Cristo' : 
-                          'Simplesmente Cristão';
-        const itemName = course === 'igreja' ? 'Lição' : 
-                        course === 'revelacoes' ? 'Revelação' : 'Estudo';
-        
-        alert(`🎉 Parabéns! ${itemName} ${nextLesson} desbloqueada!`);
-    } else {
-        alert('❌ Código incorreto! Verifique se você inseriu o código correto da prova.');
-        input.value = '';
-    }
-}
-
-// Função para desbloquear uma lição específica
-function unlockLesson(course, lessonNumber) {
-    const lessonItem = document.querySelector(`#lessons-${course} [data-lesson="${lessonNumber}"]`);
-    if (!lessonItem) return;
-    
-    // Atualizar visual
-    lessonItem.classList.remove('locked');
-    lessonItem.classList.add('unlocked');
-    
-    // Atualizar título
-    const title = lessonItem.querySelector('h4');
-    const itemName = course === 'igreja' ? 'Lição' : 
-                    course === 'revelacoes' ? 'Revelação' : 'Estudo';
-    title.textContent = `📖 ${itemName} ${lessonNumber}`;
-    
-    // Atualizar conteúdo
-    const content = lessonItem.querySelector('.lesson-content');
-    const pdfUrl = LESSON_PDFS[course][lessonNumber];
-    
-    content.innerHTML = `
-        <a href="${pdfUrl}" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
-        <a href="#" data-quiz="${course}-${lessonNumber}" class="btn btn-primary btn-small quiz-btn">📝 Fazer Prova</a>
-    `;
-    
-    // Salvar progresso
-    saveProgress(course, lessonNumber);
-}
-
-// Função para obter lições desbloqueadas
-function getUnlockedLessons(course) {
-    const progress = JSON.parse(localStorage.getItem(`course_progress_${course}`) || '{"unlockedLessons": 1}');
-    return progress.unlockedLessons || 1;
-}
-
-// Função para salvar progresso
-function saveProgress(course, lessonNumber) {
-    const progress = {
-        unlockedLessons: lessonNumber,
-        lastUpdate: new Date().toISOString()
-    };
-    localStorage.setItem(`course_progress_${course}`, JSON.stringify(progress));
-}
-
-// Função para carregar progresso salvo
-function loadProgress(course) {
-    const unlockedLessons = getUnlockedLessons(course);
-    
-    for (let i = 2; i <= unlockedLessons; i++) {
-        unlockLesson(course, i);
-    }
-}
-
 // Função para abrir quiz
 function openQuiz(course, lessonNumber) {
     const quizUrl = LESSON_QUIZZES[course][lessonNumber];
@@ -669,19 +504,6 @@ document.addEventListener('click', function(e) {
         const course = quizData[0];
         const lesson = parseInt(quizData[1]);
         openQuiz(course, lesson);
-    }
-});
-
-// Carregar progresso quando a página carrega
-document.addEventListener('DOMContentLoaded', function() {
-    if (document.getElementById('lessons-igreja')) {
-        loadProgress('igreja');
-    }
-    if (document.getElementById('lessons-revelacoes')) {
-        loadProgress('revelacoes');
-    }
-    if (document.getElementById('lessons-cristao')) {
-        loadProgress('cristao');
     }
 });
 
