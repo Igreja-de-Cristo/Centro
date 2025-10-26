@@ -2958,6 +2958,20 @@ a:focus {
     }
 }
 
+/* FORÇAR MENU MOBILE - ÚLTIMA INSTÂNCIA */
+@media screen and (max-width: 480px) {
+    .mobile-menu-toggle {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: fixed !important;
+        top: 1rem !important;
+        right: 1rem !important;
+        z-index: 99999 !important;
+        pointer-events: all !important;
+    }
+}
+
 /* ===== BANNERS VISUAIS DO SISTEMA ADMIN ===== */
 .banners-container {
     width: 100%;
