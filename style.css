@@ -2875,8 +2875,23 @@ a:focus {
    FORÇA MENU HAMBURGER - REGRA FINAL
    ====================================== */
 
-/* FORÇA o menu hamburger a aparecer em dispositivos móveis */
+/* FORÇA o menu hamburger a aparecer em dispositivos móveis - SEMPRE VISÍVEL */
 @media screen and (max-width: 768px) {
+    /* Mantém o header e navegação sempre visíveis em mobile */
+    .site-header {
+        position: sticky !important;
+        top: 0 !important;
+        transform: translateY(0) !important;
+        z-index: 100 !important;
+    }
+    
+    .main-navigation {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 99 !important;
+    }
+    
+    /* Menu hamburger FIXO e SEMPRE VISÍVEL */
     .mobile-menu-toggle {
         display: flex !important;
         position: fixed !important;
@@ -2895,6 +2910,7 @@ a:focus {
         flex-direction: column !important;
         gap: 5px !important;
         transform: none !important;
+        transition: all 0.3s ease !important;
     }
     
     .mobile-menu-toggle .hamburger {
@@ -2904,6 +2920,22 @@ a:focus {
         border-radius: 2px !important;
         transition: all 0.3s ease !important;
         display: block !important;
+    }
+    
+    /* Hover no menu hamburger */
+    .mobile-menu-toggle:hover {
+        transform: scale(1.05) !important;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35) !important;
+    }
+    
+    /* Menu hamburger quando aberto (X vermelho) */
+    .mobile-menu-toggle[aria-expanded="true"] {
+        background: rgba(220, 53, 69, 0.95) !important;
+        border-color: #dc3545 !important;
+    }
+    
+    .mobile-menu-toggle[aria-expanded="true"] .hamburger {
+        background-color: white !important;
     }
     
     /* FORÇA navegação principal a ser oculta em mobile */
@@ -2923,5 +2955,506 @@ a:focus {
         justify-content: center !important;
         align-items: center !important;
         z-index: 9998 !important;
+    }
+}
+
+/* ===== BANNERS VISUAIS DO SISTEMA ADMIN ===== */
+.banners-container {
+    width: 100%;
+    margin: 2rem 0;
+    padding: 0;
+}
+
+.banner-visual {
+    width: 100%;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.banner-visual:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.banner-visual img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner-visual.posicao-topo {
+    margin-top: 0;
+}
+
+.banner-visual.posicao-meio {
+    margin: 3rem 0;
+}
+
+.banner-visual.posicao-rodape {
+    margin-bottom: 0;
+}
+
+.banner-visual.tipo-urgente {
+    border: 3px solid #e53e3e;
+    animation: pulse-border 2s infinite;
+}
+
+@keyframes pulse-border {
+    0%, 100% {
+        border-color: #e53e3e;
+    }
+    50% {
+        border-color: #fc8181;
+    }
+}
+
+.banner-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 2rem;
+    color: white;
+}
+
+.banner-overlay h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.banner-overlay p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Responsive para banners */
+@media (max-width: 768px) {
+    .banner-visual {
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .banner-overlay {
+        padding: 1.5rem;
+    }
+    
+    .banner-overlay h3 {
+        font-size: 1.2rem;
+    }
+    
+    .banner-overlay p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-visual {
+        border-radius: 4px;
+        margin-bottom: 1rem;
+    }
+    
+    .banner-overlay {
+        padding: 1rem;
+    }
+    
+    .banner-overlay h3 {
+        font-size: 1rem;
+    }
+    
+    .banner-overlay p {
+        font-size: 0.85rem;
+    }
+}
+
+/* ===== SISTEMA DE EXPANDIR/COLAPSAR LIÇÕES ===== */
+.collapsible-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.collapsible-header:hover {
+    color: #3182ce;
+}
+
+.toggle-lessons-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    color: #3182ce;
+    border-radius: 4px;
+    min-width: 40px;
+    height: 40px;
+}
+
+.toggle-lessons-btn:hover {
+    background-color: rgba(49, 130, 206, 0.1);
+    transform: scale(1.1);
+}
+
+.toggle-lessons-btn:focus {
+    outline: 2px solid #3182ce;
+    outline-offset: 2px;
+}
+
+.toggle-lessons-btn:active {
+    transform: scale(0.95);
+}
+
+.toggle-icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Rotaciona a setinha quando expandido */
+.toggle-lessons-btn[aria-expanded="true"] .toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* Animação suave do conteúdo colapsável */
+.collapsible-content {
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    max-height: 0;
+}
+
+.collapsible-content.expanded {
+    opacity: 1;
+    max-height: 10000px;
+    display: grid !important;
+}
+
+/* Indicador visual de que é clicável */
+.collapsible-header {
+    position: relative;
+}
+
+.collapsible-header::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 0;
+    background: linear-gradient(to bottom, #3182ce, #2c5282);
+    transition: height 0.3s ease;
+    border-radius: 2px;
+}
+
+.collapsible-header:hover::before {
+    height: 70%;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+    .collapsible-header {
+        font-size: 1.1rem;
+    }
+    
+    .toggle-lessons-btn {
+        min-width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+    
+    .toggle-icon {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .collapsible-header {
+        font-size: 1rem;
+        padding: 0.3rem 0;
+    }
+    
+    .toggle-lessons-btn {
+        min-width: 32px;
+        height: 32px;
+        padding: 0.3rem;
+    }
+}
+
+/* ===== PÁGINAS LEGAIS (POLÍTICA DE PRIVACIDADE E TERMOS DE USO) ===== */
+.legal-content {
+    padding: 3rem 0;
+    background: #f7fafc;
+}
+
+.legal-document {
+    background: white;
+    border-radius: 12px;
+    padding: 3rem;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.legal-meta {
+    background: #edf2f7;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border-left: 4px solid #3182ce;
+}
+
+.legal-meta p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    color: #2d3748;
+}
+
+.legal-section {
+    margin: 2.5rem 0;
+}
+
+.legal-section h2 {
+    color: #1a365d;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #3182ce;
+    font-family: 'Playfair Display', serif;
+}
+
+.legal-section h3 {
+    color: #2c5282;
+    font-size: 1.4rem;
+    margin: 1.5rem 0 1rem;
+    font-weight: 600;
+}
+
+.legal-section h4 {
+    color: #2d3748;
+    font-size: 1.1rem;
+    margin: 1rem 0 0.5rem;
+    font-weight: 600;
+}
+
+.legal-section p {
+    color: #4a5568;
+    line-height: 1.8;
+    margin: 1rem 0;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.legal-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+.legal-section ul li {
+    padding: 0.5rem 0 0.5rem 2rem;
+    position: relative;
+    line-height: 1.7;
+    color: #4a5568;
+}
+
+.legal-section ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0.5rem;
+    color: #3182ce;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.highlight-box {
+    background: #fff5f5;
+    border-left: 4px solid #e53e3e;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.info-box {
+    background: #ebf8ff;
+    border-left: 4px solid #3182ce;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.contact-box {
+    background: #f7fafc;
+    border: 2px solid #cbd5e0;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+}
+
+.contact-box h4 {
+    color: #1a365d;
+    margin-bottom: 1rem;
+}
+
+.contact-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-box ul li {
+    padding: 0.5rem 0;
+}
+
+.contact-box a {
+    color: #3182ce;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+}
+
+.rights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.right-item {
+    background: #f7fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.right-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: #3182ce;
+}
+
+.right-item h4 {
+    color: #2c5282;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.right-item p {
+    color: #4a5568;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.consent-section {
+    background: #edf2f7;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid #3182ce;
+    margin: 3rem 0;
+}
+
+.legal-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e2e8f0;
+    text-align: center;
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+.legal-footer p {
+    margin: 0.5rem 0;
+}
+
+.footer-legal-links {
+    margin-top: 1rem !important;
+    font-size: 0.9rem;
+}
+
+.footer-legal-links a {
+    margin: 0 0.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.footer-legal-links a:hover {
+    opacity: 0.8;
+}
+
+/* Responsividade para páginas legais */
+@media (max-width: 768px) {
+    .legal-document {
+        padding: 2rem 1.5rem;
+        border-radius: 8px;
+    }
+    
+    .legal-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .legal-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .legal-section p {
+        font-size: 0.95rem;
+    }
+    
+    .rights-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .highlight-box,
+    .info-box,
+    .contact-box {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .legal-content {
+        padding: 1.5rem 0;
+    }
+    
+    .legal-document {
+        padding: 1.5rem 1rem;
+    }
+    
+    .legal-section h2 {
+        font-size: 1.3rem;
+    }
+    
+    .legal-section h3 {
+        font-size: 1.1rem;
+    }
+    
+    .legal-section p {
+        font-size: 0.9rem;
+        text-align: left;
+    }
+    
+    .legal-meta {
+        padding: 1rem;
+    }
+    
+    .consent-section {
+        padding: 1.5rem;
     }
 }

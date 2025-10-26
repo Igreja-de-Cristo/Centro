@@ -107,6 +107,9 @@
         <!-- Banner de Informativos -->
         <section id="informativos-banner" class="informativos-banner"></section>
 
+        <!-- Banners Visuais - Posição Topo -->
+        <section id="banners-topo" class="banners-container"></section>
+
         <!-- Hero Section -->
         <section class="hero-section" id="inicio">
             <div class="hero-content">
@@ -157,6 +160,9 @@
             </div>
         </section>
         
+        <!-- Banners Visuais - Posição Meio -->
+        <section id="banners-meio" class="banners-container"></section>
+
         <!-- Courses Section -->
         <section class="courses-section">
             <div class="container">
@@ -260,6 +266,9 @@
                 </div>
             </div>
         </section>
+
+        <!-- Banners Visuais - Posição Rodapé -->
+        <section id="banners-rodape" class="banners-container"></section>
     </main>
     
     <!-- Footer -->
@@ -301,6 +310,10 @@
         
         <div class="footer-bottom">
             <p>&copy; 2025 Igreja de Cristo do Centro. Todos os direitos reservados.</p>
+            <p class="footer-legal-links">
+                <a href="politica-privacidade.html" style="color: #fff; text-decoration: underline;">Política de Privacidade</a> | 
+                <a href="termos-uso.html" style="color: #fff; text-decoration: underline;">Termos de Uso</a>
+            </p>
         </div>
     </footer>
     
@@ -400,11 +413,68 @@
             return (agora - fechadoEm) > umaHora;
         }
 
+        // ===== SISTEMA DE BANNERS VISUAIS =====
+        function carregarBannersVisuais() {
+            const banners = JSON.parse(localStorage.getItem('igreja_banners') || '[]');
+            
+            // Filtrar banners ativos e não expirados
+            const bannersAtivos = banners.filter(banner => 
+                banner.ativo && !isBannerExpirado(banner)
+            );
+
+            // Separar por posição
+            const bannersTopo = bannersAtivos.filter(b => b.posicao === 'topo');
+            const bannersMeio = bannersAtivos.filter(b => b.posicao === 'meio');
+            const bannersRodape = bannersAtivos.filter(b => b.posicao === 'rodape');
+
+            // Renderizar cada seção
+            renderizarBanners('banners-topo', bannersTopo);
+            renderizarBanners('banners-meio', bannersMeio);
+            renderizarBanners('banners-rodape', bannersRodape);
+        }
+
+        function isBannerExpirado(banner) {
+            return banner.dataExpiracao && new Date(banner.dataExpiracao) < new Date();
+        }
+
+        function renderizarBanners(containerId, banners) {
+            const container = document.getElementById(containerId);
+            
+            if (!banners || banners.length === 0) {
+                container.style.display = 'none';
+                return;
+            }
+
+            container.style.display = 'block';
+            container.innerHTML = banners.map(banner => {
+                const conteudo = banner.link ? 
+                    `<a href="${banner.link}" target="_blank" rel="noopener">
+                        <img src="${banner.imagem}" alt="${banner.titulo}">
+                    </a>` :
+                    `<img src="${banner.imagem}" alt="${banner.titulo}">`;
+
+                return `
+                    <div class="banner-visual posicao-${banner.posicao} tipo-${banner.tipo}">
+                        ${conteudo}
+                        ${banner.descricao ? `
+                            <div class="banner-overlay">
+                                <h3>${banner.titulo}</h3>
+                                <p>${banner.descricao}</p>
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            }).join('');
+        }
+
         // Carregar informativos quando a página carrega
         document.addEventListener('DOMContentLoaded', function() {
             if (deveMostrarBanner()) {
                 carregarInformativos();
             }
+
+            // Carregar banners visuais
+            carregarBannersVisuais();
 
             // ===== ACESSO ADMINISTRATIVO SECRETO =====
             let logoClickCount = 0;

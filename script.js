@@ -137,18 +137,37 @@ document.addEventListener('DOMContentLoaded', function() {
     const navigation = document.querySelector('.main-navigation');
     
     function handleHeaderScroll() {
+        // Verifica se está em dispositivo móvel (largura <= 768px)
+        const isMobile = window.innerWidth <= 768;
         const scrolled = window.pageYOffset > 50;
         
-        if (header) {
-            header.style.transform = scrolled ? 'translateY(-100%)' : 'translateY(0)';
-        }
-        
-        if (navigation) {
-            navigation.style.top = scrolled ? '0' : 'auto';
+        // Em mobile, NÃO esconde o header para o menu hamburger ficar sempre visível
+        if (isMobile) {
+            if (header) {
+                header.style.transform = 'translateY(0)';
+            }
+            if (navigation) {
+                navigation.style.top = 'auto';
+            }
+        } else {
+            // Em desktop, mantém o comportamento original
+            if (header) {
+                header.style.transform = scrolled ? 'translateY(-100%)' : 'translateY(0)';
+            }
+            
+            if (navigation) {
+                navigation.style.top = scrolled ? '0' : 'auto';
+            }
         }
     }
     
     window.addEventListener('scroll', throttle(handleHeaderScroll, 100));
+    
+    // Chama ao redimensionar a janela para ajustar corretamente
+    window.addEventListener('resize', throttle(handleHeaderScroll, 100));
+    
+    // Chama imediatamente ao carregar para aplicar o estado inicial correto
+    handleHeaderScroll();
     
     // ===== INTERSECTION OBSERVER FOR ANIMATIONS =====
     const observerOptions = {
@@ -590,3 +609,104 @@ window.IgrejaDeCreisto = {
     copyToClipboard,
     showNotification
 };
+
+// ===== SISTEMA DE EXPANDIR/COLAPSAR LIÇÕES DOS CURSOS =====
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleciona todos os botões de toggle
+    const toggleButtons = document.querySelectorAll('.toggle-lessons-btn');
+    
+    toggleButtons.forEach(button => {
+        // Adiciona evento de clique no botão
+        button.addEventListener('click', function(e) {
+            e.stopPropagation(); // Evita propagação do evento
+            toggleLessons(this);
+        });
+        
+        // Também permite clicar no header inteiro
+        const header = button.closest('.collapsible-header');
+        if (header) {
+            header.addEventListener('click', function(e) {
+                // Evita duplo toggle se clicar diretamente no botão
+                if (e.target === button || button.contains(e.target)) {
+                    return;
+                }
+                toggleLessons(button);
+            });
+        }
+    });
+    
+    // Função para expandir/colapsar as lições
+    function toggleLessons(button) {
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        const header = button.closest('.collapsible-header');
+        const content = header.nextElementSibling;
+        
+        if (!content || !content.classList.contains('collapsible-content')) {
+            console.warn('Conteúdo colapsável não encontrado');
+            return;
+        }
+        
+        if (isExpanded) {
+            // Colapsar
+            button.setAttribute('aria-expanded', 'false');
+            button.setAttribute('aria-label', button.getAttribute('aria-label').replace('Ocultar', 'Expandir'));
+            content.classList.remove('expanded');
+            content.style.display = 'none';
+            
+            // Animação suave de saída
+            setTimeout(() => {
+                content.style.display = 'none';
+            }, 400);
+        } else {
+            // Expandir
+            button.setAttribute('aria-expanded', 'true');
+            button.setAttribute('aria-label', button.getAttribute('aria-label').replace('Expandir', 'Ocultar'));
+            content.style.display = 'grid';
+            
+            // Força o reflow para a animação funcionar
+            content.offsetHeight;
+            
+            // Adiciona a classe expanded para animar
+            setTimeout(() => {
+                content.classList.add('expanded');
+            }, 10);
+            
+            // Scroll suave até o conteúdo
+            setTimeout(() => {
+                const yOffset = -100;
+                const y = header.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }, 100);
+        }
+        
+        // Log para debug
+        console.log(`Lições ${isExpanded ? 'colapsadas' : 'expandidas'}`);
+    }
+    
+    // Adiciona suporte para teclado (Enter e Espaço)
+    toggleButtons.forEach(button => {
+        button.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleLessons(this);
+            }
+        });
+    });
+    
+    // Se houver hash na URL apontando para um curso específico, expande automaticamente
+    if (window.location.hash) {
+        const hash = window.location.hash.substring(1);
+        const targetSection = document.getElementById(hash);
+        
+        if (targetSection) {
+            const toggleBtn = targetSection.querySelector('.toggle-lessons-btn');
+            if (toggleBtn && toggleBtn.getAttribute('aria-expanded') === 'false') {
+                setTimeout(() => {
+                    toggleLessons(toggleBtn);
+                }, 500);
+            }
+        }
+    }
+    
+    console.log('✅ Sistema de expandir/colapsar lições carregado!');
+});

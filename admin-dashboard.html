@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📊 Dashboard Administrativo - Igreja de Cristo do Centro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .admin-layout {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background: linear-gradient(180deg, #2c5282 0%, #1a365d 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+
+        .sidebar-header {
+            padding: 0 1.5rem 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-header h1 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .sidebar-header p {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        .admin-user-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem 1.5rem;
+            margin: 0 1.5rem 1.5rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .user-name {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+        }
+
+        .logout-btn-sidebar {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+
+        .logout-btn-sidebar:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .nav-menu {
+            list-style: none;
+            padding: 0 1rem;
+        }
+
+        .nav-item {
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.875rem 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .nav-link.active {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .nav-icon {
+            font-size: 1.5rem;
+            width: 30px;
+            text-align: center;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            margin-left: 280px;
+            padding: 2rem;
+        }
+
+        .header-top {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-title h2 {
+            color: #2c5282;
+            font-size: 1.8rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .header-title p {
+            color: #718096;
+            font-size: 0.95rem;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* Dashboard Cards */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .stat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .stat-icon {
+            font-size: 2.5rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .stat-card.blue .stat-icon { background: linear-gradient(135deg, #4299e1, #3182ce); }
+        .stat-card.green .stat-icon { background: linear-gradient(135deg, #48bb78, #38a169); }
+        .stat-card.purple .stat-icon { background: linear-gradient(135deg, #9f7aea, #805ad5); }
+        .stat-card.orange .stat-icon { background: linear-gradient(135deg, #ed8936, #dd6b20); }
+
+        .stat-info h3 {
+            color: #4a5568;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-footer {
+            color: #718096;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .stat-trend {
+            color: #48bb78;
+            font-weight: 600;
+        }
+
+        /* Quick Actions */
+        .quick-actions {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .quick-actions h3 {
+            color: #2c5282;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .actions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .action-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f7fafc, #edf2f7);
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-color: #3182ce;
+        }
+
+        .action-icon {
+            font-size: 2.5rem;
+        }
+
+        .action-label {
+            font-weight: 600;
+            color: #2d3748;
+            text-align: center;
+        }
+
+        .action-description {
+            font-size: 0.85rem;
+            color: #718096;
+            text-align: center;
+        }
+
+        /* Recent Activity */
+        .recent-activity {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .recent-activity h3 {
+            color: #2c5282;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .activity-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            border-left: 3px solid #e2e8f0;
+            margin-bottom: 1rem;
+            transition: all 0.3s;
+        }
+
+        .activity-item:hover {
+            background: #f7fafc;
+            border-left-color: #3182ce;
+        }
+
+        .activity-icon {
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #edf2f7;
+            border-radius: 50%;
+        }
+
+        .activity-content {
+            flex: 1;
+        }
+
+        .activity-title {
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 0.25rem;
+        }
+
+        .activity-time {
+            font-size: 0.85rem;
+            color: #718096;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #3182ce, #2c5282);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(49, 130, 206, 0.3);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #718096, #4a5568);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 1rem;
+            }
+
+            .admin-layout {
+                flex-direction: column;
+            }
+
+            .header-top {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .header-actions {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border-left: 4px solid;
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            z-index: 2000;
+            max-width: 350px;
+            animation: slideIn 0.3s ease;
+        }
+
+        .notification.success { border-left-color: #48bb78; }
+        .notification.error { border-left-color: #f56565; }
+        .notification.info { border-left-color: #4299e1; }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>🏛️ Igreja de Cristo</h1>
+                <p>Painel Administrativo</p>
+            </div>
+
+            <div class="admin-user-info">
+                <div class="user-name">
+                    <span>👤</span>
+                    <span id="username-display">Admin</span>
+                </div>
+                <button onclick="logout()" class="logout-btn-sidebar" title="Sair">🚪</button>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="admin-dashboard.html" class="nav-link active">
+                        <span class="nav-icon">📊</span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="admin-informativos.html" class="nav-link">
+                        <span class="nav-icon">📢</span>
+                        <span>Informativos</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="admin-banners.html" class="nav-link">
+                        <span class="nav-icon">🖼️</span>
+                        <span>Banners</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="admin-midia.html" class="nav-link">
+                        <span class="nav-icon">📁</span>
+                        <span>Galeria de Mídia</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" onclick="verLogs(); return false;" class="nav-link">
+                        <span class="nav-icon">📋</span>
+                        <span>Logs de Acesso</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <span class="nav-icon">🏠</span>
+                        <span>Ver Site</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="header-top">
+                <div class="header-title">
+                    <h2>📊 Dashboard</h2>
+                    <p>Visão geral do sistema administrativo</p>
+                </div>
+                <div class="header-actions">
+                    <a href="index.html" class="btn btn-secondary">🏠 Ver Site</a>
+                </div>
+            </div>
+
+            <!-- Statistics Cards -->
+            <div class="dashboard-grid">
+                <div class="stat-card blue" onclick="window.location.href='admin-informativos.html'">
+                    <div class="stat-header">
+                        <div class="stat-icon">📢</div>
+                        <div class="stat-info">
+                            <h3>Informativos</h3>
+                        </div>
+                    </div>
+                    <div class="stat-number" id="total-informativos">0</div>
+                    <div class="stat-footer">
+                        <span id="informativos-ativos">0</span> ativos
+                    </div>
+                </div>
+
+                <div class="stat-card green" onclick="window.location.href='admin-banners.html'">
+                    <div class="stat-header">
+                        <div class="stat-icon">🖼️</div>
+                        <div class="stat-info">
+                            <h3>Banners</h3>
+                        </div>
+                    </div>
+                    <div class="stat-number" id="total-banners">0</div>
+                    <div class="stat-footer">
+                        <span id="banners-ativos">0</span> ativos
+                    </div>
+                </div>
+
+                <div class="stat-card purple" onclick="window.location.href='admin-midia.html'">
+                    <div class="stat-header">
+                        <div class="stat-icon">📁</div>
+                        <div class="stat-info">
+                            <h3>Arquivos</h3>
+                        </div>
+                    </div>
+                    <div class="stat-number" id="total-arquivos">0</div>
+                    <div class="stat-footer">
+                        Galeria de mídia
+                    </div>
+                </div>
+
+                <div class="stat-card orange">
+                    <div class="stat-header">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-info">
+                            <h3>Acessos</h3>
+                        </div>
+                    </div>
+                    <div class="stat-number" id="total-acessos">0</div>
+                    <div class="stat-footer">
+                        <span class="stat-trend">↗ Últimos 7 dias</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <h3>⚡ Ações Rápidas</h3>
+                <div class="actions-grid">
+                    <a href="admin-informativos.html" class="action-btn">
+                        <div class="action-icon">📢</div>
+                        <div class="action-label">Novo Informativo</div>
+                        <div class="action-description">Criar aviso ou anúncio</div>
+                    </a>
+
+                    <a href="admin-banners.html" class="action-btn">
+                        <div class="action-icon">🖼️</div>
+                        <div class="action-label">Adicionar Banner</div>
+                        <div class="action-description">Banner visual com imagem</div>
+                    </a>
+
+                    <a href="admin-midia.html" class="action-btn">
+                        <div class="action-icon">📤</div>
+                        <div class="action-label">Upload de Arquivo</div>
+                        <div class="action-description">Enviar imagem ou PDF</div>
+                    </a>
+
+                    <a href="#" onclick="exportarTudo(); return false;" class="action-btn">
+                        <div class="action-icon">💾</div>
+                        <div class="action-label">Backup Completo</div>
+                        <div class="action-description">Salvar todos os dados</div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="recent-activity">
+                <h3>📜 Atividade Recente</h3>
+                <div id="recent-activity-list">
+                    <div style="text-align: center; color: #718096; padding: 2rem;">
+                        Nenhuma atividade registrada ainda
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // ===== PROTEÇÃO DE ACESSO =====
+        function checkAuth() {
+            const session = localStorage.getItem('admin_session');
+            
+            if (!session) {
+                window.location.href = 'admin-login.html';
+                return false;
+            }
+
+            try {
+                const data = JSON.parse(session);
+                
+                if (Date.now() >= data.expires) {
+                    localStorage.removeItem('admin_session');
+                    alert('Sessão expirada. Faça login novamente.');
+                    window.location.href = 'admin-login.html';
+                    return false;
+                }
+
+                document.getElementById('username-display').textContent = data.username;
+                return true;
+                
+            } catch (e) {
+                localStorage.removeItem('admin_session');
+                window.location.href = 'admin-login.html';
+                return false;
+            }
+        }
+
+        if (!checkAuth()) {
+            throw new Error('Acesso negado');
+        }
+
+        function logout() {
+            if (confirm('Tem certeza que deseja sair?')) {
+                localStorage.removeItem('admin_session');
+                window.location.href = 'admin-login.html';
+            }
+        }
+
+        // ===== ESTATÍSTICAS DO DASHBOARD =====
+        function carregarEstatisticas() {
+            // Informativos
+            const informativos = JSON.parse(localStorage.getItem('igreja_informativos') || '[]');
+            const informativosAtivos = informativos.filter(i => i.ativo).length;
+            document.getElementById('total-informativos').textContent = informativos.length;
+            document.getElementById('informativos-ativos').textContent = informativosAtivos;
+
+            // Banners
+            const banners = JSON.parse(localStorage.getItem('igreja_banners') || '[]');
+            const bannersAtivos = banners.filter(b => b.ativo).length;
+            document.getElementById('total-banners').textContent = banners.length;
+            document.getElementById('banners-ativos').textContent = bannersAtivos;
+
+            // Arquivos de mídia
+            const arquivos = JSON.parse(localStorage.getItem('igreja_midia') || '[]');
+            document.getElementById('total-arquivos').textContent = arquivos.length;
+
+            // Logs de acesso
+            const logs = JSON.parse(localStorage.getItem('admin_access_logs') || '[]');
+            document.getElementById('total-acessos').textContent = logs.filter(l => l.success).length;
+
+            // Atividade recente
+            carregarAtividadeRecente();
+        }
+
+        function carregarAtividadeRecente() {
+            const container = document.getElementById('recent-activity-list');
+            const atividades = [];
+
+            // Pegar últimos informativos
+            const informativos = JSON.parse(localStorage.getItem('igreja_informativos') || '[]');
+            informativos.slice(0, 3).forEach(info => {
+                atividades.push({
+                    icon: '📢',
+                    title: `Informativo criado: ${info.titulo}`,
+                    time: formatarTempo(info.dataCriacao),
+                    timestamp: new Date(info.dataCriacao).getTime()
+                });
+            });
+
+            // Pegar últimos banners
+            const banners = JSON.parse(localStorage.getItem('igreja_banners') || '[]');
+            banners.slice(0, 2).forEach(banner => {
+                atividades.push({
+                    icon: '🖼️',
+                    title: `Banner criado: ${banner.titulo}`,
+                    time: formatarTempo(banner.dataCriacao),
+                    timestamp: new Date(banner.dataCriacao).getTime()
+                });
+            });
+
+            // Ordenar por data
+            atividades.sort((a, b) => b.timestamp - a.timestamp);
+
+            if (atividades.length === 0) {
+                container.innerHTML = `
+                    <div style="text-align: center; color: #718096; padding: 2rem;">
+                        Nenhuma atividade registrada ainda
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = atividades.slice(0, 5).map(ativ => `
+                <div class="activity-item">
+                    <div class="activity-icon">${ativ.icon}</div>
+                    <div class="activity-content">
+                        <div class="activity-title">${ativ.title}</div>
+                        <div class="activity-time">${ativ.time}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function formatarTempo(dataISO) {
+            if (!dataISO) return 'Agora mesmo';
+            
+            const agora = new Date();
+            const data = new Date(dataISO);
+            const diff = agora - data;
+            
+            const minutos = Math.floor(diff / 60000);
+            const horas = Math.floor(diff / 3600000);
+            const dias = Math.floor(diff / 86400000);
+            
+            if (minutos < 1) return 'Agora mesmo';
+            if (minutos < 60) return `${minutos} minuto${minutos > 1 ? 's' : ''} atrás`;
+            if (horas < 24) return `${horas} hora${horas > 1 ? 's' : ''} atrás`;
+            if (dias < 7) return `${dias} dia${dias > 1 ? 's' : ''} atrás`;
+            
+            return data.toLocaleDateString('pt-BR');
+        }
+
+        function verLogs() {
+            const logs = JSON.parse(localStorage.getItem('admin_access_logs') || '[]');
+            
+            if (logs.length === 0) {
+                mostrarNotificacao('info', 'Nenhum log de acesso registrado.');
+                return;
+            }
+
+            const logHtml = logs.slice(-10).reverse().map(log => `
+                <div style="padding: 10px; border-bottom: 1px solid #e2e8f0; ${log.success ? '' : 'background: #fff5f5;'}">
+                    <div><strong>${log.success ? '✅' : '❌'} ${log.username}</strong></div>
+                    <div style="font-size: 0.85rem; color: #718096;">
+                        ${new Date(log.timestamp).toLocaleString('pt-BR')}
+                    </div>
+                </div>
+            `).join('');
+
+            const popup = window.open('', 'Logs', 'width=600,height=400');
+            popup.document.write(`
+                <html>
+                <head>
+                    <title>Logs de Acesso</title>
+                    <style>
+                        body { font-family: 'Inter', sans-serif; padding: 20px; }
+                        h2 { color: #2c5282; }
+                    </style>
+                </head>
+                <body>
+                    <h2>📋 Últimos 10 Acessos</h2>
+                    ${logHtml}
+                </body>
+                </html>
+            `);
+        }
+
+        function exportarTudo() {
+            const backup = {
+                informativos: JSON.parse(localStorage.getItem('igreja_informativos') || '[]'),
+                banners: JSON.parse(localStorage.getItem('igreja_banners') || '[]'),
+                midia: JSON.parse(localStorage.getItem('igreja_midia') || '[]'),
+                dataExportacao: new Date().toISOString(),
+                versao: '2.0'
+            };
+
+            const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `backup_completo_igreja_${new Date().toISOString().split('T')[0]}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+
+            mostrarNotificacao('success', '✅ Backup completo exportado com sucesso!');
+        }
+
+        function mostrarNotificacao(tipo, mensagem) {
+            const notification = document.createElement('div');
+            notification.className = `notification ${tipo}`;
+            notification.innerHTML = `<strong>${mensagem}</strong>`;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Carregar ao iniciar
+        document.addEventListener('DOMContentLoaded', () => {
+            carregarEstatisticas();
+            
+            // Atualizar a cada 30 segundos
+            setInterval(carregarEstatisticas, 30000);
+        });
+    </script>
+</body>
+</html>
+
