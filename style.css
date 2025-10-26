@@ -2958,6 +2958,27 @@ a:focus {
     }
 }
 
+/* PREVENIR OVERFLOW HORIZONTAL EM TODAS AS TELAS */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+body {
+    overflow-x: hidden;
+    max-width: 100vw;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* FORÇAR MENU MOBILE - TODAS AS TELAS PEQUENAS */
 @media screen and (max-width: 768px) {
     .mobile-menu-toggle {
@@ -3005,9 +3026,110 @@ a:focus {
         max-height: 100vh !important;
         overflow-y: auto !important;
     }
+    
+    /* Prevenir overflow em containers */
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        overflow-x: hidden !important;
+    }
+    
+    /* Ajustar seções */
+    section {
+        width: 100% !important;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+    }
+    
+    /* Ajustar grids */
+    .events-grid,
+    .livros-grid,
+    .courses-grid,
+    .features-grid,
+    .links-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+        width: 100% !important;
+    }
+    
+    /* Cards responsivos */
+    .course-card,
+    .event-card,
+    .livro-card,
+    .link-card,
+    .feature-card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
 }
 
-/* RESPONSIVIDADE MELHORADA */
+/* SMARTPHONES MÉDIOS/GRANDES (iPhone 16 Pro Max, Galaxy S23 Ultra, etc) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+    
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .container {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+    
+    /* Header otimizado */
+    .header-container {
+        padding: 1rem !important;
+    }
+    
+    .header-logo img {
+        max-height: 50px;
+    }
+    
+    /* Hero sections */
+    .page-hero,
+    .hero-section {
+        padding: 4rem 0 !important;
+        min-height: auto !important;
+    }
+    
+    /* Botões em 2 colunas quando possível */
+    .course-actions,
+    .event-actions,
+    .btn-group {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.5rem !important;
+    }
+    
+    .btn,
+    .btn-primary,
+    .btn-outline {
+        width: 100% !important;
+        padding: 0.75rem 1rem !important;
+        font-size: 0.9rem !important;
+    }
+    
+    /* Footer otimizado */
+    .footer-content {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 2rem !important;
+    }
+    
+    .footer-bottom {
+        padding: 1.5rem !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+/* RESPONSIVIDADE MELHORADA - SMARTPHONES PEQUENOS */
 @media screen and (max-width: 480px) {
     /* Ajustar tamanhos de fonte */
     body {
@@ -3020,6 +3142,10 @@ a:focus {
     
     h2 {
         font-size: 1.3rem !important;
+    }
+    
+    h3 {
+        font-size: 1.1rem !important;
     }
     
     /* Container com padding menor */
@@ -3035,6 +3161,7 @@ a:focus {
         width: 100% !important;
         text-align: center !important;
         padding: 0.75rem 1rem !important;
+        font-size: 0.85rem !important;
     }
     
     /* Header compacto */
@@ -3052,10 +3179,29 @@ a:focus {
         justify-content: center !important;
     }
     
+    .header-logo img {
+        max-height: 40px !important;
+    }
+    
     .header-contact {
         width: 100% !important;
         justify-content: center !important;
         flex-wrap: wrap !important;
+        gap: 0.5rem !important;
+    }
+    
+    .contact-item {
+        font-size: 0.85rem !important;
+    }
+    
+    /* Hero sections compactas */
+    .page-hero,
+    .hero-section {
+        padding: 3rem 0 !important;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.5rem !important;
     }
     
     /* Footer responsivo */
@@ -3071,6 +3217,48 @@ a:focus {
     
     .footer-bottom p {
         margin-bottom: 0.5rem !important;
+        word-wrap: break-word !important;
+    }
+    
+    /* Tabelas responsivas */
+    table {
+        display: block !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+    }
+    
+    /* Formulários */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="date"],
+    input[type="time"],
+    textarea,
+    select {
+        width: 100% !important;
+        max-width: 100% !important;
+        font-size: 16px !important; /* Previne zoom no iOS */
+    }
+    
+    /* Calendário compacto */
+    .calendar-grid {
+        gap: 0.25rem !important;
+        font-size: 0.75rem !important;
+    }
+    
+    /* Cards menores */
+    .course-card,
+    .event-card,
+    .livro-card {
+        padding: 1rem !important;
+    }
+    
+    /* Botões de ação em cards */
+    .course-actions,
+    .event-actions {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
     }
 }
 
