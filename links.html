@@ -370,7 +370,27 @@
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2025 Igreja de Cristo do Centro. Todos os direitos reservados.</p>
+            <p>&copy; <span id="current-year"></span> Igreja de Cristo do Centro. Todos os direitos reservados.</p>
+            <p>
+                Desenvolvido por 
+                <a href="https://wa.me/5592991168442?text=Olá%20Lucas!%20Vi%20seu%20trabalho%20no%20site%20da%20Igreja%20de%20Cristo%20do%20Centro." 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   style="color: #4299e1; text-decoration: none; font-weight: 600; transition: color 0.3s;"
+                   onmouseover="this.style.color='#63b3ed'"
+                   onmouseout="this.style.color='#4299e1'">
+                    Lucas Souza
+                </a>
+                | 
+                <a href="https://wa.me/5592991168442?text=Olá%20Lucas!%20Vi%20seu%20trabalho%20no%20site%20da%20Igreja." 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   style="color: #48bb78; text-decoration: none; font-weight: 600; transition: color 0.3s;"
+                   onmouseover="this.style.color='#25D366'"
+                   onmouseout="this.style.color='#48bb78'">
+                    📱 WhatsApp
+                </a>
+            </p>
             <p class="footer-legal-links">
                 <a href="politica-privacidade.html" style="color: #fff; text-decoration: underline;">Política de Privacidade</a> | 
                 <a href="termos-uso.html" style="color: #fff; text-decoration: underline;">Termos de Uso</a>
@@ -383,6 +403,9 @@
     </button>
     
     <script src="script.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
     <script>
         // Funções específicas da página de links
         function requestMaterial(material) {
