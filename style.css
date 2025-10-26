@@ -4046,3 +4046,465 @@ a:focus {
         padding: 1px 4px;
     }
 }
+
+/* ========================================
+   BIBLIOTECA DIGITAL
+   ======================================== */
+
+.biblioteca-content {
+    padding: 3rem 0;
+}
+
+/* Controles */
+.biblioteca-controls {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.search-box {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 0.8rem 1.2rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #4299e1;
+}
+
+.btn-search {
+    padding: 0.8rem 2rem;
+    background: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-search:hover {
+    background: #3182ce;
+}
+
+.biblioteca-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.biblioteca-sort {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.biblioteca-sort label {
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.biblioteca-sort select {
+    padding: 0.5rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+/* Estatísticas */
+.biblioteca-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4299e1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: #718096;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Grid de Livros */
+.livros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.livros-grid-small {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+/* Card de Livro */
+.livro-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.livro-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.livro-capa {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.livro-capa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.capa-placeholder {
+    font-size: 4rem;
+    color: white;
+}
+
+.livro-info {
+    padding: 1.5rem;
+}
+
+.livro-categoria {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #4299e1;
+    background: #ebf8ff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    margin-bottom: 0.75rem;
+}
+
+.livro-titulo {
+    font-size: 1.2rem;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.livro-autor {
+    color: #718096;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.livro-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    color: #718096;
+}
+
+.livro-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    background: #edf2f7;
+    color: #4a5568;
+    padding: 0.25rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+.livro-descricao {
+    color: #718096;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.livro-actions {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.btn-icon:hover {
+    transform: scale(1.2);
+}
+
+.btn-icon.favorito {
+    color: #f6ad55;
+}
+
+/* Badges */
+.badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    z-index: 10;
+}
+
+.badge-new {
+    background: #48bb78;
+    color: white;
+}
+
+.badge-popular {
+    background: #f6ad55;
+    color: white;
+    top: 3rem;
+}
+
+/* Modal PDF */
+.pdf-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.pdf-modal-content {
+    width: 100%;
+    max-width: 1200px;
+    height: 90vh;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.pdf-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.pdf-modal-header h3 {
+    flex: 1;
+    margin: 0 1rem;
+    color: #2d3748;
+}
+
+.btn-close-modal {
+    background: #e2e8f0;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-close-modal:hover {
+    background: #cbd5e0;
+}
+
+.pdf-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.pdf-viewer {
+    flex: 1;
+    background: #f7fafc;
+}
+
+.pdf-viewer iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Biblioteca Section */
+.biblioteca-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e2e8f0;
+}
+
+.biblioteca-section h2 {
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+}
+
+/* Card Pequeno */
+.livro-card-small {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.livro-card-small:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.livro-capa-small {
+    width: 60px;
+    height: 80px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.livro-capa-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.capa-placeholder-small {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.livro-info-small h4 {
+    font-size: 0.95rem;
+    color: #2d3748;
+    margin-bottom: 0.25rem;
+}
+
+.livro-info-small p {
+    font-size: 0.85rem;
+    color: #718096;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #718096;
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+.text-muted {
+    color: #a0aec0;
+    font-size: 0.9rem;
+}
+
+/* Responsivo - Biblioteca */
+@media (max-width: 768px) {
+    .search-box {
+        flex-direction: column;
+    }
+    
+    .biblioteca-filters {
+        flex-direction: column;
+    }
+    
+    .filter-btn {
+        width: 100%;
+    }
+    
+    .livros-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .biblioteca-sort {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .pdf-modal-header {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .pdf-modal-content {
+        height: 95vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .livro-actions {
+        flex-direction: column;
+    }
+    
+    .livro-actions .btn,
+    .livro-actions .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .biblioteca-stats {
+        grid-template-columns: 1fr;
+    }
+}

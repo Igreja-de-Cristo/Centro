@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="Eventos, seminários e atividades da Igreja de Cristo do Centro - Manaus/AM. Confira nossa programação e participe!">
-    <meta name="keywords" content="eventos igreja cristo, seminários manaus, atividades igreja, programação igreja cristo">
+    <meta name="description" content="Biblioteca Digital Cristã - Livros, estudos e materiais bíblicos gratuitos escritos pelos irmãos da Igreja de Cristo do Centro.">
+    <meta name="keywords" content="biblioteca cristã, livros evangélicos, estudos bíblicos pdf, material cristão gratuito">
     
     <link rel="icon" type="image/svg+xml" href="./assets/logo-igreja.svg">
-    <link rel="canonical" href="https://igrejadecristocentro-manaus.netlify.app/eventos.html">
+    <link rel="canonical" href="https://igrejadecristocentro-manaus.netlify.app/biblioteca.html">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
     
     <link rel="stylesheet" href="style.css">
     
-    <title>Eventos e Atividades - Igreja de Cristo do Centro</title>
+    <title>Biblioteca Digital - Igreja de Cristo do Centro</title>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
@@ -61,8 +61,8 @@
                 <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
                 <li><a href="reunioes.html" class="nav-link">Reuniões</a></li>
                 <li><a href="cursos.html" class="nav-link">Cursos</a></li>
-                <li><a href="eventos.html" class="nav-link active" aria-current="page">Eventos</a></li>
-                <li><a href="biblioteca.html" class="nav-link">Biblioteca</a></li>
+                <li><a href="eventos.html" class="nav-link">Eventos</a></li>
+                <li><a href="biblioteca.html" class="nav-link active" aria-current="page">Biblioteca</a></li>
                 <li><a href="contatos.html" class="nav-link">Contatos</a></li>
                 <li><a href="links.html" class="nav-link">Links</a></li>
             </ul>
@@ -72,113 +72,103 @@
     <main id="main-content" class="main-content" role="main">
         <section class="page-hero">
             <div class="container">
-                <h1>🎯 Eventos e Atividades</h1>
-                <p class="hero-description">Fique por dentro de tudo que acontece em nossa comunidade e igrejas irmãs</p>
+                <h1>📚 Biblioteca Digital Cristã</h1>
+                <p class="hero-description">Livros, estudos e materiais bíblicos gratuitos escritos pelos irmãos da nossa igreja</p>
             </div>
         </section>
         
-        <section class="events-content">
+        <section class="biblioteca-content">
             <div class="container">
-                <!-- Filtros de Categoria -->
-                <div class="events-filters">
-                    <button class="filter-btn active" data-filter="todos">Todos</button>
-                    <button class="filter-btn" data-filter="eventos">📅 Eventos</button>
-                    <button class="filter-btn" data-filter="seminarios">🎓 Seminários</button>
-                    <button class="filter-btn" data-filter="avisos">📢 Avisos</button>
-                    <button class="filter-btn" data-filter="igrejas_irmas">🏛️ Igrejas Irmãs</button>
-                    <button class="filter-btn" data-filter="comemoracoes">🎉 Comemorações</button>
-                    <button class="filter-btn" data-filter="cultos_especiais">🙏 Cultos Especiais</button>
-                </div>
                 
-                <!-- Tabs de Visualização -->
-                <div class="view-tabs">
-                    <button class="tab-btn active" data-view="lista">📋 Lista</button>
-                    <button class="tab-btn" data-view="calendario">📅 Calendário</button>
-                    <button class="tab-btn" data-view="mapa">🗺️ Mapa</button>
-                </div>
-                
-                <!-- VIEW 1: LISTA DE EVENTOS -->
-                <div class="events-view active" id="view-lista">
-                    <div class="events-section">
-                        <h2>Próximos Eventos</h2>
-                        <div id="eventos-lista" class="events-grid">
-                            <!-- Eventos serão carregados aqui via JavaScript -->
-                            <div class="no-events">
-                                <p>📭 Nenhum evento próximo no momento.</p>
-                                <p>Em breve teremos novidades!</p>
-                            </div>
-                        </div>
+                <!-- Busca e Filtros -->
+                <div class="biblioteca-controls">
+                    <div class="search-box">
+                        <input type="text" id="busca-livros" placeholder="🔍 Buscar por título, autor ou palavra-chave..." aria-label="Buscar livros">
+                        <button class="btn-search" id="btn-buscar">Buscar</button>
                     </div>
                     
-                    <div class="events-section">
-                        <h2>Eventos Encerrados</h2>
-                        <button class="btn btn-outline" id="toggle-arquivo">
-                            📂 Ver Eventos Anteriores
-                        </button>
-                        <div id="eventos-arquivo" class="events-grid" style="display: none; margin-top: 1rem;">
-                            <!-- Eventos passados serão carregados aqui -->
-                        </div>
+                    <div class="biblioteca-filters">
+                        <button class="filter-btn active" data-categoria="todas">Todas</button>
+                        <button class="filter-btn" data-categoria="doutrinas">📖 Doutrinas</button>
+                        <button class="filter-btn" data-categoria="estudos">📚 Estudos</button>
+                        <button class="filter-btn" data-categoria="comentarios">📜 Comentários</button>
+                        <button class="filter-btn" data-categoria="cursos">🎓 Material de Cursos</button>
+                        <button class="filter-btn" data-categoria="infantil">👶 Infantil</button>
+                        <button class="filter-btn" data-categoria="familia">👨‍👩‍👧 Família</button>
+                        <button class="filter-btn" data-categoria="historia">💒 História</button>
+                        <button class="filter-btn" data-categoria="devocionais">🙏 Devocionais</button>
+                    </div>
+                    
+                    <div class="biblioteca-sort">
+                        <label for="ordenacao">Ordenar por:</label>
+                        <select id="ordenacao">
+                            <option value="recente">Mais Recentes</option>
+                            <option value="antigo">Mais Antigos</option>
+                            <option value="titulo">Título (A-Z)</option>
+                            <option value="autor">Autor (A-Z)</option>
+                            <option value="popular">Mais Populares</option>
+                        </select>
                     </div>
                 </div>
                 
-                <!-- VIEW 2: CALENDÁRIO -->
-                <div class="events-view" id="view-calendario">
-                    <div class="calendar-container">
-                        <div class="calendar-header">
-                            <button class="btn-calendar" id="prev-month">←</button>
-                            <h2 id="current-month-year">Novembro 2025</h2>
-                            <button class="btn-calendar" id="next-month">→</button>
-                        </div>
-                        
-                        <div class="calendar-legend">
-                            <span><span class="legend-dot today"></span> Hoje</span>
-                            <span><span class="legend-dot upcoming"></span> Próximos</span>
-                            <span><span class="legend-dot past"></span> Passados</span>
-                        </div>
-                        
-                        <div class="calendar-grid" id="calendar">
-                            <!-- Calendário será gerado aqui via JavaScript -->
-                        </div>
-                        
-                        <div class="calendar-events" id="calendar-events-list">
-                            <h3>Eventos Selecionados</h3>
-                            <p class="text-muted">Clique em uma data no calendário para ver os eventos</p>
-                        </div>
+                <!-- Estatísticas -->
+                <div class="biblioteca-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-livros">0</span>
+                        <span class="stat-label">Livros</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-autores">0</span>
+                        <span class="stat-label">Autores</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-downloads">0</span>
+                        <span class="stat-label">Downloads</span>
                     </div>
                 </div>
                 
-                <!-- VIEW 3: MAPA -->
-                <div class="events-view" id="view-mapa">
-                    <div class="map-section">
-                        <h2>🗺️ Locais dos Eventos</h2>
-                        <p>Visualize onde acontecem nossos eventos e atividades</p>
-                        
-                        <div id="map-container" class="map-frame">
-                            <!-- Mapa será inserido aqui via JavaScript -->
-                            <div class="map-placeholder">
-                                <p>🗺️ Carregando mapa...</p>
-                            </div>
-                        </div>
-                        
-                        <div id="map-events-list" class="map-events">
-                            <!-- Lista de eventos com localização -->
-                        </div>
+                <!-- Grid de Livros -->
+                <div id="livros-grid" class="livros-grid">
+                    <!-- Livros serão carregados aqui via JavaScript -->
+                    <div class="empty-state">
+                        <div class="empty-icon">📚</div>
+                        <h3>Biblioteca em Construção</h3>
+                        <p>Em breve teremos diversos livros e estudos bíblicos disponíveis!</p>
+                        <p class="text-muted">Os irmãos da igreja estão preparando materiais para compartilhar.</p>
                     </div>
                 </div>
                 
-                <!-- Seção CTA -->
-                <section class="events-cta">
-                    <div class="cta-content">
-                        <h2>📱 Fique por Dentro!</h2>
-                        <p>Entre em contato para receber informações sobre nossos eventos e atividades</p>
-                        <a href="https://wa.me/5592991146877?text=Gostaria%20de%20receber%20informações%20sobre%20os%20eventos%20da%20igreja" 
-                           target="_blank" class="btn btn-primary btn-lg">
-                            💬 Falar no WhatsApp
-                        </a>
-                    </div>
-                </section>
+                <!-- Histórico de Leitura -->
+                <div class="biblioteca-section" id="historico-section" style="display: none;">
+                    <h2>📖 Seu Histórico de Leitura</h2>
+                    <div id="historico-livros" class="livros-grid-small"></div>
+                </div>
+                
+                <!-- Favoritos -->
+                <div class="biblioteca-section" id="favoritos-section" style="display: none;">
+                    <h2>⭐ Seus Favoritos</h2>
+                    <div id="favoritos-livros" class="livros-grid-small"></div>
+                </div>
+                
             </div>
         </section>
+        
+        <!-- Modal de Visualização de PDF -->
+        <div id="pdf-modal" class="pdf-modal" style="display: none;">
+            <div class="pdf-modal-content">
+                <div class="pdf-modal-header">
+                    <button class="btn-close-modal" id="close-pdf-modal">← Voltar</button>
+                    <h3 id="pdf-titulo">Título do Livro</h3>
+                    <div class="pdf-actions">
+                        <button class="btn btn-sm" id="btn-favoritar">⭐ Favoritar</button>
+                        <a class="btn btn-sm btn-primary" id="btn-download-pdf" target="_blank">📥 Download</a>
+                    </div>
+                </div>
+                <div class="pdf-viewer">
+                    <iframe id="pdf-frame" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
     </main>
     
     <footer class="site-footer" role="contentinfo">
@@ -254,7 +244,7 @@
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
-    <script src="eventos.js"></script>
+    <script src="biblioteca.js"></script>
 </body>
 </html>
 
