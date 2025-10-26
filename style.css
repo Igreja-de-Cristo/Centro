@@ -668,10 +668,13 @@ a:focus {
     align-items: center;
     position: relative;
     z-index: 1;
+    width: 100%;
+    padding: 0 1rem;
 }
 
 .hero-text {
-    max-width: 600px;
+    max-width: 100%;
+    width: 100%;
 }
 
 .hero-title {
@@ -2979,6 +2982,23 @@ img {
     height: auto;
 }
 
+/* Botões WhatsApp responsivos no header */
+.btn-whatsapp-secretaria,
+.btn-whatsapp {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+    .btn-whatsapp-secretaria,
+    .btn-whatsapp {
+        font-size: 0.75rem !important;
+        padding: 0.3rem 0.6rem !important;
+        margin: 0.25rem !important;
+    }
+}
+
 /* FORÇAR MENU MOBILE - TODAS AS TELAS PEQUENAS */
 @media screen and (max-width: 768px) {
     .mobile-menu-toggle {
@@ -3043,6 +3063,53 @@ img {
         overflow-x: hidden !important;
     }
     
+    /* Hero Section responsivo - 1 coluna */
+    .hero-section {
+        padding: 3rem 1rem !important;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        text-align: center !important;
+        padding: 0 1rem !important;
+    }
+    
+    .hero-text {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    
+    .hero-title {
+        font-size: 1.75rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    .hero-description {
+        font-size: 1rem !important;
+    }
+    
+    .hero-buttons {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        width: 100% !important;
+    }
+    
+    .hero-buttons .btn {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .hero-image {
+        display: flex !important;
+        justify-content: center !important;
+    }
+    
+    .hero-image img {
+        max-width: 200px !important;
+        width: 80% !important;
+    }
+    
     /* Ajustar grids */
     .events-grid,
     .livros-grid,
@@ -3093,11 +3160,39 @@ img {
         max-height: 50px;
     }
     
-    /* Hero sections */
+    /* Hero sections - 1 coluna */
     .page-hero,
     .hero-section {
-        padding: 4rem 0 !important;
+        padding: 4rem 1.5rem !important;
         min-height: auto !important;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        text-align: center !important;
+        padding: 0 1rem !important;
+    }
+    
+    .hero-text {
+        max-width: 100% !important;
+    }
+    
+    .hero-title {
+        font-size: 2rem !important;
+    }
+    
+    .hero-buttons {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+    
+    .hero-buttons .btn {
+        width: 100% !important;
+    }
+    
+    .hero-image img {
+        max-width: 250px !important;
     }
     
     /* Botões em 2 colunas quando possível */
@@ -3259,6 +3354,319 @@ img {
     .event-actions {
         flex-direction: column !important;
         gap: 0.5rem !important;
+    }
+}
+
+/* ========================================
+   TABLETS - PEQUENOS E MÉDIOS (768px - 1024px)
+   iPad, Galaxy Tab, etc
+   ======================================== */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .container {
+        max-width: 95%;
+        padding: 0 2rem;
+    }
+    
+    /* Header otimizado */
+    .header-container {
+        padding: 1rem 2rem;
+    }
+    
+    /* Menu desktop visível */
+    .mobile-menu-toggle {
+        display: none;
+    }
+    
+    .nav-menu {
+        display: flex !important;
+        flex-direction: row !important;
+        position: static !important;
+        background: transparent !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+    }
+    
+    /* Grids em 2 colunas */
+    .courses-grid,
+    .events-grid,
+    .livros-grid,
+    .links-grid,
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem;
+    }
+    
+    /* Footer em 2 colunas */
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    /* Hero sections */
+    .page-hero,
+    .hero-section {
+        padding: 5rem 0;
+    }
+    
+    /* Cards otimizados */
+    .course-card,
+    .event-card,
+    .livro-card {
+        padding: 1.5rem;
+    }
+}
+
+/* ========================================
+   NOTEBOOKS PEQUENOS (1024px - 1366px)
+   MacBook Air 13", Notebooks HD
+   ======================================== */
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+    .container {
+        max-width: 1200px;
+        padding: 0 2rem;
+    }
+    
+    /* Grids em 3 colunas */
+    .courses-grid,
+    .events-grid,
+    .livros-grid,
+    .links-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    /* Footer em 3 colunas */
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    
+    /* Hero otimizado */
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.15rem;
+    }
+    
+    /* Calendário otimizado */
+    .calendar-grid {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+/* ========================================
+   NOTEBOOKS MÉDIOS/GRANDES (1366px - 1600px)
+   MacBook Pro 16", Notebooks Full HD
+   ======================================== */
+@media screen and (min-width: 1367px) and (max-width: 1600px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    /* Grids em 3-4 colunas */
+    .courses-grid,
+    .events-grid,
+    .livros-grid,
+    .links-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    
+    /* Footer em 4 colunas */
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.5rem;
+    }
+    
+    /* Hero grande */
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.25rem;
+        max-width: 800px;
+    }
+}
+
+/* ========================================
+   DESKTOPS/MONITORES GRANDES (1600px - 1920px)
+   Monitores Full HD, iMac 24"
+   ======================================== */
+@media screen and (min-width: 1601px) and (max-width: 1920px) {
+    .container {
+        max-width: 1440px;
+    }
+    
+    body {
+        font-size: 17px;
+    }
+    
+    /* Grids em 4 colunas */
+    .courses-grid,
+    .events-grid,
+    .livros-grid,
+    .links-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.5rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+    
+    /* Hero extra grande */
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.35rem;
+        max-width: 900px;
+    }
+    
+    /* Cards maiores */
+    .course-card,
+    .event-card,
+    .livro-card {
+        padding: 2rem;
+    }
+    
+    /* Calendário grande */
+    .calendar-grid {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+
+/* ========================================
+   MONITORES WIDE/ULTRAWIDE (1920px+)
+   2K, 4K, 5K, Ultrawide 21:9
+   ======================================== */
+@media screen and (min-width: 1921px) {
+    .container {
+        max-width: 1600px;
+    }
+    
+    body {
+        font-size: 18px;
+    }
+    
+    /* Grids em 4-5 colunas */
+    .courses-grid,
+    .events-grid,
+    .livros-grid,
+    .links-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+    }
+    
+    /* Hero máximo */
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.5rem;
+        max-width: 1000px;
+    }
+    
+    /* Header maior */
+    .header-container {
+        padding: 1.5rem 3rem;
+    }
+    
+    .header-logo img {
+        max-height: 70px;
+    }
+    
+    /* Cards premium */
+    .course-card,
+    .event-card,
+    .livro-card {
+        padding: 2.5rem;
+    }
+    
+    /* Footer espaçoso */
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+    }
+    
+    .footer-bottom {
+        padding: 2rem;
+        font-size: 1rem;
+    }
+    
+    /* Calendário extra grande */
+    .calendar-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    /* Seções com mais espaço */
+    section {
+        padding: 5rem 0;
+    }
+}
+
+/* ========================================
+   MONITORES ULTRAWIDE EXTREMOS (2560px+)
+   ======================================== */
+@media screen and (min-width: 2560px) {
+    .container {
+        max-width: 2000px;
+    }
+    
+    body {
+        font-size: 20px;
+    }
+    
+    /* Grids em 5-6 colunas */
+    .courses-grid,
+    .events-grid,
+    .livros-grid,
+    .links-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 3rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+    }
+    
+    /* Hero ultra grande */
+    .hero-content h1 {
+        font-size: 5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.75rem;
+        max-width: 1200px;
     }
 }
 
