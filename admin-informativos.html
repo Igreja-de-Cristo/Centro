@@ -333,12 +333,52 @@
                         <textarea id="descricao" placeholder="Descrição detalhada do informativo..." maxlength="500"></textarea>
                     </div>
 
+                    <!-- NOVOS CAMPOS PARA EVENTOS -->
+                    <div class="form-group">
+                        <label for="categoria">🎯 Categoria do Evento:</label>
+                        <select id="categoria">
+                            <option value="eventos">📅 Eventos</option>
+                            <option value="seminarios">🎓 Seminários</option>
+                            <option value="avisos">📢 Avisos</option>
+                            <option value="igrejas_irmas">🏛️ Igrejas Irmãs</option>
+                            <option value="comemoracoes">🎉 Comemorações</option>
+                            <option value="cultos_especiais">🙏 Cultos Especiais</option>
+                        </select>
+                        <small>Para página de Eventos com calendário e mapa</small>
+                    </div>
+
                     <div class="form-row">
                         <div class="form-group">
                             <label for="data-evento">📅 Data do Evento:</label>
-                            <input type="datetime-local" id="data-evento">
+                            <input type="date" id="dataEvento">
+                            <small>Data para o calendário</small>
                         </div>
                         
+                        <div class="form-group">
+                            <label for="hora-evento">⏰ Hora do Evento:</label>
+                            <input type="time" id="horaEvento" value="19:00">
+                            <small>Horário de início</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="local-nome">📍 Nome do Local:</label>
+                        <input type="text" id="localNome" placeholder="Ex: Igreja de Cristo do Centro" maxlength="100">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="local-endereco">🗺️ Endereço Completo:</label>
+                        <input type="text" id="localEndereco" placeholder="Av. Sete de Setembro, 1801 - Centro, Manaus/AM" maxlength="200">
+                        <small>Usado para mostrar no mapa Google Maps</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="whatsapp">💬 Link WhatsApp (opcional):</label>
+                        <input type="url" id="whatsapp" placeholder="https://wa.me/5592991146877?text=Olá">
+                        <small>Link direto para dúvidas/inscrições no evento</small>
+                    </div>
+
+                    <div class="form-row">
                         <div class="form-group">
                             <label for="prioridade">⭐ Prioridade:</label>
                             <select id="prioridade">
@@ -346,6 +386,11 @@
                                 <option value="media" selected>🟡 Média</option>
                                 <option value="alta">🔴 Alta</option>
                             </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="data-expiracao">⏰ Expira em:</label>
+                            <input type="date" id="data-expiracao">
                         </div>
                     </div>
 
@@ -594,7 +639,14 @@
                 tipo: document.getElementById('tipo').value,
                 titulo: document.getElementById('titulo').value,
                 descricao: document.getElementById('descricao').value,
-                dataEvento: document.getElementById('data-evento').value,
+                categoria: document.getElementById('categoria').value,
+                dataEvento: document.getElementById('dataEvento').value,
+                horaEvento: document.getElementById('horaEvento').value,
+                local: {
+                    nome: document.getElementById('localNome').value,
+                    endereco: document.getElementById('localEndereco').value
+                },
+                whatsapp: document.getElementById('whatsapp').value,
                 prioridade: document.getElementById('prioridade').value,
                 ativo: document.getElementById('ativo').value,
                 dataExpiracao: document.getElementById('data-expiracao').value
@@ -620,7 +672,12 @@
             document.getElementById('tipo').value = informativo.tipo;
             document.getElementById('titulo').value = informativo.titulo;
             document.getElementById('descricao').value = informativo.descricao || '';
-            document.getElementById('data-evento').value = informativo.dataEvento || '';
+            document.getElementById('categoria').value = informativo.categoria || 'eventos';
+            document.getElementById('dataEvento').value = informativo.dataEvento || '';
+            document.getElementById('horaEvento').value = informativo.horaEvento || '19:00';
+            document.getElementById('localNome').value = (informativo.local && informativo.local.nome) || '';
+            document.getElementById('localEndereco').value = (informativo.local && informativo.local.endereco) || '';
+            document.getElementById('whatsapp').value = informativo.whatsapp || '';
             document.getElementById('prioridade').value = informativo.prioridade;
             document.getElementById('ativo').value = informativo.ativo.toString();
             document.getElementById('data-expiracao').value = informativo.dataExpiracao || '';

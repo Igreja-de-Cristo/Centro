@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Eventos, seminários e atividades da Igreja de Cristo do Centro - Manaus/AM. Confira nossa programação e participe!">
+    <meta name="keywords" content="eventos igreja cristo, seminários manaus, atividades igreja, programação igreja cristo">
+    
+    <link rel="icon" type="image/svg+xml" href="./assets/logo-igreja.svg">
+    <link rel="canonical" href="https://igrejadecristocentro-manaus.netlify.app/eventos.html">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Eventos e Atividades - Igreja de Cristo do Centro</title>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
+    
+    <header class="site-header" role="banner">
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="./assets/logo-igreja.svg" alt="Igreja de Cristo do Centro" class="logo-img">
+                <div class="logo-text">
+                    <h1>Igreja de Cristo do Centro</h1>
+                    <span class="logo-subtitle">Manaus - AM</span>
+                </div>
+            </div>
+            
+            <div class="header-contact">
+                <div class="contact-item">
+                    <a href="https://wa.me/5592991146877?text=Olá!%20Gostaria%20de%20entrar%20em%20contato%20com%20a%20secretaria."
+                        class="btn btn-whatsapp-secretaria" target="_blank"
+                        style="font-size: 0.8rem; padding: 0.4rem 0.8rem; margin: 0.5rem 0.5rem 0.5rem 0;">
+                        <span class="whatsapp-icon">📱</span> WhatsApp Secretaria
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <i class="icon-location" aria-hidden="true">📍</i>
+                    <span>Av. Sete de Setembro, 1801</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="main-navigation" role="navigation" aria-label="Navegação principal">
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="sr-only">Menu</span>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Início</a></li>
+                <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
+                <li><a href="reunioes.html" class="nav-link">Reuniões</a></li>
+                <li><a href="cursos.html" class="nav-link">Cursos</a></li>
+                <li><a href="eventos.html" class="nav-link active" aria-current="page">Eventos</a></li>
+                <li><a href="contatos.html" class="nav-link">Contatos</a></li>
+                <li><a href="links.html" class="nav-link">Links</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main id="main-content" class="main-content" role="main">
+        <section class="page-hero">
+            <div class="container">
+                <h1>🎯 Eventos e Atividades</h1>
+                <p class="hero-description">Fique por dentro de tudo que acontece em nossa comunidade e igrejas irmãs</p>
+            </div>
+        </section>
+        
+        <section class="events-content">
+            <div class="container">
+                <!-- Filtros de Categoria -->
+                <div class="events-filters">
+                    <button class="filter-btn active" data-filter="todos">Todos</button>
+                    <button class="filter-btn" data-filter="eventos">📅 Eventos</button>
+                    <button class="filter-btn" data-filter="seminarios">🎓 Seminários</button>
+                    <button class="filter-btn" data-filter="avisos">📢 Avisos</button>
+                    <button class="filter-btn" data-filter="igrejas_irmas">🏛️ Igrejas Irmãs</button>
+                    <button class="filter-btn" data-filter="comemoracoes">🎉 Comemorações</button>
+                    <button class="filter-btn" data-filter="cultos_especiais">🙏 Cultos Especiais</button>
+                </div>
+                
+                <!-- Tabs de Visualização -->
+                <div class="view-tabs">
+                    <button class="tab-btn active" data-view="lista">📋 Lista</button>
+                    <button class="tab-btn" data-view="calendario">📅 Calendário</button>
+                    <button class="tab-btn" data-view="mapa">🗺️ Mapa</button>
+                </div>
+                
+                <!-- VIEW 1: LISTA DE EVENTOS -->
+                <div class="events-view active" id="view-lista">
+                    <div class="events-section">
+                        <h2>Próximos Eventos</h2>
+                        <div id="eventos-lista" class="events-grid">
+                            <!-- Eventos serão carregados aqui via JavaScript -->
+                            <div class="no-events">
+                                <p>📭 Nenhum evento próximo no momento.</p>
+                                <p>Em breve teremos novidades!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="events-section">
+                        <h2>Eventos Encerrados</h2>
+                        <button class="btn btn-outline" id="toggle-arquivo">
+                            📂 Ver Eventos Anteriores
+                        </button>
+                        <div id="eventos-arquivo" class="events-grid" style="display: none; margin-top: 1rem;">
+                            <!-- Eventos passados serão carregados aqui -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- VIEW 2: CALENDÁRIO -->
+                <div class="events-view" id="view-calendario">
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <button class="btn-calendar" id="prev-month">←</button>
+                            <h2 id="current-month-year">Novembro 2025</h2>
+                            <button class="btn-calendar" id="next-month">→</button>
+                        </div>
+                        
+                        <div class="calendar-legend">
+                            <span><span class="legend-dot today"></span> Hoje</span>
+                            <span><span class="legend-dot upcoming"></span> Próximos</span>
+                            <span><span class="legend-dot past"></span> Passados</span>
+                        </div>
+                        
+                        <div class="calendar-grid" id="calendar">
+                            <!-- Calendário será gerado aqui via JavaScript -->
+                        </div>
+                        
+                        <div class="calendar-events" id="calendar-events-list">
+                            <h3>Eventos Selecionados</h3>
+                            <p class="text-muted">Clique em uma data no calendário para ver os eventos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- VIEW 3: MAPA -->
+                <div class="events-view" id="view-mapa">
+                    <div class="map-section">
+                        <h2>🗺️ Locais dos Eventos</h2>
+                        <p>Visualize onde acontecem nossos eventos e atividades</p>
+                        
+                        <div id="map-container" class="map-frame">
+                            <!-- Mapa será inserido aqui via JavaScript -->
+                            <div class="map-placeholder">
+                                <p>🗺️ Carregando mapa...</p>
+                            </div>
+                        </div>
+                        
+                        <div id="map-events-list" class="map-events">
+                            <!-- Lista de eventos com localização -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Seção CTA -->
+                <section class="events-cta">
+                    <div class="cta-content">
+                        <h2>📱 Fique por Dentro!</h2>
+                        <p>Entre em contato para receber informações sobre nossos eventos e atividades</p>
+                        <a href="https://wa.me/5592991146877?text=Gostaria%20de%20receber%20informações%20sobre%20os%20eventos%20da%20igreja" 
+                           target="_blank" class="btn btn-primary btn-lg">
+                            💬 Falar no WhatsApp
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Igreja de Cristo do Centro</h3>
+                <p>Uma comunidade cristã comprometida com os ensinos de Jesus Cristo e a autoridade das Escrituras.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contatos</h3>
+                <div class="contact-info">
+                    <p>📍 Av. Sete de Setembro, 1801 - Centro</p>
+                    <a href="https://wa.me/5592991146877?text=Olá!%20Gostaria%20de%20entrar%20em%20contato%20com%20a%20secretaria." class="btn btn-whatsapp-secretaria" target="_blank" style="font-size: 0.8rem; padding: 0.4rem 0.8rem; margin: 0.5rem 0.5rem 0.5rem 0;">
+                        <span class="whatsapp-icon">📱</span> WhatsApp Secretaria
+                    </a>
+                    <a href="https://wa.me/5592988357459?text=Olá!%20Gostaria%20de%20informações%20sobre%20os%20cursos%20DBF." class="btn btn-whatsapp" target="_blank" style="font-size: 0.8rem; padding: 0.4rem 0.8rem; margin: 0.5rem 0.5rem 0.5rem 0;">
+                        <span class="whatsapp-icon">📱</span> WhatsApp DBF
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/igrejadecristodasete/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <img src="./assets/instagran-icon.svg" alt="Instagram" loading="lazy">
+                    </a>
+                    <a href="https://www.youtube.com/@igrejadecristonocentro-manaus" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <img src="./assets/youtube-icon.svg" alt="YouTube" loading="lazy">
+                    </a>
+                    <a href="https://wa.me/5592991146877" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <img src="./assets/whatsapp-icon.svg" alt="WhatsApp" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Igreja de Cristo do Centro. Todos os direitos reservados.</p>
+            <p>
+                Desenvolvido por 
+                <a href="https://wa.me/5592991168442?text=Olá%20Lucas!%20Vi%20seu%20trabalho%20no%20site%20da%20Igreja%20de%20Cristo%20do%20Centro." 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   style="color: #4299e1; text-decoration: none; font-weight: 600; transition: color 0.3s;"
+                   onmouseover="this.style.color='#63b3ed'"
+                   onmouseout="this.style.color='#4299e1'">
+                    Lucas Souza
+                </a>
+                | 
+                <a href="https://wa.me/5592991168442?text=Olá%20Lucas!%20Vi%20seu%20trabalho%20no%20site%20da%20Igreja." 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   style="color: #48bb78; text-decoration: none; font-weight: 600; transition: color 0.3s;"
+                   onmouseover="this.style.color='#25D366'"
+                   onmouseout="this.style.color='#48bb78'">
+                    📱 WhatsApp
+                </a>
+            </p>
+            <p class="footer-legal-links">
+                <a href="politica-privacidade.html" style="color: #fff; text-decoration: underline;">Política de Privacidade</a> | 
+                <a href="termos-uso.html" style="color: #fff; text-decoration: underline;">Termos de Uso</a>
+            </p>
+        </div>
+    </footer>
+    
+    <button class="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
+        ↑
+    </button>
+    
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    <script src="eventos.js"></script>
+</body>
+</html>
+
