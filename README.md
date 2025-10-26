@@ -169,7 +169,7 @@ Projeto_ICS/
 ├── 📄 sobre.html               # Sobre nós
 ├── 📄 reunioes.html            # Reuniões e horários
 ├── 📄 cursos.html              # 🎓 Cursos (configurar Google Forms aqui)
-├── 📄 contato.html             # Contato e localização
+├── 📄 contatos.html             # Contato e localização
 ├── 📄 links.html               # Links úteis
 ├── 🎨 style.css                # Estilos
 ├── ⚡ script.js                # JavaScript básico
@@ -329,7 +329,7 @@ Projeto_ICS/
 ├── 📄 sobre.html               # Sobre nós
 ├── 📄 reunioes.html            # Reuniões e horários
 ├── 📄 cursos.html              # 🎓 Cursos bíblicos (PRINCIPAL)
-├── 📄 contato.html             # Contato e localização
+├── 📄 contatos.html             # Contato e localização
 ├── 📄 links.html               # Links úteis e recursos
 ├── 🎨 style.css                # Estilos principais
 ├── ⚡ script.js                # JavaScript funcional
