@@ -135,6 +135,79 @@
             </div>
         </section>
         
+        <!-- Templo Section -->
+        <section class="templo-section">
+            <div class="container">
+                <h2 class="section-title">📍 Conheça Nosso Templo</h2>
+                <p class="section-subtitle">Venha nos visitar e fazer parte da nossa comunidade</p>
+                
+                <div class="templo-grid">
+                    <!-- Foto Principal do Templo -->
+                    <div class="templo-main-image">
+                        <img src="./assets/templo-principal.jpeg" 
+                             alt="Fachada da Igreja de Cristo do Centro" 
+                             class="templo-img"
+                             onclick="abrirLightbox(this.src, this.alt)"
+                             onerror="this.onerror=null; this.src='./assets/logo-igreja.svg'; this.alt='Logo da Igreja';">
+                        <div class="image-overlay">
+                            <span class="zoom-icon">🔍 Clique para ampliar</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Mapa Interativo -->
+                    <div class="templo-map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.0449847447746!2d-60.02534082465384!3d-3.1303479968818836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c1bc8b2b6d7d7%3A0x5c5e5e5e5e5e5e5e!2sAv.%20Sete%20de%20Setembro%2C%201801%20-%20Centro%2C%20Manaus%20-%20AM!5e0!3m2!1spt-BR!2sbr!4v1635000000000!5m2!1spt-BR!2sbr"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            title="Localização da Igreja de Cristo do Centro">
+                        </iframe>
+                    </div>
+                </div>
+                
+                <!-- Galeria de Fotos (preparada para fotos adicionais) -->
+                <div class="templo-gallery" id="templo-gallery">
+                    <!-- As fotos adicionais serão inseridas aqui quando disponíveis -->
+                    <!-- Exemplo:
+                    <div class="gallery-item">
+                        <img src="./assets/templo-interior.jpg" alt="Interior da Igreja" onclick="abrirLightbox(this.src, this.alt)">
+                    </div>
+                    -->
+                </div>
+                
+                <!-- Informações e Botões -->
+                <div class="templo-info-box">
+                    <div class="templo-address">
+                        <h3>📍 Localização</h3>
+                        <p>Av. Sete de Setembro, 1801</p>
+                        <p>Centro - Manaus/AM</p>
+                        <p>CEP: 69005-141</p>
+                    </div>
+                    
+                    <div class="templo-actions">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Sete+de+Setembro,+1801,+Centro,+Manaus,+AM" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="btn btn-primary">
+                            🗺️ Como Chegar
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Av.+Sete+de+Setembro,+1801,+Centro,+Manaus,+AM" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="btn btn-secondary">
+                            📍 Ver no Google Maps
+                        </a>
+                        <a href="contatos.html" class="btn btn-outline">
+                            💬 Mais Informações
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- Features Section -->
         <section class="features-section">
             <div class="container">
@@ -251,6 +324,19 @@
             </div>
         </section>
         
+        <!-- Banner Parallax do Templo -->
+        <section class="templo-banner-parallax">
+            <div class="parallax-overlay"></div>
+            <div class="parallax-content">
+                <h2>🏛️ Venha Nos Visitar</h2>
+                <p>Fazemos parte de uma comunidade acolhedora e comprometida com a Palavra de Deus</p>
+                <div class="parallax-buttons">
+                    <a href="reunioes.html" class="btn btn-light">Ver Horários das Reuniões</a>
+                    <a href="contatos.html" class="btn btn-outline-light">Entre em Contato</a>
+                </div>
+            </div>
+        </section>
+        
         <!-- Schedule Section - VERSÃO ATUALIZADA 2025-10-07 -->
         <section class="schedule-section" data-version="3.0-updated">
             <div class="container">
@@ -341,6 +427,40 @@
     
     <!-- JavaScript -->
     <script src="script.js"></script>
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="fecharLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+    
+    <!-- Script do Lightbox -->
+    <script>
+        function abrirLightbox(src, alt) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            const caption = document.getElementById('lightbox-caption');
+            
+            img.src = src;
+            caption.textContent = alt;
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function fecharLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Fechar com ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                fecharLightbox();
+            }
+        });
+    </script>
     
     <!-- Script para atualizar ano automaticamente -->
     <script>
