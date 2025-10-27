@@ -2388,32 +2388,298 @@ a:focus {
 }
 
 .contact-section {
-    background: #f7fafc;
-    padding: 3rem 0;
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    padding: 4rem 0;
     margin: 4rem 0;
     text-align: center;
 }
 
-.contact-methods {
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+}
+
+.section-intro {
+    font-size: 1.2rem;
+    color: #4a5568;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Grid de Cards de Contato */
+.contact-cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin: 2rem 0;
+    margin: 3rem 0;
+    padding: 0 1rem;
 }
 
-.contact-method {
+/* Estilo Base dos Cards */
+.contact-card {
     background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
 }
 
-.note {
-    background: #e6fffa;
-    border-left: 4px solid #38a169;
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Ícone do Card */
+.contact-card-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.contact-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+}
+
+.contact-card p {
+    color: #718096;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Informações do Card */
+.contact-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
     padding: 1rem;
-    margin-top: 2rem;
-    border-radius: 0 8px 8px 0;
+    background: #f7fafc;
+    border-radius: 8px;
+}
+
+.availability-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+}
+
+.availability-badge.available {
+    background: #c6f6d5;
+    color: #22543d;
+}
+
+.response-time {
+    font-size: 0.85rem;
+    color: #718096;
+    font-style: italic;
+}
+
+.email-address {
+    font-weight: 600;
+    color: #3182ce;
+    word-break: break-all;
+}
+
+.address {
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.address-detail {
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+.schedule {
+    font-size: 0.85rem;
+    color: #718096;
+    margin-top: 0.5rem;
+}
+
+/* Botões de Contato */
+.btn-contact {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-whatsapp {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+}
+
+.btn-whatsapp:hover {
+    background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
+    transform: scale(1.05);
+}
+
+.btn-email {
+    background: linear-gradient(135deg, #3182ce 0%, #2c5282 100%);
+    color: white;
+}
+
+.btn-email:hover {
+    background: linear-gradient(135deg, #2c5282 0%, #2a4365 100%);
+    transform: scale(1.05);
+}
+
+.btn-map {
+    background: linear-gradient(135deg, #805ad5 0%, #553c9a 100%);
+    color: white;
+}
+
+.btn-map:hover {
+    background: linear-gradient(135deg, #553c9a 0%, #44337a 100%);
+    transform: scale(1.05);
+}
+
+/* Cards Específicos - Cores Temáticas */
+.whatsapp-card::before {
+    background: linear-gradient(90deg, #25D366 0%, #128C7E 100%);
+}
+
+.email-card::before {
+    background: linear-gradient(90deg, #3182ce 0%, #2c5282 100%);
+}
+
+.presencial-card::before {
+    background: linear-gradient(90deg, #805ad5 0%, #553c9a 100%);
+}
+
+/* Box de Informações Adicionais */
+.contact-info-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin: 3rem auto;
+    max-width: 900px;
+    text-align: left;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.info-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.info-item p {
+    margin: 0;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+.info-item strong {
+    color: #2d3748;
+}
+
+/* Links Rápidos no Footer */
+.quick-links-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e2e8f0;
+}
+
+.quick-links-footer p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 1rem;
+}
+
+.quick-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.quick-link {
+    padding: 0.6rem 1.2rem;
+    background: white;
+    color: #3182ce;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid #3182ce;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.quick-link:hover {
+    background: #3182ce;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contact-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+    
+    .section-intro {
+        font-size: 1rem;
+    }
+    
+    .contact-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .quick-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .quick-link {
+        text-align: center;
+    }
 }
 
 /* ===== RESPONSIVE ADJUSTMENTS FOR INTERNAL PAGES ===== */
