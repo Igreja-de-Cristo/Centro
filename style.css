@@ -2190,35 +2190,7 @@ a:focus {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-.social-media-section {
-    background: #f7fafc;
-    padding: 4rem 0;
-    margin: 4rem 0;
-}
-
-.social-media-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.social-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    display: flex;
-    gap: 1.5rem;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.social-icon img {
-    width: 48px;
-    height: 48px;
-}
-
-.social-content h3 {
-    margin-bottom: 0.5rem;
-}
+/* Estilos de redes sociais removidos - estavam duplicando o footer */
 
 .directions-section {
     margin: 4rem 0;
