@@ -232,7 +232,7 @@ function renderizarLivros() {
     }
     
     // Renderizar no conteúdo dos accordions
-    const categorias = ['todas', 'pregacoes', 'intensivos', 'cursos', 'infantil', 'casais'];
+    const categorias = ['todas', 'pregacoes', 'intensivos', 'cursos', 'infantil', 'casais', 'hinarios'];
     
     categorias.forEach(cat => {
         const conteudoDiv = document.getElementById(`conteudo-${cat}`);
@@ -630,7 +630,8 @@ function getCategoriaInfo(categoria) {
         'intensivos': { name: 'Intensivos/Seminários', icon: '📚' },
         'cursos': { name: 'Estudos Bíblicos', icon: '📄' },
         'infantil': { name: 'Material Infantil', icon: '👶' },
-        'casais': { name: 'Casais', icon: '💑' }
+        'casais': { name: 'Casais', icon: '💑' },
+        'hinarios': { name: 'Hinários', icon: '🎵' }
     };
     return categorias[categoria] || { name: 'Geral', icon: '📚' };
 }
