@@ -930,6 +930,18 @@ a:focus {
     margin-left: 1rem;
 }
 
+/* Badge de duração na grade resumida do index */
+.duration-badge {
+    font-size: 0.85rem;
+    color: #1a365d;
+    background: rgba(190, 227, 248, 0.9);
+    padding: 0.3rem 0.6rem;
+    border-radius: 999px;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(26, 54, 93, 0.2);
+}
+
 /* ===== FOOTER ===== */
 .site-footer {
     background: linear-gradient(135deg, #1a202c, #2d3748);
