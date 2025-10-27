@@ -1,5 +1,5 @@
-/* CSS Base e Sistema de Design - Versão 3.0 - Cache Busting */
-/* Última atualização: 2025-10-07 - Menu hamburger + Horários corrigidos */
+/* CSS Base e Sistema de Design - Versão 3.1 - Cache Busting */
+/* Última atualização: 2025-01-21 - Biblioteca com Accordion + Categorias atualizadas */
 :root {
     /* Variáveis de Design Responsivo */
     --max-width: 1200px;
@@ -5232,5 +5232,144 @@ img {
     
     .biblioteca-stats {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ===== BIBLIOTECA ACCORDION ===== */
+.biblioteca-accordion {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-item.active {
+    background: #f7fafc;
+}
+
+.accordion-header {
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #edf2f7;
+}
+
+.accordion-header:active {
+    background-color: #e2e8f0;
+}
+
+.accordion-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.accordion-title {
+    flex: 1;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.accordion-arrow {
+    font-size: 1.2rem;
+    color: #4299e1;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.accordion-item.active .accordion-arrow {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 1.5rem;
+}
+
+.accordion-content.active {
+    max-height: 5000px;
+    padding: 1.5rem 1.5rem 1.5rem 3.75rem;
+}
+
+.categoria-descricao {
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid #4299e1;
+}
+
+.categoria-conteudo {
+    margin-top: 1rem;
+}
+
+.categoria-conteudo .livros-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Responsivo - Accordion */
+@media (max-width: 768px) {
+    .accordion-header {
+        padding: 1rem;
+        gap: 0.75rem;
+    }
+    
+    .accordion-title {
+        font-size: 1rem;
+    }
+    
+    .accordion-content.active {
+        padding: 1rem;
+        padding-left: 2.5rem;
+    }
+    
+    .categoria-descricao {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+    
+    .categoria-conteudo .livros-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .accordion-header {
+        padding: 0.75rem;
+    }
+    
+    .accordion-icon {
+        font-size: 1.25rem;
+    }
+    
+    .accordion-title {
+        font-size: 0.95rem;
+    }
+    
+    .accordion-content.active {
+        padding-left: 2rem;
     }
 }

@@ -98,13 +98,37 @@ function setupEventListeners() {
         btnBuscar.addEventListener('click', aplicarFiltros);
     }
     
-    // Filtros de categoria
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-            categoriaAtual = this.dataset.categoria;
-            aplicarFiltros();
+    // Accordion de categorias
+    document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', function() {
+            const accordionItem = this.closest('.accordion-item');
+            const isActive = accordionItem.classList.contains('active');
+            
+            // Fechar todos os accordions
+            document.querySelectorAll('.accordion-item').forEach(item => {
+                item.classList.remove('active');
+                const content = item.querySelector('.accordion-content');
+                const arrow = item.querySelector('.accordion-arrow');
+                if (content) content.classList.remove('active');
+                if (arrow) arrow.textContent = '▶';
+            });
+            
+            // Abrir o accordion clicado se não estava aberto
+            if (!isActive) {
+                accordionItem.classList.add('active');
+                const content = accordionItem.querySelector('.accordion-content');
+                const arrow = accordionItem.querySelector('.accordion-arrow');
+                if (content) content.classList.add('active');
+                if (arrow) arrow.textContent = '▼';
+                
+                // Atualizar categoria atual
+                categoriaAtual = accordionItem.dataset.categoria;
+                aplicarFiltros();
+            } else {
+                // Se estava aberto, fecha e mostra todos
+                categoriaAtual = 'todas';
+                aplicarFiltros();
+            }
         });
     });
     
@@ -191,21 +215,90 @@ function ordenarLivros() {
 // ========================================
 
 function renderizarLivros() {
+    // Renderizar no grid antigo (para compatibilidade)
     const grid = document.getElementById('livros-grid');
-    if (!grid) return;
-    
-    if (livrosFiltrados.length === 0) {
-        grid.innerHTML = `
-            <div class="empty-state">
-                <div class="empty-icon">🔍</div>
-                <h3>Nenhum livro encontrado</h3>
-                <p>Tente ajustar seus filtros ou termo de busca.</p>
-            </div>
-        `;
-        return;
+    if (grid) {
+        if (livrosFiltrados.length === 0) {
+            grid.innerHTML = `
+                <div class="empty-state">
+                    <div class="empty-icon">🔍</div>
+                    <h3>Nenhum livro encontrado</h3>
+                    <p>Tente ajustar seus filtros ou termo de busca.</p>
+                </div>
+            `;
+        } else {
+            grid.innerHTML = livrosFiltrados.map(livro => criarCardLivro(livro)).join('');
+        }
     }
     
-    grid.innerHTML = livrosFiltrados.map(livro => criarCardLivro(livro)).join('');
+    // Renderizar no conteúdo dos accordions
+    const categorias = ['todas', 'pregacoes', 'intensivos', 'cursos', 'infantil', 'casais'];
+    
+    categorias.forEach(cat => {
+        const conteudoDiv = document.getElementById(`conteudo-${cat}`);
+        if (!conteudoDiv) return;
+        
+        // Filtrar livros por categoria
+        let livrosCategoria = cat === 'todas' 
+            ? [...todosLivros] 
+            : todosLivros.filter(l => l.categoria === cat);
+        
+        // Aplicar busca se houver
+        const termoBusca = document.getElementById('busca-livros')?.value.toLowerCase() || '';
+        if (termoBusca && cat === categoriaAtual) {
+            livrosCategoria = livrosCategoria.filter(livro => {
+                const titulo = (livro.titulo || '').toLowerCase();
+                const autor = (livro.autor || '').toLowerCase();
+                const descricao = (livro.descricao || '').toLowerCase();
+                const tags = (livro.tags || []).join(' ').toLowerCase();
+                
+                return titulo.includes(termoBusca) || 
+                       autor.includes(termoBusca) || 
+                       descricao.includes(termoBusca) ||
+                       tags.includes(termoBusca);
+            });
+        }
+        
+        // Ordenar
+        switch(ordenacaoAtual) {
+            case 'recente':
+                livrosCategoria.sort((a, b) => new Date(b.dataCadastro) - new Date(a.dataCadastro));
+                break;
+            case 'antigo':
+                livrosCategoria.sort((a, b) => new Date(a.dataCadastro) - new Date(b.dataCadastro));
+                break;
+            case 'titulo':
+                livrosCategoria.sort((a, b) => a.titulo.localeCompare(b.titulo));
+                break;
+            case 'autor':
+                livrosCategoria.sort((a, b) => a.autor.localeCompare(b.autor));
+                break;
+            case 'popular':
+                livrosCategoria.sort((a, b) => (b.visualizacoes || 0) - (a.visualizacoes || 0));
+                break;
+        }
+        
+        // Renderizar apenas se for a categoria atual
+        if (cat === categoriaAtual) {
+            if (livrosCategoria.length === 0) {
+                conteudoDiv.innerHTML = `
+                    <div class="empty-state" style="padding: 2rem 1rem;">
+                        <div class="empty-icon">🔍</div>
+                        <h3>Nenhum conteúdo encontrado</h3>
+                        <p>Tente ajustar seus filtros ou termo de busca.</p>
+                    </div>
+                `;
+            } else {
+                conteudoDiv.innerHTML = `
+                    <div class="livros-grid">
+                        ${livrosCategoria.map(livro => criarCardLivro(livro)).join('')}
+                    </div>
+                `;
+            }
+        } else {
+            conteudoDiv.innerHTML = ''; // Limpar conteúdo de categorias não ativas
+        }
+    });
     
     // Adicionar event listeners nos cards
     document.querySelectorAll('.btn-ler-online').forEach(btn => {
@@ -533,16 +626,13 @@ function criarCardLivroPequeno(livro) {
 
 function getCategoriaInfo(categoria) {
     const categorias = {
-        'doutrinas': { name: 'Doutrinas Bíblicas', icon: '📖' },
-        'estudos': { name: 'Estudos Temáticos', icon: '📚' },
-        'comentarios': { name: 'Comentários Bíblicos', icon: '📜' },
-        'cursos': { name: 'Material de Cursos', icon: '🎓' },
+        'pregacoes': { name: 'Pregações', icon: '📖' },
+        'intensivos': { name: 'Intensivos/Seminários', icon: '📚' },
+        'cursos': { name: 'Estudos Bíblicos', icon: '📄' },
         'infantil': { name: 'Material Infantil', icon: '👶' },
-        'familia': { name: 'Vida Familiar', icon: '👨‍👩‍👧' },
-        'historia': { name: 'História da Igreja', icon: '💒' },
-        'devocionais': { name: 'Devocionais', icon: '🙏' }
+        'casais': { name: 'Casais', icon: '💑' }
     };
-    return categorias[categoria] || categorias['doutrinas'];
+    return categorias[categoria] || { name: 'Geral', icon: '📚' };
 }
 
 function truncarTexto(texto, maxLength) {
