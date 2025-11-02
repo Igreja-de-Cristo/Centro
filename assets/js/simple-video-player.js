@@ -128,6 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ebd: ['B50DcHymhRI'],   // IDs dos vídeos da E.B.D Online
         vigilias: ['R0xc84FhXeE'], // IDs das vigílias
         retiros: ['5on5e5UTLbE'], // IDs dos vídeos de retiros
-        pregacoes: ['fRLavq0L-4Q'] // IDs das pregações
+        pregacoes: ['fRLavq0L-4Q', 'YAwEKym3hTw'] // IDs das pregações
     });
 });
