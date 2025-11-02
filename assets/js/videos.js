@@ -23,10 +23,16 @@ function onYouTubeIframeAPIReady() {
     // Inicializar player principal
     featuredPlayer = new YT.Player('featured-player', {
         videoId: featuredVideoId,
+        height: '360',
+        width: '640',
         playerVars: {
             'playsinline': 1,
             'rel': 0,
-            'modestbranding': 1
+            'modestbranding': 1,
+            'origin': window.location.origin,
+            'enablejsapi': 1,
+            'fs': 1,
+            'controls': 1
         }
     });
 }
@@ -58,11 +64,17 @@ function openVideoModal(videoId) {
     if (!modalPlayer) {
         modalPlayer = new YT.Player('modal-player', {
             videoId: videoId,
+            height: '480',
+            width: '853',
             playerVars: {
                 'autoplay': 1,
                 'playsinline': 1,
                 'rel': 0,
-                'modestbranding': 1
+                'modestbranding': 1,
+                'origin': window.location.origin,
+                'enablejsapi': 1,
+                'fs': 1,
+                'controls': 1
             }
         });
     } else {
