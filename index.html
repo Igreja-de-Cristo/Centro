@@ -28,6 +28,7 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/css/cookie-consent.css">
+    <link rel="stylesheet" href="assets/css/mobile-nav.css">
     <script src="assets/js/cookie-consent.js"></script>
     
     <title>Igreja de Cristo do Centro - Manaus/AM</title>
@@ -87,13 +88,6 @@
     <!-- Navigation -->
     <nav class="main-navigation" role="navigation" aria-label="Navegação principal">
         <div class="nav-container">
-            <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="nav-menu" data-version="3.0" title="Menu - Versão Atualizada">
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-                <span class="sr-only">Menu ✅ Atualizado</span>
-            </button>
-            
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#inicio" class="nav-link active" aria-current="page">Início</a></li>
                 <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
@@ -349,12 +343,10 @@
                         <div class="schedule-time">
                             <span class="time">09:00</span>
                             <span class="activity">Escola Bíblica Dominical (EBD)</span>
-                            <span class="duration-badge" aria-label="Duração">1h 30min</span>
                         </div>
                         <div class="schedule-time">
                             <span class="time">10:00</span>
                             <span class="activity">Culto Principal</span>
-                            <span class="duration-badge" aria-label="Duração">1h 15min</span>
                         </div>
                     </div>
                     
@@ -441,6 +433,77 @@
             </p>
         </div>
     </footer>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" role="navigation" aria-label="Navegação mobile">
+        <ul class="mobile-nav-menu">
+            <li class="mobile-nav-item">
+                <a href="index.html" class="mobile-nav-link active">
+                    <span class="mobile-nav-icon">🏠</span>
+                    <span>Início</span>
+                </a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="sobre.html" class="mobile-nav-link">
+                    <span class="mobile-nav-icon">👥</span>
+                    <span>Sobre</span>
+                </a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="biblioteca.html" class="mobile-nav-link">
+                    <span class="mobile-nav-icon">📚</span>
+                    <span>Biblioteca</span>
+                </a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="cursos.html" class="mobile-nav-link">
+                    <span class="mobile-nav-icon">📖</span>
+                    <span>Cursos</span>
+                </a>
+            </li>
+            <li class="mobile-nav-item">
+                <button class="mobile-nav-link" id="mobile-more-btn">
+                    <span class="mobile-nav-icon">⋮</span>
+                    <span>Mais</span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Mobile More Menu -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <div class="mobile-more-menu" id="mobile-more-menu">
+        <div class="mobile-more-menu-header">
+            <span class="mobile-more-menu-title">Menu</span>
+            <button class="mobile-more-close" id="mobile-more-close">✕</button>
+        </div>
+        <ul class="mobile-more-list">
+            <li class="mobile-more-item">
+                <a href="reunioes.html" class="mobile-more-link">
+                    <span class="mobile-more-icon">🕒</span>
+                    <span>Reuniões</span>
+                </a>
+            </li>
+            <li class="mobile-more-item">
+                <a href="eventos.html" class="mobile-more-link">
+                    <span class="mobile-more-icon">📅</span>
+                    <span>Eventos</span>
+                </a>
+            </li>
+            <li class="mobile-more-item">
+                <a href="contatos.html" class="mobile-more-link">
+                    <span class="mobile-more-icon">📞</span>
+                    <span>Contatos</span>
+                </a>
+            </li>
+            <li class="mobile-more-item">
+                <a href="links.html" class="mobile-more-link">
+                    <span class="mobile-more-icon">🔗</span>
+                    <span>Links</span>
+                </a>
+            </li>
+        </ul>
+    </div>
     
     <!-- Back to Top Button -->
     <button class="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
@@ -449,6 +512,7 @@
     
     <!-- JavaScript -->
     <script src="script.js"></script>
+    <script src="assets/js/mobile-nav.js"></script>
     
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox" onclick="fecharLightbox()">
