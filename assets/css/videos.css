@@ -1,0 +1,139 @@
+/* Estilos para a seção de vídeos */
+.videos-section {
+    padding: 2rem 0;
+    background: #f8f9fa;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.video-thumbnail {
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f1f1f1;
+    transition: transform 0.2s ease;
+}
+
+.video-thumbnail:hover {
+    transform: translateY(-3px);
+}
+
+.video-thumbnail img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.video-info {
+    padding: 1rem;
+    background: #fff;
+}
+
+.video-info h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+.video-info .video-date {
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.video-category-title {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: #333;
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 0.5rem;
+}
+
+.live-indicator {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff0000;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Estilos para o modal de vídeo */
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.9);
+    z-index: 1000;
+    padding: 2rem;
+}
+
+.video-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.close-modal {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+    
+    .video-modal {
+        padding: 1rem;
+    }
+}

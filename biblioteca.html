@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/videos.css">
     
     <title>Biblioteca Digital - Igreja de Cristo do Centro</title>
 </head>
@@ -225,6 +226,53 @@
                     <div id="favoritos-livros" class="livros-grid-small"></div>
                 </div>
                 
+                <!-- Seção de Vídeos -->
+                <section class="videos-section">
+                    <h2 class="section-title">📺 Vídeos e Transmissões</h2>
+                    
+                    <!-- Player Principal - Última Live ou Vídeo em Destaque -->
+                    <div class="featured-video">
+                        <h3>Última Transmissão</h3>
+                        <div class="video-container" id="featured-player">
+                            <!-- Player será inserido via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Seção de Últimos Vídeos -->
+                    <div class="recent-videos">
+                        <h3 class="video-category-title">Últimos Vídeos</h3>
+                        <div class="video-grid" id="recent-videos-grid">
+                            <!-- Thumbnails serão inseridas via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Seção de Cultos -->
+                    <div class="cultos-section">
+                        <h3 class="video-category-title">Cultos</h3>
+                        <div class="video-grid" id="cultos-grid">
+                            <!-- Videos serão inseridos via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Seção de Estudos Bíblicos -->
+                    <div class="estudos-section">
+                        <h3 class="video-category-title">Estudos Bíblicos</h3>
+                        <div class="video-grid" id="estudos-grid">
+                            <!-- Videos serão inseridos via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Modal para Vídeos -->
+                    <div class="video-modal" id="video-modal">
+                        <div class="video-modal-content">
+                            <button class="close-modal" id="close-video-modal">&times;</button>
+                            <div class="video-container" id="modal-player">
+                                <!-- Player será inserido via JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
             </div>
         </section>
         
@@ -313,6 +361,7 @@
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
     <script src="biblioteca.js"></script>
+    <script src="assets/js/videos.js"></script>
 </body>
 </html>
 
