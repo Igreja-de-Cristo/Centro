@@ -10,7 +10,8 @@ const featuredVideoId = 'VIDEO_ID_DESTAQUE'; // Substituir pelo ID do vídeo em 
 const videoIds = {
     recent: [], // IDs dos vídeos recentes
     cultos: [], // IDs dos cultos
-    estudos: []  // IDs dos estudos bíblicos
+    estudos: [], // IDs dos estudos bíblicos
+    vigilias: ['R0xc84FhXeE'] // IDs das vigílias
 };
 
 // Players do YouTube
@@ -103,6 +104,9 @@ function initializeVideoGrids() {
     
     // Carregar estudos bíblicos
     loadVideosToGrid('estudos-grid', videoIds.estudos);
+
+    // Carregar vigílias
+    loadVideosToGrid('vigilias-grid', videoIds.vigilias);
 }
 
 // Quando o DOM estiver pronto

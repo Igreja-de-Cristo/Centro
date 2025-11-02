@@ -5,29 +5,64 @@
 
 ## 🎯 Visão Geral
 
-Sistema administrativo completo, moderno e intuitivo que permite ao cliente gerenciar **TODO O CONTEÚDO DO SITE** sem necessidade de conhecimentos técnicos ou contato com desenvolvedor.
+Sistema administrativo moderno com API REST que permite gerenciar **TODO O CONTEÚDO DO SITE** de forma segura e profissional, incluindo vídeos, eventos e conteúdo dinâmico.
 
 ### ✨ Características Principais:
 
-- 🚀 **100% Front-end** - Não precisa de servidor/backend
-- 💾 **Armazenamento Local** - Dados salvos no navegador (localStorage)
-- 🔒 **Totalmente Invisível** - Visitantes não veem nada do admin
-- 📱 **Responsivo** - Funciona perfeitamente em celular/tablet
-- 🎨 **Interface Moderna** - Design profissional e intuitivo
-- ⚡ **Tempo Real** - Mudanças aparecem instantaneamente no site
-- 🛡️ **Sistema de Segurança** - Login, sessões, proteção de acesso
+- 🎥 **Gerenciamento de Vídeos** - Integração com YouTube
+- � **Analytics Avançado** - Estatísticas detalhadas
+- 🔒 **API Segura** - Autenticação JWT e rate limiting
+- 📱 **100% Responsivo** - Mobile-first design
+- 🎨 **Interface Moderna** - Design profissional
+- ⚡ **MongoDB + Node.js** - Backend robusto
+- 🛡️ **Segurança Total** - XSS, CORS, Sanitização
+- 💾 **Backup Automático** - Dados sempre seguros
 
 ---
 
-## 📦 Arquivos do Sistema
+## 📦 Estrutura do Sistema
 
-### 🔐 Autenticação e Acesso:
-- `admin-login.html` - Página de login com segurança
-- `admin-dashboard.html` - Dashboard principal com estatísticas
+### 🌐 Frontend:
+- `admin-login.html` - Autenticação JWT
+- `admin-dashboard.html` - Dashboard principal
+- `admin-videos.html` - Gestão de vídeos YouTube
+- `admin-informativos.html` - Gestão de conteúdo
+- `admin-banners.html` - Banners e destaques
 
-### 📝 Gerenciamento de Conteúdo:
-- `admin-informativos.html` - Gerenciar avisos e anúncios
-- `admin-banners.html` - Criar banners visuais com imagens
+### ⚙️ Backend (Node.js):
+```
+server/
+├── index.js           # Configuração principal
+├── routes/            # Rotas da API
+│   ├── auth.js        # Autenticação
+│   ├── videos.js      # API de vídeos
+│   └── backup.js      # Sistema de backup
+├── models/            # Modelos MongoDB
+│   ├── User.js        # Usuários
+│   ├── Video.js       # Vídeos
+│   └── Playlist.js    # Playlists
+└── services/          # Serviços
+    ├── analytics.js   # Análise de dados
+    ├── security.js    # Segurança
+    └── backup.js      # Backup automático
+```
+
+### 🔒 API REST:
+```javascript
+// Autenticação
+POST   /api/auth/login    - Login
+POST   /api/auth/refresh  - Refresh token
+
+// Vídeos
+GET    /api/videos        - Listar vídeos
+POST   /api/videos        - Adicionar vídeo
+PATCH  /api/videos/:id    - Atualizar vídeo
+DELETE /api/videos/:id    - Remover vídeo
+
+// Analytics
+POST   /api/videos/:id/view  - Registrar view
+GET    /api/videos/:id/stats - Estatísticas
+```
 - `admin-midia.html` - Galeria de mídia (upload de arquivos)
 
 ### 🎨 Integração no Site:

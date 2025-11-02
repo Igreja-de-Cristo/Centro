@@ -8,13 +8,14 @@
 1. [Introdução](#introdução)
 2. [Como Acessar o Painel](#como-acessar-o-painel)
 3. [Dashboard Principal](#dashboard-principal)
-4. [Gerenciar Informativos](#gerenciar-informativos)
-5. [Gerenciar Banners Visuais](#gerenciar-banners-visuais)
-6. [Galeria de Mídia](#galeria-de-mídia)
-7. [Backup e Restauração](#backup-e-restauração)
-8. [Dicas e Boas Práticas](#dicas-e-boas-práticas)
-9. [Resolução de Problemas](#resolução-de-problemas)
-10. [Segurança](#segurança)
+4. [Gerenciar Vídeos](#gerenciar-vídeos)
+5. [Gerenciar Informativos](#gerenciar-informativos)
+6. [Gerenciar Banners](#gerenciar-banners)
+7. [Galeria de Mídia](#galeria-de-mídia)
+8. [API e Integração](#api-e-integração)
+9. [Analytics e Relatórios](#analytics-e-relatórios)
+10. [Backup e Segurança](#backup-e-segurança)
+11. [Resolução de Problemas](#resolução-de-problemas)
 
 ---
 
@@ -22,32 +23,75 @@
 
 ### O que é este sistema?
 
-Este é um **painel administrativo completo** criado especialmente para que você possa gerenciar **todo o conteúdo do site** sem precisar de conhecimentos técnicos ou ajuda de programador.
+Este é um **painel administrativo completo** com API REST integrada, criado especialmente para que você possa gerenciar **todo o conteúdo do site** sem precisar de conhecimentos técnicos avançados.
 
 ### O que você pode fazer:
 
+✅ **Gerenciar vídeos do YouTube** com analytics  
 ✅ **Criar e editar informativos** (avisos, eventos, anúncios)  
 ✅ **Adicionar banners visuais** com imagens para eventos especiais  
 ✅ **Fazer upload de arquivos** (imagens, PDFs, documentos)  
 ✅ **Gerenciar conteúdo** de forma visual e intuitiva  
+✅ **Acompanhar estatísticas** de visualização  
 ✅ **Fazer backup** de todos os dados  
-✅ **Visualizar estatísticas** do que está publicado  
 
 ### ⚠️ IMPORTANTE:
-- O sistema é **totalmente invisível** para visitantes normais do site
-- Apenas quem tem login e senha pode acessar
-- Todas as alterações aparecem **imediatamente** no site
-- Tudo é salvo **automaticamente** no navegador
+- Sistema protegido com autenticação JWT
+- Backup automático diário
+- Analytics de engajamento
+- Rate limiting para segurança
+- Sanitização automática de dados
 
 ---
 
-## 🚪 Como Acessar o Painel
+## 🎥 Gerenciar Vídeos
 
-### Método 1: Acesso Secreto pelo Logo (Recomendado) ⭐
+### Adicionar Novo Vídeo
 
-1. Vá para a **página inicial** do site (`www.seusite.com`)
-2. **Clique 5 vezes rapidamente** no logo da igreja (no topo da página)
-3. Aparecerá um **botão "🔐 Acesso Admin"** no canto inferior direito
+1. Acesse `admin-videos.html`
+2. Clique em "Novo Vídeo"
+3. Preencha:
+   - **ID do YouTube**: encontrado na URL do vídeo
+   - **Título**: nome do vídeo
+   - **Categoria**: culto, estudo ou evento
+   - **Descrição**: detalhes do conteúdo
+   - **Destaque**: marcar se for destaque
+
+### Editar Vídeos
+
+1. Localize o vídeo na lista
+2. Clique em "Editar"
+3. Modifique os campos necessários
+4. Salve as alterações
+
+### Analytics de Vídeos
+
+Na seção de estatísticas você pode ver:
+- Total de visualizações
+- Tempo médio assistido
+- Engajamento por vídeo
+- Relatórios por categoria
+
+### API de Vídeos
+
+Endpoints disponíveis:
+```
+GET    /api/videos          - Lista vídeos
+POST   /api/videos          - Adiciona vídeo
+PATCH  /api/videos/:id      - Atualiza vídeo
+DELETE /api/videos/:id      - Remove vídeo
+POST   /api/videos/:id/view - Registra visualização
+GET    /api/videos/:id/stats - Estatísticas
+```
+
+## � Como Acessar o Painel
+
+### Método 1: Login Seguro (JWT) ⭐
+
+1. Acesse `admin-login.html`
+2. Insira suas credenciais
+3. O token JWT será armazenado automaticamente
+4. Você será redirecionado ao dashboard
 4. **Clique no botão** para ir à página de login
 5. O botão **desaparece após 10 segundos**
 

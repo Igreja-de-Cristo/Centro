@@ -1,33 +1,46 @@
 # 🚀 Guia Rápido - Sistema Administrativo
 ## Igreja de Cristo do Centro
 
----
+Este guia rápido explica as principais funcionalidades do sistema administrativo.
 
-## 🔐 Como Entrar
+## 🔐 Acesso ao Sistema
 
-### Opção 1: Acesso Secreto ⭐
-1. Abra o site da igreja
-2. **Clique 5 vezes rápido** no logo
-3. Aparece botão "Acesso Admin" → Clique
-4. Faça login
+1. Acesse: `admin-login.html`
+2. Digite suas credenciais
+3. Pronto! Você está no dashboard
 
-### Opção 2: Acesso Direto
-Digite no navegador: `www.seusite.com/admin-login.html`
+## 📊 Funcionalidades Principais:
 
-### Login:
-```
-Usuário: admin
-Senha: IgrejaAdmin2025!
-```
+### 🎥 Vídeos do YouTube
+- Adicionar vídeos
+- Categorizar (culto/estudo/evento)
+- Ver estatísticas
+- Destacar vídeos importantes
 
----
+### 📢 Informativos
+- Criar avisos
+- Programar eventos
+- Atualizar horários
 
-## 📊 O que você pode fazer:
+### �️ Banners
+- Upload de imagens
+- Definir período
+- Configurar links
 
-✅ **Criar informativos** (avisos, eventos)  
-✅ **Adicionar banners** com imagens  
-✅ **Fazer upload** de arquivos  
-✅ **Fazer backup** dos dados  
+### 📊 Analytics
+- Visualizações
+- Engajamento
+- Relatórios
+
+## ⚡ Ações Rápidas
+
+### Adicionar Vídeo:
+1. Menu → Vídeos
+2. "Novo Vídeo"
+3. Cole ID do YouTube
+4. Preencha título
+5. Escolha categoria
+6. Salve!
 ✅ **Ver estatísticas**  
 
 ---
