@@ -110,6 +110,9 @@ class SimpleVideoPlayer {
         if (videoData.retiros?.length) {
             this.loadVideosToGrid('retiros-grid', videoData.retiros);
         }
+        if (videoData.pregacoes?.length) {
+            this.loadVideosToGrid('pregacoes-grid', videoData.pregacoes);
+        }
     }
 }
 
@@ -124,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
         estudos: [],            // IDs dos estudos bíblicos
         ebd: ['B50DcHymhRI'],   // IDs dos vídeos da E.B.D Online
         vigilias: ['R0xc84FhXeE'], // IDs das vigílias
-        retiros: ['5on5e5UTLbE']  // IDs dos vídeos de retiros
+        retiros: ['5on5e5UTLbE'], // IDs dos vídeos de retiros
+        pregacoes: ['fRLavq0L-4Q'] // IDs das pregações
     });
 });
