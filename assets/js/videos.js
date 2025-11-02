@@ -32,7 +32,10 @@ function onYouTubeIframeAPIReady() {
             'origin': window.location.origin,
             'enablejsapi': 1,
             'fs': 1,
-            'controls': 1
+            'controls': 1,
+            'host': 'https://www.youtube.com',
+            'showinfo': 1,
+            'autohide': 0
         }
     });
 }
@@ -74,7 +77,10 @@ function openVideoModal(videoId) {
                 'origin': window.location.origin,
                 'enablejsapi': 1,
                 'fs': 1,
-                'controls': 1
+                'controls': 1,
+                'host': 'https://www.youtube.com',
+                'showinfo': 1,
+                'autohide': 0
             }
         });
     } else {
