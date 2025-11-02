@@ -1,4 +1,4 @@
-// Mobile Navigation - v1.0
+// Mobile Navigation - v2.0
 document.addEventListener('DOMContentLoaded', function() {
     const moreBtn = document.getElementById('mobile-more-btn');
     const moreMenu = document.getElementById('mobile-more-menu');
@@ -7,21 +7,36 @@ document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
 
     // Funções de gerenciamento do menu
-    function toggleMoreMenu() {
-        moreMenu.classList.toggle('active');
-        overlay.classList.toggle('active');
-        body.classList.toggle('mobile-more-active');
+    function showMoreMenu(event) {
+        event.preventDefault();
+        moreMenu.classList.add('active');
+        overlay.classList.add('active');
+        body.classList.add('mobile-more-active');
+    }
+
+    function hideMoreMenu() {
+        moreMenu.classList.remove('active');
+        overlay.classList.remove('active');
+        body.classList.remove('mobile-more-active');
     }
 
     // Event Listeners
-    moreBtn.addEventListener('click', toggleMoreMenu);
-    moreClose.addEventListener('click', toggleMoreMenu);
-    overlay.addEventListener('click', toggleMoreMenu);
+    if (moreBtn) {
+        moreBtn.addEventListener('click', showMoreMenu);
+    }
+
+    if (moreClose) {
+        moreClose.addEventListener('click', hideMoreMenu);
+    }
+
+    if (overlay) {
+        overlay.addEventListener('click', hideMoreMenu);
+    }
 
     // Fechar menu com tecla ESC
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && moreMenu.classList.contains('active')) {
-            toggleMoreMenu();
+            hideMoreMenu();
         }
     });
 
@@ -31,7 +46,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
         
         mobileNavLinks.forEach(link => {
-            if (link.getAttribute('href') === currentPage) {
+            const href = link.getAttribute('href');
+            if (href === currentPage || 
+                (currentPage === 'index.html' && href === '/') || 
+                (href !== '/' && currentPage.startsWith(href))) {
                 link.classList.add('active');
             } else {
                 link.classList.remove('active');

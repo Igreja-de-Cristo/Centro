@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo - ICS</title>
+    <link rel="stylesheet" href="admin/css/admin.css">
+    <link rel="stylesheet" href="admin/css/components/sidebar.css">
+    <link rel="stylesheet" href="admin/css/components/forms.css">
+    <link rel="stylesheet" href="admin/css/components/cards.css">
+    <link rel="stylesheet" href="admin/css/components/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="assets/img/logo.png" alt="ICS Logo" class="sidebar-logo">
+            <h1 class="sidebar-title">Painel ICS</h1>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="sidebar-menu">
+                <li class="sidebar-item">
+                    <a href="#/" class="sidebar-link active" data-page="dashboard">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#/informativos" class="sidebar-link" data-page="informativos">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Informativos</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#/banners" class="sidebar-link" data-page="banners">
+                        <i class="fas fa-images"></i>
+                        <span>Banners</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#/videos" class="sidebar-link" data-page="videos">
+                        <i class="fas fa-video"></i>
+                        <span>Vídeos</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#/midia" class="sidebar-link" data-page="midia">
+                        <i class="fas fa-photo-film"></i>
+                        <span>Galeria de Mídia</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <img src="assets/img/default-avatar.png" alt="Avatar" class="user-avatar">
+                <div class="user-details">
+                    <span class="user-name">Administrador</span>
+                    <span class="user-role">Admin</span>
+                </div>
+            </div>
+            <button id="logoutBtn" class="btn btn-text">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Sair</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="header">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-actions">
+                <button class="btn btn-icon" title="Notificações">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <button class="btn btn-icon" title="Configurações">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Dynamic Content Container -->
+        <div id="mainContent" class="content"></div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="admin/js/auth.js"></script>
+    <script src="admin/js/admin.js" type="module"></script>
+    <script src="admin/js/modules/dashboard.js" type="module"></script>
+</body>
+</html>
