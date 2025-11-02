@@ -1,4 +1,4 @@
-// Mobile Navigation - v2.0
+// Mobile Navigation - v2.1
 document.addEventListener('DOMContentLoaded', function() {
     const moreBtn = document.getElementById('mobile-more-btn');
     const moreMenu = document.getElementById('mobile-more-menu');
@@ -9,20 +9,29 @@ document.addEventListener('DOMContentLoaded', function() {
     // Funções de gerenciamento do menu
     function showMoreMenu(event) {
         event.preventDefault();
+        event.stopPropagation(); // Impede que o evento se propague
+        if (!moreMenu || !overlay) {
+            console.error('Menu "Mais" não encontrado. Verifique se os elementos existem no DOM.');
+            return;
+        }
         moreMenu.classList.add('active');
         overlay.classList.add('active');
         body.classList.add('mobile-more-active');
     }
 
     function hideMoreMenu() {
+        if (!moreMenu || !overlay) return;
         moreMenu.classList.remove('active');
         overlay.classList.remove('active');
         body.classList.remove('mobile-more-active');
     }
 
-    // Event Listeners
+    // Event Listeners com verificação de existência
     if (moreBtn) {
         moreBtn.addEventListener('click', showMoreMenu);
+        console.log('Botão "Mais" inicializado com sucesso');
+    } else {
+        console.error('Botão "Mais" não encontrado no DOM');
     }
 
     if (moreClose) {
@@ -35,9 +44,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Fechar menu com tecla ESC
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && moreMenu.classList.contains('active')) {
+        if (e.key === 'Escape' && moreMenu?.classList.contains('active')) {
             hideMoreMenu();
         }
+    });
+
+    // Fechar menu ao clicar em um link
+    document.querySelectorAll('.mobile-more-link').forEach(link => {
+        link.addEventListener('click', () => {
+            hideMoreMenu();
+        });
     });
 
     // Atualizar item ativo no menu
@@ -46,6 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
         
         mobileNavLinks.forEach(link => {
+            if (link.tagName.toLowerCase() === 'button') return; // Pula o botão "Mais"
+            
             const href = link.getAttribute('href');
             if (href === currentPage || 
                 (currentPage === 'index.html' && href === '/') || 
@@ -60,6 +78,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializar item ativo
     updateActiveMenuItem();
 
-    // Atualizar item ativo ao navegar (para SPA se necessário)
+    // Atualizar item ativo ao navegar
     window.addEventListener('popstate', updateActiveMenuItem);
 });
