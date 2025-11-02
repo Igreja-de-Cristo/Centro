@@ -1,0 +1,51 @@
+/* Mobile Navigation - Responsive Rules - v2.0 */
+
+/* Regras para Desktop (>= 769px) */
+@media screen and (min-width: 769px) {
+    /* Esconde completamente a navegação mobile em desktop */
+    .mobile-nav,
+    .mobile-more-menu,
+    .mobile-overlay {
+        display: none !important; /* Força esconder em desktop */
+    }
+    
+    /* Garante que o menu desktop permaneça visível */
+    .main-navigation {
+        display: block !important; /* Força exibição em desktop */
+    }
+}
+
+/* Regras para Mobile (<= 768px) */
+@media screen and (max-width: 768px) {
+    /* Esconde menu desktop em mobile */
+    .main-navigation {
+        display: none !important;
+    }
+    
+    /* Ajustes para o menu mobile */
+    .mobile-nav {
+        display: block;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    .mobile-nav-menu {
+        padding: 0 10px;
+    }
+    
+    .mobile-nav-link {
+        font-size: 0.85rem;
+        padding: 0.7rem 0.8rem;
+    }
+    
+    .mobile-nav-icon {
+        font-size: 1.1rem;
+    }
+    
+    /* Ajustes para o menu "Mais" */
+    .mobile-more-menu {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+}

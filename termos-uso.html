@@ -15,12 +15,42 @@
     
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/css/cookie-consent.css">
-    <script src="assets/js/cookie-consent.js"></script>
+    <link rel="stylesheet" href="./assets/css/mobile-nav.css">
+    <link rel="stylesheet" href="./assets/css/mobile-nav-responsive.css">
     
     <title>Termos de Uso - Igreja de Cristo do Centro</title>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
+
+    <nav class="mobile-nav">
+        <div class="nav-header">
+            <div class="logo-container">
+                <img src="./assets/logo-igreja.svg" alt="Logo da Igreja" class="mobile-logo">
+                <span class="logo-text">Igreja de Cristo do Centro</span>
+            </div>
+            <button class="mobile-nav-toggle">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+        <ul class="nav-list">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="biblioteca.html">Biblioteca</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="links.html">Links Úteis</a></li>
+            <li><a href="contatos.html">Contatos</a></li>
+            <li class="more-dropdown">
+                <span>Mais</span>
+                <ul>
+                    <li><a href="reunioes.html">Reuniões</a></li>
+                    <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+                    <li><a href="termos-uso.html">Termos de Uso</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
     
     <header class="site-header" role="banner">
         <div class="header-container">
@@ -47,12 +77,6 @@
     
     <nav class="main-navigation" role="navigation" aria-label="Navegação principal">
         <div class="nav-container">
-            <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="nav-menu">
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-                <span class="sr-only">Menu</span>
-            </button>
             
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link">Início</a></li>
@@ -423,6 +447,7 @@
     </button>
     
     <script src="script.js"></script>
+    <script src="./assets/js/mobile-nav.js"></script>
 </body>
 </html>
 
