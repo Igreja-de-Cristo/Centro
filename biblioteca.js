@@ -221,9 +221,10 @@ function renderizarLivros() {
         if (livrosFiltrados.length === 0) {
             grid.innerHTML = `
                 <div class="empty-state">
-                    <div class="empty-icon">🔍</div>
-                    <h3>Nenhum livro encontrado</h3>
-                    <p>Tente ajustar seus filtros ou termo de busca.</p>
+                    <div class="empty-icon">�</div>
+                    <h3>Biblioteca em Construção</h3>
+                    <p>Em breve teremos diversos livros e estudos bíblicos disponíveis!</p>
+                    <p class="text-muted">Os irmãos da igreja estão preparando materiais para compartilhar.</p>
                 </div>
             `;
         } else {
