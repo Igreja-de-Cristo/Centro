@@ -2,7 +2,6 @@
 class SimpleVideoPlayer {
     constructor() {
         this.videoContainers = {
-            featured: document.getElementById('featured-player'),
             modal: document.getElementById('modal-player')
         };
         this.modal = document.getElementById('video-modal');
@@ -92,11 +91,6 @@ class SimpleVideoPlayer {
     }
 
     initialize(videoData) {
-        // Carregar vídeo em destaque
-        if (videoData.featured) {
-            this.loadVideo('featured', videoData.featured);
-        }
-
         // Carregar grids de vídeos
         if (videoData.recent?.length) {
             this.loadVideosToGrid('recent-videos-grid', videoData.recent);
@@ -119,7 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Configurar os IDs dos vídeos
     player.initialize({
-        featured: 'R0xc84FhXeE', // ID do vídeo em destaque
         recent: [],              // IDs dos vídeos recentes
         cultos: [],             // IDs dos cultos
         estudos: [],            // IDs dos estudos bíblicos
