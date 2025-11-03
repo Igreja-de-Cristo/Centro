@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
-    <meta name="description" content="Horários das reuniões da Igreja de Cristo do Centro - Cultos, estudos bíblicos e reuniões de oração em Manaus/AM.">
-    <meta name="keywords" content="reuniões igreja cristo, cultos manaus, estudos bíblicos, horários reuniões">
+    <meta name="description" content="Biblioteca Digital Cristã - Livros, estudos e materiais bíblicos gratuitos escritos pelos irmãos da Igreja de Cristo do Centro.">
+    <meta name="keywords" content="biblioteca cristã, livros evangélicos, estudos bíblicos pdf, material cristão gratuito">
     
     <link rel="icon" type="image/svg+xml" href="./assets/logo-igreja.svg">
-    <link rel="canonical" href="https://igrejadecristocentro-manaus.netlify.app/reunioes.html">
+    <link rel="canonical" href="https://igrejadecristocentro-manaus.netlify.app/biblioteca.html">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./assets/css/mobile-nav.css">
-    <link rel="stylesheet" href="./assets/css/mobile-nav-responsive.css">
+    <link rel="stylesheet" href="assets/css/videos.css">
+    <link rel="stylesheet" href="assets/css/cookie-consent.css">
+    <link rel="stylesheet" href="assets/css/mobile-nav.css">
+    <link rel="stylesheet" href="assets/css/mobile-nav-responsive.css">
+    <script src="assets/js/cookie-consent.js"></script>
+    <script src="assets/js/mobile-nav.js"></script>
     
-    <title>Reuniões - Igreja de Cristo do Centro</title>
+    <title>Biblioteca Digital - Igreja de Cristo do Centro</title>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
@@ -57,7 +61,7 @@
                                 </a>
                             </li>
                             <li class="mobile-nav-item">
-                                <a href="biblioteca.html" class="mobile-nav-link">
+                                <a href="biblioteca.html" class="mobile-nav-link active">
                                     <span class="mobile-nav-icon">📚</span>
                                     <span>Biblioteca</span>
                                 </a>
@@ -69,31 +73,43 @@
                                 </a>
                             </li>
                             <li class="mobile-nav-item">
-                                <button class="mobile-nav-link active" id="mobile-more-btn">
-                                    <span class="mobile-nav-icon">⋮</span>
+                                <button class="mobile-nav-link" id="mobile-more-btn">
+                                    <span class="mobile-nav-icon">⌄</span>
                                     <span>Mais</span>
                                 </button>
+                                <!-- Dropdown Menu -->
+                                <div class="mobile-dropdown">
+                                    <ul class="mobile-dropdown-list">
+                                        <li class="mobile-dropdown-item">
+                                            <a href="eventos.html" class="mobile-dropdown-link">
+                                                <span class="mobile-dropdown-icon">📅</span>
+                                                <span>Eventos</span>
+                                            </a>
+                                        </li>
+                                        <li class="mobile-dropdown-item">
+                                            <a href="reunioes.html" class="mobile-dropdown-link">
+                                                <span class="mobile-dropdown-icon">👥</span>
+                                                <span>Reuniões</span>
+                                            </a>
+                                        </li>
+                                        <li class="mobile-dropdown-item">
+                                            <a href="contatos.html" class="mobile-dropdown-link">
+                                                <span class="mobile-dropdown-icon">�</span>
+                                                <span>Contatos</span>
+                                            </a>
+                                        </li>
+                                        <li class="mobile-dropdown-item">
+                                            <a href="links.html" class="mobile-dropdown-link">
+                                                <span class="mobile-dropdown-icon">�</span>
+                                                <span>Links</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
                     </nav>
-
-                    <!-- Menu Mais (Overlay) -->
-                    <div class="mobile-overlay" id="mobile-overlay"></div>
-                    <div class="mobile-more-menu" id="mobile-more-menu">
-                        <div class="mobile-more-menu-header">
-                            <span class="mobile-more-menu-title">Menu</span>
-                            <button class="mobile-more-close" id="mobile-more-close">✕</button>
-                        </div>
-                        <ul class="mobile-more-grid">
-                            <li class="mobile-more-item">
-                                <a href="eventos.html" class="mobile-more-link">
-                                    <span class="mobile-more-icon">📅</span>
-                                    <span class="mobile-more-label">Eventos</span>
-                                </a>
-                            </li>
-                            <li class="mobile-more-item">
-                                <a href="reunioes.html" class="mobile-more-link active">
-                                    <span class="mobile-more-icon">👥</span>
+                </div>
                                     <span class="mobile-more-label">Reuniões</span>
                                 </a>
                             </li>
@@ -122,10 +138,10 @@
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link">Início</a></li>
                 <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
-                <li><a href="reunioes.html" class="nav-link active" aria-current="page">Reuniões</a></li>
+                <li><a href="reunioes.html" class="nav-link">Reuniões</a></li>
                 <li><a href="cursos.html" class="nav-link">Cursos</a></li>
                 <li><a href="eventos.html" class="nav-link">Eventos</a></li>
-                <li><a href="biblioteca.html" class="nav-link">Biblioteca</a></li>
+                <li><a href="biblioteca.html" class="nav-link active" aria-current="page">Biblioteca</a></li>
                 <li><a href="contatos.html" class="nav-link">Contatos</a></li>
                 <li><a href="links.html" class="nav-link">Links</a></li>
             </ul>
@@ -135,219 +151,238 @@
     <main id="main-content" class="main-content" role="main">
         <section class="page-hero">
             <div class="container">
-                <h1>Nossas Reuniões</h1>
-                <p class="hero-description">Junte-se a nós em adoração, estudo e comunhão cristã</p>
+                <h1>📚 Biblioteca Digital Cristã</h1>
+                <p class="hero-description">Livros, estudos e materiais bíblicos gratuitos escritos pelos irmãos da nossa igreja</p>
             </div>
         </section>
         
-        <section class="meetings-content">
+        <section class="biblioteca-content">
             <div class="container">
-                <div class="meetings-intro">
-                    <h2>Você é Bem-Vindo!</h2>
-                    <p>Nossas reuniões são abertas a todos que desejam conhecer mais sobre Jesus Cristo e os ensinamentos da Bíblia. Venha como você está - não há código de vestimenta obrigatório. O importante é o coração sincero em busca da verdade.</p>
-                </div>
                 
-                <div class="schedule-detailed">
-                    <div class="schedule-day">
-                        <div class="day-header">
-                            <h2>Domingo</h2>
-                            <span class="day-subtitle">Dia do Senhor</span>
+                <!-- Busca e Filtros -->
+                <div class="biblioteca-controls">
+                    <div class="search-box">
+                        <input type="text" id="busca-livros" placeholder="🔍 Buscar por título, autor ou palavra-chave..." aria-label="Buscar livros">
+                        <button class="btn-search" id="btn-buscar">Buscar</button>
+                    </div>
+                    
+                    <!-- Categorias em Accordion -->
+                    <div class="biblioteca-accordion" id="categorias-accordion">
+                        <div class="accordion-item active" data-categoria="todas">
+                            <div class="accordion-header">
+                                <span class="accordion-icon">📚</span>
+                                <span class="accordion-title">Todas as Categorias</span>
+                                <span class="accordion-arrow">▼</span>
+                            </div>
+                            <div class="accordion-content active">
+                                <p class="categoria-descricao">Explore todos os materiais disponíveis na biblioteca.</p>
+                                <div class="categoria-conteudo" id="conteudo-todas"></div>
+                            </div>
                         </div>
                         
-                        <div class="meetings-list">
-                            <div class="meeting-item">
-                                <div class="meeting-time">
-                                    <span class="time">09:00</span>
-                                </div>
-                                <div class="meeting-details">
-                                    <h3>Escola Bíblica Dominical</h3>
-                                    <p>Estudo sistemático das Escrituras para todas as idades. Dividimos em classes conforme a faixa etária para um aprendizado mais efetivo.</p>
-                                    <div class="meeting-features">
-                                        <span class="feature">👨‍👩‍👧‍👦 Todas as idades</span>
-                                        <span class="feature">📚 Estudo dirigido</span>
-                                        <span class="feature">🤝 Participação interativa</span>
-                                    </div>
-                                </div>
+                        <div class="accordion-item" data-categoria="pregacoes">
+                            <div class="accordion-header">
+                                <span class="accordion-icon">📖</span>
+                                <span class="accordion-title">Pregações</span>
+                                <span class="accordion-arrow">▶</span>
                             </div>
-                            
-                            <div class="meeting-item">
-                                <div class="meeting-time">
-                                    <span class="time">10:00</span>
-                                </div>
-                                <div class="meeting-details">
-                                    <h3>Culto Principal</h3>
-                                    <p>Nossa principal reunião semanal com cânticos congregacionais, orações, pregação da Palavra, ceia do Senhor e ofertas voluntárias.</p>
-                                    <div class="meeting-features">
-                                        <span class="feature">🎵 Cânticos congregacionais</span>
-                                        <span class="feature">🍞 Ceia do Senhor</span>
-                                        <span class="feature">📖 Pregação bíblica</span>
-                                    </div>
-                                </div>
+                            <div class="accordion-content">
+                                <p class="categoria-descricao">Vídeos das pregações realizadas na igreja. Cada pregação inclui a data de quando foi ministrada e o tema abordado. Você pode assistir diretamente no site sem precisar sair.</p>
+                                <div class="categoria-conteudo" id="conteudo-pregacoes"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item" data-categoria="intensivos">
+                            <div class="accordion-header">
+                                <span class="accordion-icon">📚</span>
+                                <span class="accordion-title">Intensivos/Seminários</span>
+                                <span class="accordion-arrow">▶</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p class="categoria-descricao">Conteúdos dos eventos de intensivos e seminários, incluindo vídeos gravados dos encontros e materiais de apoio (PDFs ou indicação de livros utilizados durante o evento).</p>
+                                <div class="categoria-conteudo" id="conteudo-intensivos"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item" data-categoria="cursos">
+                            <div class="accordion-header">
+                                <span class="accordion-icon">📄</span>
+                                <span class="accordion-title">Estudos Bíblicos</span>
+                                <span class="accordion-arrow">▶</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p class="categoria-descricao">Materiais em PDF para estudos individuais ou em grupo. Explore diversos temas bíblicos com profundidade.</p>
+                                <div class="categoria-conteudo" id="conteudo-cursos"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item" data-categoria="infantil">
+                            <div class="accordion-header">
+                                <span class="accordion-icon">👶</span>
+                                <span class="accordion-title">Infantil</span>
+                                <span class="accordion-arrow">▶</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p class="categoria-descricao">Materiais especiais desenvolvidos para as crianças aprenderem sobre Deus de forma divertida e didática.</p>
+                                <div class="categoria-conteudo" id="conteudo-infantil"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item" data-categoria="casais">
+                            <div class="accordion-header">
+                                <span class="accordion-icon">💑</span>
+                                <span class="accordion-title">Casais</span>
+                                <span class="accordion-arrow">▶</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p class="categoria-descricao">Conteúdos voltados para fortalecer relacionamentos, abençoar casamentos e edificar famílias segundo os princípios bíblicos.</p>
+                                <div class="categoria-conteudo" id="conteudo-casais"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item" data-categoria="hinarios">
+                            <div class="accordion-header">
+                                <span class="accordion-icon">🎵</span>
+                                <span class="accordion-title">Hinários</span>
+                                <span class="accordion-arrow">▶</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p class="categoria-descricao">Coleção de hinários em formato PDF e PowerPoint para uso durante os cultos e estudos. Disponibilizados para facilitar a adoração congregacional com cânticos e hinos espirituais.</p>
+                                <div class="categoria-conteudo" id="conteudo-hinarios"></div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="schedule-day">
-                        <div class="day-header">
-                            <h2>Quarta-feira</h2>
-                            <span class="day-subtitle">Meio da Semana</span>
-                        </div>
-                        
-                        <div class="meetings-list">
-                            <div class="meeting-item">
-                                <div class="meeting-time">
-                                    <span class="time">19:00</span>
-                                </div>
-                                <div class="meeting-details">
-                                    <h3>Reunião em Novo Aleixo</h3>
-                                    <p>Estudo bíblico e comunhão na casa dos irmãos Aníbal e Jovina.</p>
-                                    <div class="meeting-features">
-                                        <span class="feature">🏠 Casa dos irmãos Aníbal e Jovina</span>
-                                        <span class="feature">📍 Novo Aleixo</span>
-                                        <span class="feature">📖 Estudo bíblico</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="schedule-day">
-                        <div class="day-header">
-                            <h2>Sexta-feira</h2>
-                            <span class="day-subtitle">Fim da Semana</span>
-                        </div>
-                        
-                        <div class="meetings-list">
-                            <div class="meeting-item">
-                                <div class="meeting-time">
-                                    <span class="time">19:00</span>
-                                </div>
-                                <div class="meeting-details">
-                                    <h3>Reunião em Colônia Oliveira Machado</h3>
-                                    <p>Estudo bíblico e comunhão na casa da irmã Luiza França.</p>
-                                    <div class="meeting-features">
-                                        <span class="feature">🏠 Casa da irmã Luiza França</span>
-                                        <span class="feature">📍 Colônia Oliveira Machado</span>
-                                        <span class="feature">📖 Estudo bíblico</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="biblioteca-sort">
+                        <label for="ordenacao">Ordenar por:</label>
+                        <select id="ordenacao">
+                            <option value="recente">Mais Recentes</option>
+                            <option value="antigo">Mais Antigos</option>
+                            <option value="titulo">Título (A-Z)</option>
+                            <option value="autor">Autor (A-Z)</option>
+                            <option value="popular">Mais Populares</option>
+                        </select>
                     </div>
                 </div>
                 
-                <section class="special-events">
-                    <h2>Eventos Especiais</h2>
-                    <div class="events-grid">
-                        <div class="event-card">
-                            <div class="event-icon">🎓</div>
-                            <h3>Cursos Bíblicos</h3>
-                            <p>Oferecemos cursos bíblicos regulares como "Deixe a Bíblia Falar" e estudos temáticos especiais.</p>
-                            <a href="cursos.html" class="btn btn-outline">Ver Cursos</a>
-                        </div>
-                        
-                        <div class="event-card">
-                            <div class="event-icon">💒</div>
-                            <h3>Batismos</h3>
-                            <p>Realizamos batismos por imersão conforme a prática do Novo Testamento quando há pessoas preparadas.</p>
-                        </div>
-                        
-                        <div class="event-card">
-                            <div class="event-icon">🏠</div>
-                            <h3>Estudos em Lares</h3>
-                            <p>Estudos bíblicos em casas de família para aqueles que desejam um ambiente mais íntimo de aprendizado.</p>
-                        </div>
-                        
-                        <div class="event-card">
-                            <div class="event-icon">👨‍👩‍👧‍👦</div>
-                            <h3>Reuniões Familiares</h3>
-                            <p>Encontros especiais para fortalecer os laços familiares e a educação cristã dos filhos.</p>
+                <!-- Estatísticas -->
+                <div class="biblioteca-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-livros">0</span>
+                        <span class="stat-label">Livros</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-autores">0</span>
+                        <span class="stat-label">Autores</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-downloads">0</span>
+                        <span class="stat-label">Downloads</span>
+                    </div>
+                </div>
+                
+                <!-- Histórico de Leitura -->
+                <div class="biblioteca-section" id="historico-section" style="display: none;">
+                    <h2>📖 Seu Histórico de Leitura</h2>
+                    <div id="historico-livros" class="livros-grid-small"></div>
+                </div>
+                
+                <!-- Favoritos -->
+                <div class="biblioteca-section" id="favoritos-section" style="display: none;">
+                    <h2>⭐ Seus Favoritos</h2>
+                    <div id="favoritos-livros" class="livros-grid-small"></div>
+                </div>
+                
+                <!-- Seção de Vídeos -->
+                <section class="videos-section">
+                    <h2 class="section-title">📺 Vídeos e Transmissões</h2>
+                    
+                    <!-- Seção de Pregações -->
+                    <div class="pregacoes-section">
+                        <h3 class="video-category-title">Pregações</h3>
+                        <div class="video-grid" id="pregacoes-grid">
+                            <!-- Videos serão inseridos via JavaScript -->
                         </div>
                     </div>
-                </section>
-                
-                <section class="location-info">
-                    <h2>Localização</h2>
-                    <div class="location-details">
-                        <div class="location-text">
-                            <h3>📍 Endereço</h3>
-                            <p><strong>Av. Sete de Setembro, 1801</strong><br>
-                            Centro - Manaus/AM<br>
-                            CEP: 69005-141</p>
-                            
-                            <h3>🚌 Como Chegar</h3>
-                            <ul>
-                                <li><strong>Ônibus:</strong> Linhas que passam pela Av. Sete de Setembro</li>
-                                <li><strong>Ponto de referência:</strong> Próximo ao Centro de Manaus</li>
-                                <li><strong>Estacionamento:</strong> Disponível nas proximidades</li>
-                            </ul>
-                            
-                            <div class="contact-buttons">
-                                <a href="https://wa.me/5592991146877?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20as%20reuniões" 
-                                   target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                   WhatsApp
-                                </a>
-                                <a href="contato.html" class="btn btn-secondary">Contato Completo</a>
+
+                    <!-- Seção de Últimos Vídeos -->
+                    <div class="recent-videos">
+                        <h3 class="video-category-title">Últimos Vídeos</h3>
+                        <div class="video-grid" id="recent-videos-grid">
+                            <!-- Thumbnails serão inseridas via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Seção de Cultos -->
+                    <div class="cultos-section">
+                        <h3 class="video-category-title">Cultos</h3>
+                        <div class="video-grid" id="cultos-grid">
+                            <!-- Videos serão inseridos via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Seção de Estudos Bíblicos -->
+                    <div class="estudos-section">
+                        <h3 class="video-category-title">Estudos Bíblicos</h3>
+                        <div class="video-grid" id="estudos-grid">
+                            <!-- Videos serão inseridos via JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Seção de E.B.D - Online -->
+                    <div class="ebd-section">
+                        <h3 class="video-category-title">E.B.D - Online</h3>
+                        <div class="video-grid" id="ebd-grid">
+                            <!-- Videos serão inseridos via JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Seção de Vigílias -->
+                    <div class="vigilias-section">
+                        <h3 class="video-category-title">Vigílias</h3>
+                        <div class="video-grid" id="vigilias-grid">
+                            <!-- Videos serão inseridos via JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Seção de Retiros -->
+                    <div class="retiros-section">
+                        <h3 class="video-category-title">Retiros</h3>
+                        <div class="video-grid" id="retiros-grid">
+                            <!-- Videos serão inseridos via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Modal para Vídeos -->
+                    <div class="video-modal" id="video-modal">
+                        <div class="video-modal-content">
+                            <button class="close-modal" id="close-video-modal">&times;</button>
+                            <div class="video-container" id="modal-player">
+                                <!-- Player será inserido via JavaScript -->
                             </div>
                         </div>
-                        
-                        <div class="location-map">
-                            <div class="map-placeholder">
-                                <p>🗺️ Mapa Interativo</p>
-                                <p>Av. Sete de Setembro, 1801<br>Centro - Manaus/AM</p>
-                                <a href="https://maps.google.com/?q=Av.+Sete+de+Setembro,+1801,+Centro,+Manaus,+AM" 
-                                   target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                                   Abrir no Google Maps
-                                </a>
-                            </div>
-                        </div>
                     </div>
                 </section>
                 
-                <section class="welcome-notice">
-                    <div class="notice-box">
-                        <h2>🤝 Seja Muito Bem-Vindo!</h2>
-                        <p><strong>Não é necessário agendar sua visita!</strong> Compareça diretamente aos domingos nos horários da Escola Bíblica Dominical (9h) ou do Culto Principal (10h). Você será recebido com muito amor e carinho cristão.</p>
-                        <p>Todas as nossas reuniões são abertas ao público. Venha como você está!</p>
-                    </div>
-                </section>
-                
-                <section class="meeting-guidelines">
-                    <h2>Orientações para Visitantes</h2>
-                    <div class="guidelines-grid">
-                        <div class="guideline-item">
-                            <h3>👔 Vestimenta</h3>
-                            <p>Não há código de vestimenta obrigatório. Vista-se de forma modesta e confortável. O importante é o coração sincero.</p>
-                        </div>
-                        
-                        <div class="guideline-item">
-                            <h3>⏰ Chegada</h3>
-                            <p>Sugerimos chegar alguns minutos antes do início para se acomodar e receber as boas-vindas da comunidade.</p>
-                        </div>
-                        
-                        <div class="guideline-item">
-                            <h3>👶 Crianças</h3>
-                            <p>Crianças são muito bem-vindas! Temos classes específicas na Escola Bíblica Dominical para diferentes idades.</p>
-                        </div>
-                        
-                        <div class="guideline-item">
-                            <h3>💰 Ofertas</h3>
-                            <p>As ofertas são voluntárias e destinadas apenas aos membros. Visitantes não têm qualquer obrigação financeira.</p>
-                        </div>
-                        
-                        <div class="guideline-item">
-                            <h3>📱 Celulares</h3>
-                            <p>Pedimos que mantenham os celulares no silencioso durante as reuniões por respeito aos demais presentes.</p>
-                        </div>
-                        
-                        <div class="guideline-item">
-                            <h3>❓ Dúvidas</h3>
-                            <p>Sinta-se livre para fazer perguntas após as reuniões. Nossos irmãos estarão felizes em conversar com você.</p>
-                        </div>
-                    </div>
-                </section>
             </div>
         </section>
+        
+        <!-- Modal de Visualização de PDF -->
+        <div id="pdf-modal" class="pdf-modal" style="display: none;">
+            <div class="pdf-modal-content">
+                <div class="pdf-modal-header">
+                    <button class="btn-close-modal" id="close-pdf-modal">← Voltar</button>
+                    <h3 id="pdf-titulo">Título do Livro</h3>
+                    <div class="pdf-actions">
+                        <button class="btn btn-sm" id="btn-favoritar">⭐ Favoritar</button>
+                        <a class="btn btn-sm btn-primary" id="btn-download-pdf" target="_blank">📥 Download</a>
+                    </div>
+                </div>
+                <div class="pdf-viewer">
+                    <iframe id="pdf-frame" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
     </main>
     
     <footer class="site-footer" role="contentinfo">
@@ -358,7 +393,7 @@
             </div>
             
             <div class="footer-section">
-                <h3>Contato</h3>
+                <h3>Contatos</h3>
                 <div class="contact-info">
                     <p>📍 Av. Sete de Setembro, 1801 - Centro</p>
                     <a href="https://wa.me/5592991146877?text=Olá!%20Gostaria%20de%20entrar%20em%20contato%20com%20a%20secretaria." class="btn btn-whatsapp-secretaria" target="_blank" style="font-size: 0.8rem; padding: 0.4rem 0.8rem; margin: 0.5rem 0.5rem 0.5rem 0;">
@@ -413,9 +448,10 @@
     </button>
     
     <script src="script.js"></script>
-    <script src="./assets/js/mobile-nav.js"></script>
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
+    <script src="biblioteca.js"></script>
+    <script src="assets/js/simple-video-player.js"></script>
 </body>
 </html>

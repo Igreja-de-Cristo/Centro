@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
-    <meta name="description" content="Contatos da Igreja de Cristo do Centro - Endereço, telefones, WhatsApp e localização em Manaus/AM.">
-    <meta name="keywords" content="contatos igreja cristo, endereço manaus, telefone igreja cristo centro, whatsapp igreja">
+    <meta name="description" content="Biblioteca Digital Cristã - Livros, estudos e materiais bíblicos gratuitos escritos pelos irmãos da Igreja de Cristo do Centro.">
+    <meta name="keywords" content="biblioteca cristã, livros evangélicos, estudos bíblicos pdf, material cristão gratuito">
     
     <link rel="icon" type="image/svg+xml" href="./assets/logo-igreja.svg">
-    <link rel="canonical" href="https://igrejadecristocentro-manaus.netlify.app/contatos.html">
+    <link rel="canonical" href="https://igrejadecristocentro-manaus.netlify.app/biblioteca.html">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/videos.css">
     <link rel="stylesheet" href="assets/css/cookie-consent.css">
     <link rel="stylesheet" href="assets/css/mobile-nav.css">
     <link rel="stylesheet" href="assets/css/mobile-nav-responsive.css">
     <script src="assets/js/cookie-consent.js"></script>
     <script src="assets/js/mobile-nav.js"></script>
     
-    <title>Contatos - Igreja de Cristo do Centro</title>
+    <title>Biblioteca Digital - Igreja de Cristo do Centro</title>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
@@ -60,7 +61,7 @@
                                 </a>
                             </li>
                             <li class="mobile-nav-item">
-                                <a href="biblioteca.html" class="mobile-nav-link">
+                                <a href="biblioteca.html" class="mobile-nav-link active">
                                     <span class="mobile-nav-icon">📚</span>
                                     <span>Biblioteca</span>
                                 </a>
@@ -72,36 +73,48 @@
                                 </a>
                             </li>
                             <li class="mobile-nav-item">
-                                <button class="mobile-nav-link active" id="mobile-more-btn">
-                                    <span class="mobile-nav-icon">⋮</span>
+                                <button class="mobile-nav-link" id="mobile-more-btn">
+                                    <span class="mobile-nav-icon">⌄</span>
                                     <span>Mais</span>
                                 </button>
+                                <!-- Dropdown Menu -->
+                                <div class="mobile-dropdown">
+                                    <ul class="mobile-dropdown-list">
+                                        <li class="mobile-dropdown-item">
+                                            <a href="eventos.html" class="mobile-dropdown-link">
+                                                <span class="mobile-dropdown-icon">📅</span>
+                                                <span>Eventos</span>
+                                            </a>
+                                        </li>
+                                        <li class="mobile-dropdown-item">
+                                            <a href="reunioes.html" class="mobile-dropdown-link">
+                                                <span class="mobile-dropdown-icon">👥</span>
+                                                <span>Reuniões</span>
+                                            </a>
+                                        </li>
+                                        <li class="mobile-dropdown-item">
+                                            <a href="contatos.html" class="mobile-dropdown-link">
+                                                <span class="mobile-dropdown-icon">�</span>
+                                                <span>Contatos</span>
+                                            </a>
+                                        </li>
+                                        <li class="mobile-dropdown-item">
+                                            <a href="links.html" class="mobile-dropdown-link">
+                                                <span class="mobile-dropdown-icon">�</span>
+                                                <span>Links</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
                     </nav>
-
-                    <!-- Menu Mais (Overlay) -->
-                    <div class="mobile-overlay" id="mobile-overlay"></div>
-                    <div class="mobile-more-menu" id="mobile-more-menu">
-                        <div class="mobile-more-menu-header">
-                            <span class="mobile-more-menu-title">Menu</span>
-                            <button class="mobile-more-close" id="mobile-more-close">✕</button>
-                        </div>
-                        <ul class="mobile-more-grid">
-                            <li class="mobile-more-item">
-                                <a href="eventos.html" class="mobile-more-link">
-                                    <span class="mobile-more-icon">📅</span>
-                                    <span class="mobile-more-label">Eventos</span>
-                                </a>
-                            </li>
-                            <li class="mobile-more-item">
-                                <a href="reunioes.html" class="mobile-more-link">
-                                    <span class="mobile-more-icon">👥</span>
+                </div>
                                     <span class="mobile-more-label">Reuniões</span>
                                 </a>
                             </li>
                             <li class="mobile-more-item">
-                                <a href="contatos.html" class="mobile-more-link active">
+                                <a href="contatos.html" class="mobile-more-link">
                                     <span class="mobile-more-icon">📞</span>
                                     <span class="mobile-more-label">Contatos</span>
                                 </a>
@@ -128,8 +141,8 @@
                 <li><a href="reunioes.html" class="nav-link">Reuniões</a></li>
                 <li><a href="cursos.html" class="nav-link">Cursos</a></li>
                 <li><a href="eventos.html" class="nav-link">Eventos</a></li>
-                <li><a href="biblioteca.html" class="nav-link">Biblioteca</a></li>
-                <li><a href="contatos.html" class="nav-link active" aria-current="page">Contatos</a></li>
+                <li><a href="biblioteca.html" class="nav-link active" aria-current="page">Biblioteca</a></li>
+                <li><a href="contatos.html" class="nav-link">Contatos</a></li>
                 <li><a href="links.html" class="nav-link">Links</a></li>
             </ul>
         </div>
@@ -138,240 +151,238 @@
     <main id="main-content" class="main-content" role="main">
         <section class="page-hero">
             <div class="container">
-                <h1>Contatos</h1>
-                <p class="hero-description">Estamos aqui para responder suas dúvidas e recebê-lo em nossa comunidade</p>
+                <h1>📚 Biblioteca Digital Cristã</h1>
+                <p class="hero-description">Livros, estudos e materiais bíblicos gratuitos escritos pelos irmãos da nossa igreja</p>
             </div>
         </section>
         
-        <section class="contact-content">
+        <section class="biblioteca-content">
             <div class="container">
-                <div class="contact-grid">
-                    <div class="contact-info-section">
-                        <h2>Informações de Contatos</h2>
-                        
-                        <div class="contact-method">
-                            <div class="contact-icon">📱</div>
-                            <div class="contact-details">
-                                <h3>WhatsApp Secretaria</h3>
-                                <p>Para informações gerais, reuniões e dúvidas</p>
-                                <a href="https://wa.me/5592991146877" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                                    Enviar Mensagem
-                                </a>
+                
+                <!-- Busca e Filtros -->
+                <div class="biblioteca-controls">
+                    <div class="search-box">
+                        <input type="text" id="busca-livros" placeholder="🔍 Buscar por título, autor ou palavra-chave..." aria-label="Buscar livros">
+                        <button class="btn-search" id="btn-buscar">Buscar</button>
+                    </div>
+                    
+                    <!-- Categorias em Accordion -->
+                    <div class="biblioteca-accordion" id="categorias-accordion">
+                        <div class="accordion-item active" data-categoria="todas">
+                            <div class="accordion-header">
+                                <span class="accordion-icon">📚</span>
+                                <span class="accordion-title">Todas as Categorias</span>
+                                <span class="accordion-arrow">▼</span>
+                            </div>
+                            <div class="accordion-content active">
+                                <p class="categoria-descricao">Explore todos os materiais disponíveis na biblioteca.</p>
+                                <div class="categoria-conteudo" id="conteudo-todas"></div>
                             </div>
                         </div>
                         
-                        <div class="contact-method">
-                            <div class="contact-icon">📚</div>
-                            <div class="contact-details">
-                                <h3>WhatsApp Cursos (DBF Online)</h3>
-                                <p>Suporte para dúvidas sobre o curso DBF online</p>
-                                <a href="https://wa.me/5592988357459?text=Olá!%20Gostaria%20de%20informações%20sobre%20o%20curso%20DBF%20online." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
-                                    <span class="whatsapp-icon">📱</span> Falar sobre DBF Online
-                                </a>
+                        <div class="accordion-item" data-categoria="pregacoes">
+                            <div class="accordion-header">
+                                <span class="accordion-icon">📖</span>
+                                <span class="accordion-title">Pregações</span>
+                                <span class="accordion-arrow">▶</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p class="categoria-descricao">Vídeos das pregações realizadas na igreja. Cada pregação inclui a data de quando foi ministrada e o tema abordado. Você pode assistir diretamente no site sem precisar sair.</p>
+                                <div class="categoria-conteudo" id="conteudo-pregacoes"></div>
                             </div>
                         </div>
                         
-                        <div class="contact-method">
-                            <div class="contact-icon">📍</div>
-                            <div class="contact-details">
-                                <h3>Endereço</h3>
-                                <p><strong>Av. Sete de Setembro, 1801</strong><br>
-                                Centro - Manaus/AM<br>
-                                CEP: 69005-141</p>
-                                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                                    <a href="https://maps.google.com/?q=Av.+Sete+de+Setembro,+1801,+Centro,+Manaus,+AM" 
-                                       target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                                       🗺️ Google Maps
-                                    </a>
-                                    <a href="https://maps.apple.com/?q=Av.+Sete+de+Setembro,+1801,+Centro,+Manaus,+AM" 
-                                       target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                                       🍎 Apple Maps
-                                    </a>
-                                </div>
+                        <div class="accordion-item" data-categoria="intensivos">
+                            <div class="accordion-header">
+                                <span class="accordion-icon">📚</span>
+                                <span class="accordion-title">Intensivos/Seminários</span>
+                                <span class="accordion-arrow">▶</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p class="categoria-descricao">Conteúdos dos eventos de intensivos e seminários, incluindo vídeos gravados dos encontros e materiais de apoio (PDFs ou indicação de livros utilizados durante o evento).</p>
+                                <div class="categoria-conteudo" id="conteudo-intensivos"></div>
                             </div>
                         </div>
                         
-                        <div class="contact-method">
-                            <div class="contact-icon">⏰</div>
-                            <div class="contact-details">
-                                <h3>Horários de Reuniões</h3>
-                                <ul class="schedule-list">
-                                    <li><strong>Domingo:</strong> 09:00 (EBD) e 10:00 (Culto)</li>
-                                    <li><strong>Quarta-feira:</strong> 19:00 - Novo Aleixo (Casa dos irmãos Aníbal e Jovina)</li>
-                                    <li><strong>Sexta-feira:</strong> 19:00 - Colônia Oliveira Machado (Casa da irmã Luiza França)</li>
-                                </ul>
-                                <a href="reunioes.html" class="btn btn-outline">
-                                    Ver Detalhes das Reuniões
-                                </a>
+                        <div class="accordion-item" data-categoria="cursos">
+                            <div class="accordion-header">
+                                <span class="accordion-icon">📄</span>
+                                <span class="accordion-title">Estudos Bíblicos</span>
+                                <span class="accordion-arrow">▶</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p class="categoria-descricao">Materiais em PDF para estudos individuais ou em grupo. Explore diversos temas bíblicos com profundidade.</p>
+                                <div class="categoria-conteudo" id="conteudo-cursos"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item" data-categoria="infantil">
+                            <div class="accordion-header">
+                                <span class="accordion-icon">👶</span>
+                                <span class="accordion-title">Infantil</span>
+                                <span class="accordion-arrow">▶</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p class="categoria-descricao">Materiais especiais desenvolvidos para as crianças aprenderem sobre Deus de forma divertida e didática.</p>
+                                <div class="categoria-conteudo" id="conteudo-infantil"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item" data-categoria="casais">
+                            <div class="accordion-header">
+                                <span class="accordion-icon">💑</span>
+                                <span class="accordion-title">Casais</span>
+                                <span class="accordion-arrow">▶</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p class="categoria-descricao">Conteúdos voltados para fortalecer relacionamentos, abençoar casamentos e edificar famílias segundo os princípios bíblicos.</p>
+                                <div class="categoria-conteudo" id="conteudo-casais"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item" data-categoria="hinarios">
+                            <div class="accordion-header">
+                                <span class="accordion-icon">🎵</span>
+                                <span class="accordion-title">Hinários</span>
+                                <span class="accordion-arrow">▶</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p class="categoria-descricao">Coleção de hinários em formato PDF e PowerPoint para uso durante os cultos e estudos. Disponibilizados para facilitar a adoração congregacional com cânticos e hinos espirituais.</p>
+                                <div class="categoria-conteudo" id="conteudo-hinarios"></div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="contact-form-section">
-                        <h2>Envie sua Mensagem</h2>
-                        <p>Preencha o formulário abaixo e responderemos o mais breve possível:</p>
-                        
-                        <form class="contact-form" id="contactForm" action="#" method="post">
-                            <div class="form-group">
-                                <label for="name">Nome Completo *</label>
-                                <input type="text" id="name" name="name" required 
-                                       aria-describedby="name-error" autocomplete="name">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">E-mail *</label>
-                                <input type="email" id="email" name="email" required 
-                                       aria-describedby="email-error" autocomplete="email">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="phone">Telefone/WhatsApp</label>
-                                <input type="tel" id="phone" name="phone" 
-                                       aria-describedby="phone-error" autocomplete="tel">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="subject">Assunto *</label>
-                                <select id="subject" name="subject" required aria-describedby="subject-error">
-                                    <option value="">Selecione um assunto</option>
-                                    <option value="informacoes-gerais">Informações Gerais</option>
-                                    <option value="reunioes">Horários das Reuniões</option>
-                                    <option value="cursos-biblicos">Cursos Bíblicos</option>
-                                    <option value="batismo">Batismo</option>
-                                    <option value="duvidas-biblicas">Dúvidas Bíblicas</option>
-                                    <option value="oracao">Pedido de Oração</option>
-                                    <option value="outros">Outros</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message">Mensagem *</label>
-                                <textarea id="message" name="message" rows="6" required 
-                                          aria-describedby="message-error" 
-                                          placeholder="Descreva sua dúvida, pedido ou mensagem..."></textarea>
-                            </div>
-                            
-                            <div class="form-group checkbox-group">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" id="privacy" name="privacy" required>
-                                    <span class="checkmark"></span>
-                                    Li e concordo com a <a href="#privacy-policy" target="_blank">política de privacidade</a> *
-                                </label>
-                            </div>
-                            
-                            <div class="form-group checkbox-group">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" id="newsletter" name="newsletter">
-                                    <span class="checkmark"></span>
-                                    Desejo receber informações sobre estudos bíblicos e eventos
-                                </label>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary">
-                                Enviar Mensagem
-                            </button>
-                        </form>
+                    <div class="biblioteca-sort">
+                        <label for="ordenacao">Ordenar por:</label>
+                        <select id="ordenacao">
+                            <option value="recente">Mais Recentes</option>
+                            <option value="antigo">Mais Antigos</option>
+                            <option value="titulo">Título (A-Z)</option>
+                            <option value="autor">Autor (A-Z)</option>
+                            <option value="popular">Mais Populares</option>
+                        </select>
                     </div>
                 </div>
                 
-                <section class="quick-contact">
-                    <h2>Contatos Rápidos</h2>
-                    <div class="quick-contact-grid">
-                        <div class="quick-contact-item">
-                            <h3>💬 Dúvidas sobre a Fé</h3>
-                            <p>Tem perguntas sobre a Bíblia ou a doutrina cristã?</p>
-                            <a href="https://wa.me/5592991146877?text=Olá,%20tenho%20dúvidas%20sobre%20a%20fé%20cristã" 
-                               target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                               Fazer Pergunta
-                            </a>
-                        </div>
-                        
-                        <div class="quick-contact-item">
-                            <h3>🎓 Informações sobre Cursos</h3>
-                            <p>Quer saber mais sobre nossos cursos bíblicos gratuitos?</p>
-                            <a href="https://wa.me/5592991146877?text=Gostaria%20de%20informações%20sobre%20os%20cursos%20bíblicos" 
-                               target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                               Saber Mais
-                            </a>
-                        </div>
-                        
-                        <div class="quick-contact-item">
-                            <h3>⛪ Venha nos Visitar</h3>
-                            <p>Compareça aos domingos na EBD (9h) ou Culto Principal (10h). Você será muito bem recebido!</p>
-                            <a href="reunioes.html" 
-                               class="btn btn-primary">
-                               Ver Horários
-                            </a>
-                        </div>
-                        
-                        <div class="quick-contact-item">
-                            <h3>🙏 Pedido de Oração</h3>
-                            <p>Precisa de oração? Estamos aqui para interceder por você.</p>
-                            <a href="https://wa.me/5592991146877?text=Gostaria%20de%20fazer%20um%20pedido%20de%20oração" 
-                               target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                               Pedir Oração
-                            </a>
+                <!-- Estatísticas -->
+                <div class="biblioteca-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-livros">0</span>
+                        <span class="stat-label">Livros</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-autores">0</span>
+                        <span class="stat-label">Autores</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-downloads">0</span>
+                        <span class="stat-label">Downloads</span>
+                    </div>
+                </div>
+                
+                <!-- Histórico de Leitura -->
+                <div class="biblioteca-section" id="historico-section" style="display: none;">
+                    <h2>📖 Seu Histórico de Leitura</h2>
+                    <div id="historico-livros" class="livros-grid-small"></div>
+                </div>
+                
+                <!-- Favoritos -->
+                <div class="biblioteca-section" id="favoritos-section" style="display: none;">
+                    <h2>⭐ Seus Favoritos</h2>
+                    <div id="favoritos-livros" class="livros-grid-small"></div>
+                </div>
+                
+                <!-- Seção de Vídeos -->
+                <section class="videos-section">
+                    <h2 class="section-title">📺 Vídeos e Transmissões</h2>
+                    
+                    <!-- Seção de Pregações -->
+                    <div class="pregacoes-section">
+                        <h3 class="video-category-title">Pregações</h3>
+                        <div class="video-grid" id="pregacoes-grid">
+                            <!-- Videos serão inseridos via JavaScript -->
                         </div>
                     </div>
-                </section>
-                
-                <!-- Redes sociais estão disponíveis no rodapé da página -->
-                
-                <section class="directions-section">
-                    <h2>Como Chegar</h2>
-                    <div class="directions-content">
-                        <div class="directions-text">
-                            <h3>Transporte Público</h3>
-                            <ul>
-                                <li><strong>Ônibus:</strong> Várias linhas passam pela Av. Sete de Setembro</li>
-                                <li><strong>Ponto mais próximo:</strong> Parada do Centro</li>
-                                <li><strong>Linhas sugeridas:</strong> Consulte o sistema de transporte público de Manaus</li>
-                            </ul>
-                            
-                            <h3>Carro Particular</h3>
-                            <ul>
-                                <li><strong>Estacionamento:</strong> Disponível nas ruas próximas</li>
-                                <li><strong>Referência:</strong> Centro de Manaus, próximo aos principais prédios comerciais</li>
-                                <li><strong>Acesso:</strong> Fácil acesso pela Av. Sete de Setembro</li>
-                            </ul>
-                            
-                            <h3>Pontos de Referência</h3>
-                            <ul>
-                                <li>Centro histórico de Manaus</li>
-                                <li>Próximo a estabelecimentos comerciais</li>
-                                <li>Região central da cidade</li>
-                            </ul>
+
+                    <!-- Seção de Últimos Vídeos -->
+                    <div class="recent-videos">
+                        <h3 class="video-category-title">Últimos Vídeos</h3>
+                        <div class="video-grid" id="recent-videos-grid">
+                            <!-- Thumbnails serão inseridas via JavaScript -->
                         </div>
-                        
-                        <div class="map-container">
-                            <div class="map-placeholder">
-                                <div class="map-content">
-                                    <h3>🗺️ Localização</h3>
-                                    <p><strong>Av. Sete de Setembro, 1801</strong><br>
-                                    Centro - Manaus/AM<br>
-                                    CEP: 69005-141</p>
-                                    
-                                    <div class="map-buttons">
-                                        <a href="https://maps.google.com/?q=Av.+Sete+de+Setembro,+1801,+Centro,+Manaus,+AM" 
-                                           target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                           🗺️ Google Maps
-                                        </a>
-                                        <a href="https://maps.apple.com/?q=Av.+Sete+de+Setembro,+1801,+Centro,+Manaus,+AM" 
-                                           target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                           🍎 Apple Maps
-                                        </a>
-                                        <a href="https://waze.com/ul?q=Av.%20Sete%20de%20Setembro,%201801,%20Centro,%20Manaus" 
-                                           target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                                           🚗 Waze
-                                        </a>
-                                    </div>
-                                </div>
+                    </div>
+                    
+                    <!-- Seção de Cultos -->
+                    <div class="cultos-section">
+                        <h3 class="video-category-title">Cultos</h3>
+                        <div class="video-grid" id="cultos-grid">
+                            <!-- Videos serão inseridos via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Seção de Estudos Bíblicos -->
+                    <div class="estudos-section">
+                        <h3 class="video-category-title">Estudos Bíblicos</h3>
+                        <div class="video-grid" id="estudos-grid">
+                            <!-- Videos serão inseridos via JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Seção de E.B.D - Online -->
+                    <div class="ebd-section">
+                        <h3 class="video-category-title">E.B.D - Online</h3>
+                        <div class="video-grid" id="ebd-grid">
+                            <!-- Videos serão inseridos via JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Seção de Vigílias -->
+                    <div class="vigilias-section">
+                        <h3 class="video-category-title">Vigílias</h3>
+                        <div class="video-grid" id="vigilias-grid">
+                            <!-- Videos serão inseridos via JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Seção de Retiros -->
+                    <div class="retiros-section">
+                        <h3 class="video-category-title">Retiros</h3>
+                        <div class="video-grid" id="retiros-grid">
+                            <!-- Videos serão inseridos via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Modal para Vídeos -->
+                    <div class="video-modal" id="video-modal">
+                        <div class="video-modal-content">
+                            <button class="close-modal" id="close-video-modal">&times;</button>
+                            <div class="video-container" id="modal-player">
+                                <!-- Player será inserido via JavaScript -->
                             </div>
                         </div>
                     </div>
                 </section>
+                
             </div>
         </section>
+        
+        <!-- Modal de Visualização de PDF -->
+        <div id="pdf-modal" class="pdf-modal" style="display: none;">
+            <div class="pdf-modal-content">
+                <div class="pdf-modal-header">
+                    <button class="btn-close-modal" id="close-pdf-modal">← Voltar</button>
+                    <h3 id="pdf-titulo">Título do Livro</h3>
+                    <div class="pdf-actions">
+                        <button class="btn btn-sm" id="btn-favoritar">⭐ Favoritar</button>
+                        <a class="btn btn-sm btn-primary" id="btn-download-pdf" target="_blank">📥 Download</a>
+                    </div>
+                </div>
+                <div class="pdf-viewer">
+                    <iframe id="pdf-frame" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
     </main>
     
     <footer class="site-footer" role="contentinfo">
@@ -440,93 +451,7 @@
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
-    <script>
-        // Funcionalidade específica do formulário de contato
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Validar formulário
-            if (!validateForm(this)) {
-                return;
-            }
-            
-            // Coletar dados do formulário
-            const formData = new FormData(this);
-            const data = {
-                name: formData.get('name'),
-                email: formData.get('email'),
-                phone: formData.get('phone'),
-                subject: formData.get('subject'),
-                message: formData.get('message')
-            };
-            
-            // Criar mensagem para WhatsApp
-            const whatsappMessage = `
-*Nova mensagem do site:*
-
-*Nome:* ${data.name}
-*E-mail:* ${data.email}
-*Telefone:* ${data.phone || 'Não informado'}
-*Assunto:* ${data.subject}
-
-*Mensagem:*
-${data.message}
-            `.trim();
-            
-            // Redirecionar para WhatsApp
-            const whatsappUrl = `https://wa.me/5592991146877?text=${encodeURIComponent(whatsappMessage)}`;
-            window.open(whatsappUrl, '_blank');
-            
-            // Mostrar mensagem de sucesso
-            alert('Redirecionando para WhatsApp para enviar sua mensagem!');
-            
-            // Limpar formulário
-            this.reset();
-        });
-        
-        function validateForm(form) {
-            const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
-            let isValid = true;
-            
-            inputs.forEach(input => {
-                const errorElement = input.parentNode.querySelector('.error-message');
-                
-                // Remove existing error
-                if (errorElement) {
-                    errorElement.remove();
-                }
-                
-                input.classList.remove('error');
-                
-                // Validate input
-                if (!input.value.trim()) {
-                    showFieldError(input, 'Este campo é obrigatório.');
-                    isValid = false;
-                } else if (input.type === 'email' && !isValidEmail(input.value)) {
-                    showFieldError(input, 'Por favor, insira um email válido.');
-                    isValid = false;
-                }
-            });
-            
-            return isValid;
-        }
-        
-        function showFieldError(input, message) {
-            input.classList.add('error');
-            
-            const errorDiv = document.createElement('div');
-            errorDiv.className = 'error-message';
-            errorDiv.textContent = message;
-            errorDiv.setAttribute('role', 'alert');
-            
-            input.parentNode.appendChild(errorDiv);
-            input.focus();
-        }
-        
-        function isValidEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
-    </script>
-
-    <!-- Back to Top Button -->
+    <script src="biblioteca.js"></script>
+    <script src="assets/js/simple-video-player.js"></script>
+</body>
+</html>

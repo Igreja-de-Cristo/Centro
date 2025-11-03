@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
-    <meta name="description" content="Links úteis da Igreja de Cristo do Centro - Recursos bíblicos, estudos online e materiais cristãos.">
-    <meta name="keywords" content="links úteis, recursos bíblicos, estudos cristãos, igreja cristo centro">
+    <meta name="description" content="Biblioteca Digital Cristã - Livros, estudos e materiais bíblicos gratuitos escritos pelos irmãos da Igreja de Cristo do Centro.">
+    <meta name="keywords" content="biblioteca cristã, livros evangélicos, estudos bíblicos pdf, material cristão gratuito">
     
     <link rel="icon" type="image/svg+xml" href="./assets/logo-igreja.svg">
-    <link rel="canonical" href="https://igrejadecristocentro-manaus.netlify.app/links.html">
+    <link rel="canonical" href="https://igrejadecristocentro-manaus.netlify.app/biblioteca.html">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./assets/css/mobile-nav.css">
-    <link rel="stylesheet" href="./assets/css/mobile-nav-responsive.css">
+    <link rel="stylesheet" href="assets/css/videos.css">
+    <link rel="stylesheet" href="assets/css/cookie-consent.css">
+    <link rel="stylesheet" href="assets/css/mobile-nav.css">
+    <link rel="stylesheet" href="assets/css/mobile-nav-responsive.css">
+    <script src="assets/js/cookie-consent.js"></script>
+    <script src="assets/js/mobile-nav.js"></script>
     
-    <title>Links Úteis - Igreja de Cristo do Centro</title>
+    <title>Biblioteca Digital - Igreja de Cristo do Centro</title>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
@@ -57,7 +61,7 @@
                                 </a>
                             </li>
                             <li class="mobile-nav-item">
-                                <a href="biblioteca.html" class="mobile-nav-link">
+                                <a href="biblioteca.html" class="mobile-nav-link active">
                                     <span class="mobile-nav-icon">📚</span>
                                     <span>Biblioteca</span>
                                 </a>
@@ -69,31 +73,43 @@
                                 </a>
                             </li>
                             <li class="mobile-nav-item">
-                                <button class="mobile-nav-link active" id="mobile-more-btn">
-                                    <span class="mobile-nav-icon">⋮</span>
+                                <button class="mobile-nav-link" id="mobile-more-btn">
+                                    <span class="mobile-nav-icon">⌄</span>
                                     <span>Mais</span>
                                 </button>
+                                <!-- Dropdown Menu -->
+                                <div class="mobile-dropdown">
+                                    <ul class="mobile-dropdown-list">
+                                        <li class="mobile-dropdown-item">
+                                            <a href="eventos.html" class="mobile-dropdown-link">
+                                                <span class="mobile-dropdown-icon">📅</span>
+                                                <span>Eventos</span>
+                                            </a>
+                                        </li>
+                                        <li class="mobile-dropdown-item">
+                                            <a href="reunioes.html" class="mobile-dropdown-link">
+                                                <span class="mobile-dropdown-icon">👥</span>
+                                                <span>Reuniões</span>
+                                            </a>
+                                        </li>
+                                        <li class="mobile-dropdown-item">
+                                            <a href="contatos.html" class="mobile-dropdown-link">
+                                                <span class="mobile-dropdown-icon">�</span>
+                                                <span>Contatos</span>
+                                            </a>
+                                        </li>
+                                        <li class="mobile-dropdown-item">
+                                            <a href="links.html" class="mobile-dropdown-link">
+                                                <span class="mobile-dropdown-icon">�</span>
+                                                <span>Links</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
                     </nav>
-
-                    <!-- Menu Mais (Overlay) -->
-                    <div class="mobile-overlay" id="mobile-overlay"></div>
-                    <div class="mobile-more-menu" id="mobile-more-menu">
-                        <div class="mobile-more-menu-header">
-                            <span class="mobile-more-menu-title">Menu</span>
-                            <button class="mobile-more-close" id="mobile-more-close">✕</button>
-                        </div>
-                        <ul class="mobile-more-grid">
-                            <li class="mobile-more-item">
-                                <a href="eventos.html" class="mobile-more-link">
-                                    <span class="mobile-more-icon">📅</span>
-                                    <span class="mobile-more-label">Eventos</span>
-                                </a>
-                            </li>
-                            <li class="mobile-more-item">
-                                <a href="reunioes.html" class="mobile-more-link">
-                                    <span class="mobile-more-icon">👥</span>
+                </div>
                                     <span class="mobile-more-label">Reuniões</span>
                                 </a>
                             </li>
@@ -104,7 +120,7 @@
                                 </a>
                             </li>
                             <li class="mobile-more-item">
-                                <a href="links.html" class="mobile-more-link active">
+                                <a href="links.html" class="mobile-more-link">
                                     <span class="mobile-more-icon">🔗</span>
                                     <span class="mobile-more-label">Links</span>
                                 </a>
@@ -125,9 +141,9 @@
                 <li><a href="reunioes.html" class="nav-link">Reuniões</a></li>
                 <li><a href="cursos.html" class="nav-link">Cursos</a></li>
                 <li><a href="eventos.html" class="nav-link">Eventos</a></li>
-                <li><a href="biblioteca.html" class="nav-link">Biblioteca</a></li>
+                <li><a href="biblioteca.html" class="nav-link active" aria-current="page">Biblioteca</a></li>
                 <li><a href="contatos.html" class="nav-link">Contatos</a></li>
-                <li><a href="links.html" class="nav-link active" aria-current="page">Links</a></li>
+                <li><a href="links.html" class="nav-link">Links</a></li>
             </ul>
         </div>
     </nav>
@@ -135,254 +151,238 @@
     <main id="main-content" class="main-content" role="main">
         <section class="page-hero">
             <div class="container">
-                <h1>Links Úteis</h1>
-                <p class="hero-description">Recursos, ferramentas e materiais para aprofundar seu estudo bíblico</p>
+                <h1>📚 Biblioteca Digital Cristã</h1>
+                <p class="hero-description">Livros, estudos e materiais bíblicos gratuitos escritos pelos irmãos da nossa igreja</p>
             </div>
         </section>
         
-        <section class="links-content">
+        <section class="biblioteca-content">
             <div class="container">
-                <section class="links-category">
-                    <h2>🔗 Sites Relacionados</h2>
-                    <div class="links-grid">
-                        <div class="link-card">
-                            <div class="link-header">
-                                <h3>Igreja de Cristo - Curitiba</h3>
-                                <span class="link-tag">Congregação Irmã</span>
+                
+                <!-- Busca e Filtros -->
+                <div class="biblioteca-controls">
+                    <div class="search-box">
+                        <input type="text" id="busca-livros" placeholder="🔍 Buscar por título, autor ou palavra-chave..." aria-label="Buscar livros">
+                        <button class="btn-search" id="btn-buscar">Buscar</button>
+                    </div>
+                    
+                    <!-- Categorias em Accordion -->
+                    <div class="biblioteca-accordion" id="categorias-accordion">
+                        <div class="accordion-item active" data-categoria="todas">
+                            <div class="accordion-header">
+                                <span class="accordion-icon">📚</span>
+                                <span class="accordion-title">Todas as Categorias</span>
+                                <span class="accordion-arrow">▼</span>
                             </div>
-                            <p>Site da congregação irmã em Curitiba com excelente conteúdo doutrinário e recursos de estudo.</p>
-                            <a href="https://www.igrejadecristo-curitiba.org.br/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                                Visitar Site
-                            </a>
+                            <div class="accordion-content active">
+                                <p class="categoria-descricao">Explore todos os materiais disponíveis na biblioteca.</p>
+                                <div class="categoria-conteudo" id="conteudo-todas"></div>
+                            </div>
                         </div>
                         
-                        <div class="link-card">
-                            <div class="link-header">
-                                <h3>Portal das Igrejas de Cristo</h3>
-                                <span class="link-tag">Portal</span>
+                        <div class="accordion-item" data-categoria="pregacoes">
+                            <div class="accordion-header">
+                                <span class="accordion-icon">📖</span>
+                                <span class="accordion-title">Pregações</span>
+                                <span class="accordion-arrow">▶</span>
                             </div>
-                            <p>Portal das Igrejas de Cristo no Brasil com lista de congregações, artigos, notícias, eventos, variedades, evangelismo e recursos educacionais.</p>
-                            <a href="https://igrejadecristo.net/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                                Visitar Site
-                            </a>
+                            <div class="accordion-content">
+                                <p class="categoria-descricao">Vídeos das pregações realizadas na igreja. Cada pregação inclui a data de quando foi ministrada e o tema abordado. Você pode assistir diretamente no site sem precisar sair.</p>
+                                <div class="categoria-conteudo" id="conteudo-pregacoes"></div>
+                            </div>
                         </div>
                         
-                        <div class="link-card">
-                            <div class="link-header">
-                                <h3>Colheita Brasil</h3>
-                                <span class="link-tag">Missões</span>
+                        <div class="accordion-item" data-categoria="intensivos">
+                            <div class="accordion-header">
+                                <span class="accordion-icon">📚</span>
+                                <span class="accordion-title">Intensivos/Seminários</span>
+                                <span class="accordion-arrow">▶</span>
                             </div>
-                            <p>Rede de irmãos que se dedica a juntar recursos e ajudar as igrejas a plantar novas congregações da Igreja de Cristo em capitais brasileiras.</p>
-                            <a href="https://colheitabrasil.com.br/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                                Visitar Site
-                            </a>
+                            <div class="accordion-content">
+                                <p class="categoria-descricao">Conteúdos dos eventos de intensivos e seminários, incluindo vídeos gravados dos encontros e materiais de apoio (PDFs ou indicação de livros utilizados durante o evento).</p>
+                                <div class="categoria-conteudo" id="conteudo-intensivos"></div>
+                            </div>
                         </div>
                         
-                        <div class="link-card">
-                            <div class="link-header">
-                                <h3>Ministério Cantares</h3>
-                                <span class="link-tag">Música</span>
+                        <div class="accordion-item" data-categoria="cursos">
+                            <div class="accordion-header">
+                                <span class="accordion-icon">📄</span>
+                                <span class="accordion-title">Estudos Bíblicos</span>
+                                <span class="accordion-arrow">▶</span>
                             </div>
-                            <p>Ministério voltado para o ensino de cânticos, regência e adoração bíblica. Oferece workshops, eventos e escola de treinamento para regentes.</p>
-                            <a href="https://www.mcantares.com.br/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                                Visitar Site
-                            </a>
+                            <div class="accordion-content">
+                                <p class="categoria-descricao">Materiais em PDF para estudos individuais ou em grupo. Explore diversos temas bíblicos com profundidade.</p>
+                                <div class="categoria-conteudo" id="conteudo-cursos"></div>
+                            </div>
                         </div>
                         
-                        <div class="link-card">
-                            <div class="link-header">
-                                <h3>Seminário EBNESR</h3>
-                                <span class="link-tag">Educação</span>
+                        <div class="accordion-item" data-categoria="infantil">
+                            <div class="accordion-header">
+                                <span class="accordion-icon">👶</span>
+                                <span class="accordion-title">Infantil</span>
+                                <span class="accordion-arrow">▶</span>
                             </div>
-                            <p>Fundado em 1998 em Recife, oferece cursos de teologia presencial, online e EAD para capacitar obreiros e ministros cristãos através de estudos bíblicos avançados.</p>
-                            <a href="https://ebnesr.com.br/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                                Visitar Site
-                            </a>
+                            <div class="accordion-content">
+                                <p class="categoria-descricao">Materiais especiais desenvolvidos para as crianças aprenderem sobre Deus de forma divertida e didática.</p>
+                                <div class="categoria-conteudo" id="conteudo-infantil"></div>
+                            </div>
                         </div>
                         
-                        <div class="link-card">
-                            <div class="link-header">
-                                <h3>SerCris</h3>
-                                <span class="link-tag">Capacitação</span>
+                        <div class="accordion-item" data-categoria="casais">
+                            <div class="accordion-header">
+                                <span class="accordion-icon">💑</span>
+                                <span class="accordion-title">Casais</span>
+                                <span class="accordion-arrow">▶</span>
                             </div>
-                            <p>Escola de Treinamento para o Serviço Cristão com o objetivo de capacitar obreiros para servir nas congregações locais em diversas regiões do Brasil.</p>
-                            <a href="https://www.sercris.com.br/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                                Visitar Site
-                            </a>
+                            <div class="accordion-content">
+                                <p class="categoria-descricao">Conteúdos voltados para fortalecer relacionamentos, abençoar casamentos e edificar famílias segundo os princípios bíblicos.</p>
+                                <div class="categoria-conteudo" id="conteudo-casais"></div>
+                            </div>
                         </div>
                         
-                        <div class="link-card">
-                            <div class="link-header">
-                                <h3>Resgate Editora</h3>
-                                <span class="link-tag">Editora</span>
+                        <div class="accordion-item" data-categoria="hinarios">
+                            <div class="accordion-header">
+                                <span class="accordion-icon">🎵</span>
+                                <span class="accordion-title">Hinários</span>
+                                <span class="accordion-arrow">▶</span>
                             </div>
-                            <p>Editora comprometida com literatura fiel às Escrituras. Distribui material de estudo, devocional e ensino para edificação da igreja.</p>
-                            <a href="https://www.resgatelivros.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                                Visitar Site
-                            </a>
+                            <div class="accordion-content">
+                                <p class="categoria-descricao">Coleção de hinários em formato PDF e PowerPoint para uso durante os cultos e estudos. Disponibilizados para facilitar a adoração congregacional com cânticos e hinos espirituais.</p>
+                                <div class="categoria-conteudo" id="conteudo-hinarios"></div>
+                            </div>
                         </div>
-                        
-                        <div class="link-card">
-                            <div class="link-header">
-                                <h3>Editora EBNESR</h3>
-                                <span class="link-tag">Editora</span>
+                    </div>
+                    
+                    <div class="biblioteca-sort">
+                        <label for="ordenacao">Ordenar por:</label>
+                        <select id="ordenacao">
+                            <option value="recente">Mais Recentes</option>
+                            <option value="antigo">Mais Antigos</option>
+                            <option value="titulo">Título (A-Z)</option>
+                            <option value="autor">Autor (A-Z)</option>
+                            <option value="popular">Mais Populares</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Estatísticas -->
+                <div class="biblioteca-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-livros">0</span>
+                        <span class="stat-label">Livros</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-autores">0</span>
+                        <span class="stat-label">Autores</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-downloads">0</span>
+                        <span class="stat-label">Downloads</span>
+                    </div>
+                </div>
+                
+                <!-- Histórico de Leitura -->
+                <div class="biblioteca-section" id="historico-section" style="display: none;">
+                    <h2>📖 Seu Histórico de Leitura</h2>
+                    <div id="historico-livros" class="livros-grid-small"></div>
+                </div>
+                
+                <!-- Favoritos -->
+                <div class="biblioteca-section" id="favoritos-section" style="display: none;">
+                    <h2>⭐ Seus Favoritos</h2>
+                    <div id="favoritos-livros" class="livros-grid-small"></div>
+                </div>
+                
+                <!-- Seção de Vídeos -->
+                <section class="videos-section">
+                    <h2 class="section-title">📺 Vídeos e Transmissões</h2>
+                    
+                    <!-- Seção de Pregações -->
+                    <div class="pregacoes-section">
+                        <h3 class="video-category-title">Pregações</h3>
+                        <div class="video-grid" id="pregacoes-grid">
+                            <!-- Videos serão inseridos via JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Seção de Últimos Vídeos -->
+                    <div class="recent-videos">
+                        <h3 class="video-category-title">Últimos Vídeos</h3>
+                        <div class="video-grid" id="recent-videos-grid">
+                            <!-- Thumbnails serão inseridas via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Seção de Cultos -->
+                    <div class="cultos-section">
+                        <h3 class="video-category-title">Cultos</h3>
+                        <div class="video-grid" id="cultos-grid">
+                            <!-- Videos serão inseridos via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Seção de Estudos Bíblicos -->
+                    <div class="estudos-section">
+                        <h3 class="video-category-title">Estudos Bíblicos</h3>
+                        <div class="video-grid" id="estudos-grid">
+                            <!-- Videos serão inseridos via JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Seção de E.B.D - Online -->
+                    <div class="ebd-section">
+                        <h3 class="video-category-title">E.B.D - Online</h3>
+                        <div class="video-grid" id="ebd-grid">
+                            <!-- Videos serão inseridos via JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Seção de Vigílias -->
+                    <div class="vigilias-section">
+                        <h3 class="video-category-title">Vigílias</h3>
+                        <div class="video-grid" id="vigilias-grid">
+                            <!-- Videos serão inseridos via JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Seção de Retiros -->
+                    <div class="retiros-section">
+                        <h3 class="video-category-title">Retiros</h3>
+                        <div class="video-grid" id="retiros-grid">
+                            <!-- Videos serão inseridos via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Modal para Vídeos -->
+                    <div class="video-modal" id="video-modal">
+                        <div class="video-modal-content">
+                            <button class="close-modal" id="close-video-modal">&times;</button>
+                            <div class="video-container" id="modal-player">
+                                <!-- Player será inserido via JavaScript -->
                             </div>
-                            <p>Editora que trabalha para levar edificação através do conhecimento para a Igreja do Senhor, publicando trabalhos de irmãos dedicados ao ensino e produção de conteúdo.</p>
-                            <a href="https://editora.ebnesr.com.br/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                                Visitar Site
-                            </a>
                         </div>
                     </div>
                 </section>
                 
-                <section class="links-category">
-                    <h2>📱 Aplicativos Recomendados</h2>
-                    <div class="apps-grid">
-                        <div class="app-card">
-                            <div class="app-icon">⛪</div>
-                            <h3>Igreja de Cristo</h3>
-                            <p>Aplicativo oficial com Bíblia NVI, devocionais, estudos bíblicos, notícias e mapa de congregações. Idealizado e desenvolvido pelo irmão João Cruz e Daniel Cruz.</p>
-                            <div class="app-stores">
-                                <a href="https://apps.apple.com/br/app/igreja-de-cristo-b%C3%ADblia-nvi/id6511193157?l=en-GB" target="_blank" rel="noopener noreferrer">iOS</a>
-                                <a href="https://play.google.com/store/apps/details?id=br.com.ymc.igrejadecristo&pli=1" target="_blank" rel="noopener noreferrer">Android</a>
-                            </div>
-                        </div>
-                        
-                        <div class="app-card">
-                            <div class="app-icon">🎵</div>
-                            <h3>Adoração e Harmonia</h3>
-                            <p>Hinário digital com hinos em áudio, partituras, vídeos e arquivos em PowerPoint. Idealizado pelo irmão Helgir Girodo (MG) e desenvolvido por Daniel Cruz.</p>
-                            <div class="app-stores">
-                                <a href="https://apps.apple.com/br/app/adora%C3%A7%C3%A3o-e-harmonia/id1589244452" target="_blank" rel="noopener noreferrer">iOS</a>
-                                <a href="https://play.google.com/store/apps/details?id=br.com.ymc.adoracaoeharmonia&hl=pt_BR" target="_blank" rel="noopener noreferrer">Android</a>
-                            </div>
-                        </div>
-                        
-                        <div class="app-card">
-                            <div class="app-icon">📖</div>
-                            <h3>Bíblia YouVersion</h3>
-                            <p>Aplicativo gratuito com várias traduções da Bíblia e planos de leitura.</p>
-                            <div class="app-stores">
-                                <a href="https://apps.apple.com/br/app/b%C3%ADblia/id282935706" target="_blank" rel="noopener noreferrer">iOS</a>
-                                <a href="https://play.google.com/store/apps/details?id=com.sirma.mobile.bible.android" target="_blank" rel="noopener noreferrer">Android</a>
-                            </div>
-                        </div>
-                        
-                        <div class="app-card">
-                            <div class="app-icon">📚</div>
-                            <h3>Logos Bible Software</h3>
-                            <p>Plataforma completa para estudo bíblico com busca inteligente, comentários, dicionários e ferramentas exegéticas. Disponível para Desktop, iOS e Android.</p>
-                            <div class="app-stores">
-                                <a href="https://pt.logos.com/baixar" target="_blank" rel="noopener noreferrer">Baixar</a>
-                            </div>
-                        </div>
-                        
-                        <div class="app-card">
-                            <div class="app-icon">📖</div>
-                            <h3>MyBible</h3>
-                            <p>Ferramenta multifuncional e flexível para leitura e estudo da Bíblia. Inclui traduções em mais de 300 idiomas, comentários, dicionários bíblicos e funciona offline.</p>
-                            <div class="app-stores">
-                                <a href="https://apps.apple.com/br/app/mybible/id1166291877" target="_blank" rel="noopener noreferrer">iOS</a>
-                                <a href="https://play.google.com/store/apps/details?id=ua.mybible&hl=pt_BR" target="_blank" rel="noopener noreferrer">Android</a>
-                            </div>
-                        </div>
-                        
-                        <div class="app-card">
-                            <div class="app-icon">❓</div>
-                            <h3>GotQuestions</h3>
-                            <p>Respostas bíblicas para perguntas sobre fé, doutrina e vida cristã. Mais de 350.000 perguntas respondidas com base nas Escrituras.</p>
-                            <div class="app-stores">
-                                <a href="https://apps.apple.com/us/app/got-questions/id366553550" target="_blank" rel="noopener noreferrer">iOS</a>
-                                <a href="https://play.google.com/store/apps/details?id=com.gotquestions.gqandapp" target="_blank" rel="noopener noreferrer">Android</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section class="contact-section">
-                    <h2>� Precisa de Algum Recurso?</h2>
-                    <p class="section-intro">Estamos prontos para ajudar! Escolha o melhor canal para entrar em contato:</p>
-                    
-                    <div class="contact-cards-grid">
-                        <!-- Card WhatsApp -->
-                        <div class="contact-card whatsapp-card">
-                            <div class="contact-card-icon">📱</div>
-                            <h3>WhatsApp</h3>
-                            <p>Resposta rápida e direta. Perfeito para solicitar materiais dos cursos ou tirar dúvidas.</p>
-                            <div class="contact-card-info">
-                                <span class="availability-badge available">🟢 Disponível agora</span>
-                                <span class="response-time">Resposta em minutos</span>
-                            </div>
-                            <a href="https://wa.me/5592991146877?text=Olá!%20Gostaria%20de%20solicitar%20recursos%20do%20site." 
-                               target="_blank" 
-                               rel="noopener noreferrer"
-                               class="btn btn-contact btn-whatsapp">
-                                Iniciar Conversa
-                            </a>
-                        </div>
-                        
-                        <!-- Card E-mail -->
-                        <div class="contact-card email-card">
-                            <div class="contact-card-icon">✉️</div>
-                            <h3>E-mail</h3>
-                            <p>Ideal para solicitações detalhadas, envio de documentos ou dúvidas mais complexas.</p>
-                            <div class="contact-card-info">
-                                <span class="email-address">centroestudosbiblicos@gmail.com</span>
-                                <span class="response-time">Resposta em até 24h úteis</span>
-                            </div>
-                            <a href="mailto:centroestudosbiblicos@gmail.com?subject=Solicitação%20de%20Recursos%20-%20Site&body=Olá,%0D%0A%0D%0AGostaria%20de%20solicitar:%0D%0A%0D%0A[Descreva%20aqui%20o%20que%20você%20precisa]" 
-                               class="btn btn-contact btn-email">
-                                Enviar E-mail
-                            </a>
-                        </div>
-                        
-                        <!-- Card Presencial -->
-                        <div class="contact-card presencial-card">
-                            <div class="contact-card-icon">📍</div>
-                            <h3>Visita Presencial</h3>
-                            <p>Venha nos visitar pessoalmente! Estamos localizados no coração de Manaus.</p>
-                            <div class="contact-card-info">
-                                <span class="address">Av. Sete de Setembro, 1801</span>
-                                <span class="address-detail">Centro - Manaus/AM</span>
-                                <span class="schedule">Seg-Sex: 8h às 18h | Sáb: 8h às 12h</span>
-                            </div>
-                            <a href="https://www.google.com/maps/search/?api=1&query=Av.+Sete+de+Setembro,+1801,+Centro,+Manaus,+AM" 
-                               target="_blank" 
-                               rel="noopener noreferrer"
-                               class="btn btn-contact btn-map">
-                                Ver no Mapa
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Informações Adicionais -->
-                    <div class="contact-info-box">
-                        <div class="info-item">
-                            <span class="info-icon">✅</span>
-                            <p><strong>Todos os recursos são gratuitos</strong> - Nossa missão é compartilhar conhecimento bíblico</p>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">📚</span>
-                            <p><strong>Materiais disponíveis:</strong> Apostilas DBF, estudos temáticos, hinários digitais e muito mais</p>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">🔄</span>
-                            <p><strong>Em desenvolvimento:</strong> Novos materiais são adicionados regularmente</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Links Rápidos -->
-                    <div class="quick-links-footer">
-                        <p>Explore também:</p>
-                        <div class="quick-links">
-                            <a href="cursos.html" class="quick-link">📖 Ver Cursos Disponíveis</a>
-                            <a href="biblioteca.html" class="quick-link">📚 Acessar Biblioteca</a>
-                            <a href="contatos.html" class="quick-link">📞 Mais Formas de Contato</a>
-                        </div>
-                    </div>
-                </section>
             </div>
         </section>
+        
+        <!-- Modal de Visualização de PDF -->
+        <div id="pdf-modal" class="pdf-modal" style="display: none;">
+            <div class="pdf-modal-content">
+                <div class="pdf-modal-header">
+                    <button class="btn-close-modal" id="close-pdf-modal">← Voltar</button>
+                    <h3 id="pdf-titulo">Título do Livro</h3>
+                    <div class="pdf-actions">
+                        <button class="btn btn-sm" id="btn-favoritar">⭐ Favoritar</button>
+                        <a class="btn btn-sm btn-primary" id="btn-download-pdf" target="_blank">📥 Download</a>
+                    </div>
+                </div>
+                <div class="pdf-viewer">
+                    <iframe id="pdf-frame" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
     </main>
     
     <footer class="site-footer" role="contentinfo">
@@ -393,7 +393,7 @@
             </div>
             
             <div class="footer-section">
-                <h3>Contato</h3>
+                <h3>Contatos</h3>
                 <div class="contact-info">
                     <p>📍 Av. Sete de Setembro, 1801 - Centro</p>
                     <a href="https://wa.me/5592991146877?text=Olá!%20Gostaria%20de%20entrar%20em%20contato%20com%20a%20secretaria." class="btn btn-whatsapp-secretaria" target="_blank" style="font-size: 0.8rem; padding: 0.4rem 0.8rem; margin: 0.5rem 0.5rem 0.5rem 0;">
@@ -448,49 +448,10 @@
     </button>
     
     <script src="script.js"></script>
-    <script src="./assets/js/mobile-nav.js"></script>
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
-    <script>
-        // Funções específicas da página de links
-        function requestMaterial(material) {
-            const materials = {
-                'dbf-apostila': 'Gostaria de receber a apostila completa do curso DBF em PDF',
-                'dbf-exercicios': 'Gostaria de receber os exercícios e questionários do curso DBF',
-                'dbf-professor': 'Gostaria de receber o guia do professor do curso DBF',
-                'temas-lista': 'Gostaria de receber a lista completa de temas do curso "O que a Bíblia diz"',
-                'estudos-tematicos': 'Gostaria de receber os estudos temáticos em PDF'
-            };
-            
-            const message = materials[material] || 'Gostaria de solicitar material do site';
-            const whatsappUrl = `https://wa.me/5592991146877?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, '_blank');
-        }
-        
-        function requestResource(resource) {
-            const resources = {
-                'comentarios': 'Gostaria de ter acesso aos comentários bíblicos',
-                'hinario': 'Gostaria de receber o hinário digital',
-                'partituras': 'Gostaria de receber as partituras dos cânticos',
-                'audios-ensino': 'Gostaria de receber os áudios de ensino sobre cânticos'
-            };
-            
-            const message = resources[resource] || 'Gostaria de solicitar recursos do site';
-            const whatsappUrl = `https://wa.me/5592991146877?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, '_blank');
-        }
-        
-        // Tracking de cliques nos links externos
-        document.querySelectorAll('a[target="_blank"]').forEach(link => {
-            link.addEventListener('click', function() {
-                const linkText = this.textContent.trim();
-                const linkUrl = this.href;
-                
-                // Analytics tracking (placeholder)
-                console.log(`External link clicked: ${linkText} - ${linkUrl}`);
-            });
-        });
-    </script>
+    <script src="biblioteca.js"></script>
+    <script src="assets/js/simple-video-player.js"></script>
 </body>
 </html>
