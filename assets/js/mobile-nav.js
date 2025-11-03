@@ -1,53 +1,45 @@
-// Mobile Navigation - v2.1
+// Mobile Navigation - v3.0
 document.addEventListener('DOMContentLoaded', function() {
-    const moreBtn = document.getElementById('mobile-more-btn');
-    const moreMenu = document.getElementById('mobile-more-menu');
-    const moreClose = document.getElementById('mobile-more-close');
-    const overlay = document.getElementById('mobile-overlay');
-    const body = document.body;
+    const mobileMoreBtn = document.getElementById('mobile-more-btn');
+    const mobileDropdown = document.querySelector('.mobile-dropdown');
 
-    // Funções de gerenciamento do menu
-    function showMoreMenu(event) {
-        event.preventDefault();
-        event.stopPropagation(); // Impede que o evento se propague
-        if (!moreMenu || !overlay) {
-            console.error('Menu "Mais" não encontrado. Verifique se os elementos existem no DOM.');
-            return;
-        }
-        moreMenu.classList.add('active');
-        overlay.classList.add('active');
-        body.classList.add('mobile-more-active');
-    }
+    if (mobileMoreBtn && mobileDropdown) {
+        mobileMoreBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            mobileMoreBtn.classList.toggle('active');
+            mobileDropdown.classList.toggle('active');
+        });
 
-    function hideMoreMenu() {
-        if (!moreMenu || !overlay) return;
-        moreMenu.classList.remove('active');
-        overlay.classList.remove('active');
-        body.classList.remove('mobile-more-active');
-    }
+        // Fechar dropdown ao clicar fora
+        document.addEventListener('click', (e) => {
+            if (!mobileDropdown.contains(e.target) && e.target !== mobileMoreBtn) {
+                mobileMoreBtn.classList.remove('active');
+                mobileDropdown.classList.remove('active');
+            }
+        });
 
-    // Event Listeners com verificação de existência
-    if (moreBtn) {
-        moreBtn.addEventListener('click', showMoreMenu);
-        console.log('Botão "Mais" inicializado com sucesso');
+        // Fechar dropdown ao clicar em um link
+        const dropdownLinks = mobileDropdown.querySelectorAll('a');
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMoreBtn.classList.remove('active');
+                mobileDropdown.classList.remove('active');
+            });
+        });
+
+        // Fechar dropdown com tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileDropdown.classList.contains('active')) {
+                mobileMoreBtn.classList.remove('active');
+                mobileDropdown.classList.remove('active');
+            }
+        });
+        
+        console.log('Menu dropdown mobile inicializado com sucesso');
     } else {
-        console.error('Botão "Mais" não encontrado no DOM');
+        console.error('Elementos do menu dropdown não encontrados no DOM');
     }
-
-    if (moreClose) {
-        moreClose.addEventListener('click', hideMoreMenu);
-    }
-
-    if (overlay) {
-        overlay.addEventListener('click', hideMoreMenu);
-    }
-
-    // Fechar menu com tecla ESC
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && moreMenu?.classList.contains('active')) {
-            hideMoreMenu();
-        }
-    });
 
     // Fechar menu ao clicar em um link
     document.querySelectorAll('.mobile-more-link').forEach(link => {
