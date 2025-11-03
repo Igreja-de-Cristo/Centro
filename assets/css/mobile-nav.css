@@ -60,51 +60,63 @@
     position: relative; /* Para posicionar o dropdown */
 }
 
+.mobile-nav {
+    position: fixed;
+    z-index: 1000;
+}
+
 .mobile-dropdown {
     position: fixed;
-    bottom: 70px; /* Altura da barra de navegação + espaço */
-    left: 0;
-    right: 0;
+    top: auto; /* Força posicionamento de cima para baixo */
+    bottom: 80px; /* Altura da barra de navegação + espaço extra */
+    left: 50%;
+    transform: translateX(-50%) translateY(100%); /* Começa escondido abaixo */
     background: #fff;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    transform: translateY(100%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    width: calc(100% - 32px); /* Largura total menos margens */
+    max-width: 300px;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.25s ease-in-out, opacity 0.2s ease-out;
     z-index: 999;
-    max-width: 600px; /* Mesmo que .mobile-nav-menu */
-    margin: 0 auto;
-    border-radius: 12px 12px 0 0;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .mobile-dropdown.active {
-    transform: translateY(0);
     opacity: 1;
     visibility: visible;
+    transform: translateX(-50%) translateY(0); /* Move para cima na posição final */
+    bottom: 80px; /* Mantém a posição fixa */
 }
 
 .mobile-dropdown-list {
     list-style: none;
     margin: 0;
-    padding: 0.5rem 0;
+    padding: 0;
     background: #ffffff;
+    min-width: 180px; /* Garante largura mínima para o texto */
 }
 
 .mobile-dropdown-item {
     margin: 0;
     padding: 0;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.mobile-dropdown-item:last-child {
+    border-bottom: none;
 }
 
 .mobile-dropdown-link {
     display: flex;
     align-items: center;
-    padding: 1rem 1.5rem;
+    padding: 12px 16px;
     color: #4a5568;
     text-decoration: none;
-    transition: background-color 0.2s ease;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    transition: background-color 0.15s ease;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .mobile-dropdown-link:hover,
@@ -113,11 +125,10 @@
 }
 
 .mobile-dropdown-icon {
-    flex-shrink: 0; /* Impede que o ícone encolha */
-    font-size: 1.25rem;
-    margin-right: 1rem;
+    flex: 0 0 24px; /* Largura fixa para o ícone */
+    font-size: 20px;
+    margin-right: 12px;
     color: #718096;
-    width: 1.5rem; /* Largura fixa para alinhamento */
     text-align: center;
 }
 
