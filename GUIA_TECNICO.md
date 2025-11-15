@@ -222,7 +222,7 @@ POST /api/auth/logout
 
 ### Contato Dev
 - Lucas Souza
-- WhatsApp: [92 99116-8442](https://wa.me/5592991168442)
+- WhatsApp: [clique aqui](https://wa.me/5592991168442)
 - Disponível em horário comercial
 
 ---

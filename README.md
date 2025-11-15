@@ -1,4 +1,233 @@
-# 🏛️ Igreja de Cristo do Centro - Sistema Administrativo
+# 🏛️ Igreja de Cristo do Centro - Site Oficial
+
+[![Deploy Status](https://img.shields.io/badge/Deploy-Live%20on%20GitHub%20Pages-success?style=for-the-badge&logo=github)](https://igreja-de-cristo.github.io/Centro/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+Site oficial da Igreja de Cristo do Centro - Manaus/AM - Uma comunidade cristã comprometida com os ensinos bíblicos.
+
+## 🌐 DEMONSTRAÇÃO AO VIVO
+
+### **🎯 [ACESSE O SITE AQUI](https://igreja-de-cristo.github.io/Centro/)**
+
+> **✨ Projeto completo funcionando!** Explore todas as funcionalidades implementadas:
+> - 📱 Design 100% responsivo 
+> - 📚 Biblioteca digital com materiais gratuitos
+> - 🎓 Sistema de cursos bíblicos
+> - ⚡ Performance otimizada
+> - 🎨 Interface moderna e profissional
+
+---
+
+## 🌟 Características
+
+- **📱 100% Responsivo** - Funciona perfeitamente em todos os dispositivos
+- **📚 Biblioteca Digital** - Livros, estudos e materiais bíblicos gratuitos
+- **🎓 Cursos Online** - DBF (Deixe a Bíblia Falar) e estudos temáticos
+- **⚡ Performance Otimizada** - Carregamento rápido e experiência fluida
+- **🎨 Design Moderno** - Interface limpa e profissional
+- **♿ Acessível** - Seguindo as melhores práticas de acessibilidade
+
+## 🚀 Deploy
+
+Este site está hospedado no **GitHub Pages** com deploy automático.
+
+**URL de Produção:** `https://igreja-de-cristo.github.io/Centro/`
+
+## 📋 Páginas
+
+### **Públicas:**
+- `index.html` - Página inicial
+- `sobre.html` - Sobre a igreja
+- `cursos.html` - Cursos bíblicos
+- `reunioes.html` - Programação de reuniões
+- `biblioteca.html` - Biblioteca digital
+- `eventos.html` - Eventos e informativos
+- `contatos.html` - Informações de contato
+- `links.html` - Links úteis
+
+### **Páginas Legais:**
+- `politica-privacidade.html` - Política de privacidade (LGPD)
+- `termos-uso.html` - Termos de uso do site
+
+## 🛠️ Tecnologias
+
+- **HTML5** - Estrutura semântica
+- **CSS3** - Design responsivo com CSS Grid e Flexbox
+- **JavaScript** - Interatividade e funcionalidades
+- **GitHub Pages** - Hospedagem gratuita e confiável
+
+## ✨ Destaques Técnicos
+
+### **🎨 Frontend Avançado:**
+- CSS Custom Properties (variáveis responsivas)
+- `clamp()` functions para tipografia fluida
+- Mobile-first approach
+- CSS Grid e Flexbox layouts complexos
+- Animações e transições suaves
+
+### **📚 Sistema de Biblioteca:**
+- Organização por categorias (Livros, Pregações, Estudos)
+- Sistema de busca e filtros
+- Visualização de PDFs integrada
+- Download de materiais
+
+### **⚡ Performance & SEO:**
+- Assets otimizados
+- Meta tags completas e Open Graph
+- URLs semânticos
+- Sitemap.xml configurado
+
+### **🛡️ Conformidade Legal:**
+- Política de Privacidade (LGPD)
+- Termos de Uso
+- Cookie Consent
+
+## 📱 Responsividade
+
+O site é otimizado para todos os dispositivos:
+
+- 📱 **Smartphones** (320px+)
+- 📱 **Tablets** (481px-768px)
+- 💻 **Laptops** (769px-1024px)
+- 🖥️ **Desktops** (1025px-1440px)
+- 🖥️ **Ultra-wide** (1441px+)
+
+## 🔧 Desenvolvimento Local
+
+```bash
+# Clone o repositório
+git clone https://github.com/Igreja-de-Cristo/Centro.git
+
+# Entre na pasta
+cd Centro
+
+# Abra o index.html no navegador
+open index.html
+```
+
+## 🎓 Cursos Disponíveis
+
+### 📚 **DBF - Deixe a Bíblia Falar**
+- **Modalidade:** Presencial ou Online
+- **Duração:** 12 semanas
+- **Conteúdo:** Fundamentos da fé cristã
+- **Material:** 12 lições em PDF
+
+### 🎯 **O que a Bíblia diz**
+- **Modalidade:** Online
+- **Duração:** Estudos temáticos
+- **Conteúdo:** Temas específicos (igreja, batismo, salvação, etc.)
+- **Material:** PDFs temáticos gratuitos
+
+### 📖 **Doutrinas Essenciais**
+- **Modalidade:** Online
+- **Duração:** 7 estudos
+- **Conteúdo:** Doutrinas fundamentais da Igreja de Cristo
+- **Material:** 7 lições em PDF
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+Centro/
+├── 📄 index.html                    # Página inicial
+├── 📄 sobre.html                    # Sobre a igreja
+├── 📄 reunioes.html                 # Horários e reuniões
+├── 📄 cursos.html                   # Cursos bíblicos
+├── 📄 biblioteca.html               # Biblioteca digital
+├── 📄 eventos.html                  # Eventos e informativos
+├── 📄 contatos.html                 # Contato
+├── 📄 links.html                    # Links úteis
+├── 📄 politica-privacidade.html     # LGPD
+├── 📄 termos-uso.html               # Termos legais
+├── 🎨 style.css                     # Estilos principais
+├── ⚡ script.js                     # JavaScript principal
+├── assets/
+│   ├── 📁 css/                      # Estilos adicionais
+│   ├── 📁 js/                       # Scripts auxiliares
+│   ├── 📁 images/                   # Imagens
+│   ├── 📁 cursos/                   # PDFs dos cursos
+│   └── 🖼️ [ícones e logos]
+├── 📋 GUIA_USUARIO.md               # Guia para usuários
+├── 📋 GUIA_TECNICO.md               # Documentação técnica
+└── 📖 README.md                     # Este arquivo
+```
+
+---
+
+## 🌟 Funcionalidades
+
+### **✅ Para os Visitantes:**
+- 📖 Acesso gratuito a materiais bíblicos
+- 🎓 Inscrição em cursos online
+- 📅 Consulta de horários e eventos
+- 📍 Localização e contato
+- 📱 Links para redes sociais
+
+### **✅ Para a Igreja:**
+- 📊 Sistema de informativos dinâmicos
+- 📚 Biblioteca digital organizada
+- 🎥 Integração com YouTube
+- 📱 Links diretos para WhatsApp
+- 🔍 SEO otimizado
+
+---
+
+## 📞 Contato
+
+### **📍 Localização:**
+Av. Sete de Setembro, 1801 - Centro  
+Manaus/AM - CEP: 69005-141
+
+### **📱 WhatsApp:**
+- **Secretaria:** [(92) 99114-6877](https://wa.me/5592991146877)
+- **DBF Online:** [(92) 98835-7459](https://wa.me/5592988357459)
+
+### **🌐 Redes Sociais:**
+- **Instagram:** [@igrejadecristodasete](https://www.instagram.com/igrejadecristodasete/)
+- **YouTube:** [@igrejadecristonocentro-manaus](https://www.youtube.com/@igrejadecristonocentro-manaus)
+
+---
+
+## 👨‍💻 Desenvolvimento
+
+Este projeto demonstra:
+
+- **Frontend Development** - HTML5, CSS3, JavaScript ES6+
+- **Responsive Design** - Mobile-first, CSS Grid, Flexbox
+- **UI/UX Design** - Interface intuitiva e acessível
+- **Performance** - Otimizações e best practices
+- **SEO** - Meta tags, Open Graph, sitemap
+- **Compliance** - LGPD, cookies, termos de uso
+
+### 🏆 **Qualidade:**
+- ✅ **100% Responsivo** em todos os dispositivos
+- ✅ **Performance Otimizada** (carregamento rápido)
+- ✅ **SEO Completo** (meta tags e sitemap)
+- ✅ **Acessibilidade** (WCAG 2.1)
+- ✅ **Código Limpo** e bem documentado
+
+---
+
+## 📄 Licença
+
+Este projeto é de propriedade da Igreja de Cristo do Centro - Manaus/AM.
+
+---
+
+## 📚 Documentação
+
+- **[GUIA_USUARIO.md](GUIA_USUARIO.md)** - Manual para usuários finais
+- **[GUIA_TECNICO.md](GUIA_TECNICO.md)** - Documentação técnica completa
+
+---
+
+**Desenvolvido com ❤️ para a comunidade cristã**
+
+*✨ "Lâmpada para os meus pés é a tua palavra, e luz para o meu caminho." - Salmo 119:105*# 🏛️ Igreja de Cristo do Centro - Sistema Administrativo
 
 [![Deploy Status](https://img.shields.io/badge/Deploy-Live%20on%20Vercel-brightgreen?style=for-the-badge&logo=vercel)](https://igrejadecristo-centro.vercel.app/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)

@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /admin-login.html
 
-Sitemap: https://igrejadecristo-centro.netlify.app/sitemap.xml
+Sitemap: https://igreja-de-cristo.github.io/Centro/sitemap.xml

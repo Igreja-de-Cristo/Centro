@@ -161,7 +161,7 @@ O sistema é 100% responsivo:
 ## 📞 Suporte
 
 ### Precisa de ajuda?
-- WhatsApp: [92 99116-8442](https://wa.me/5592991168442)
+- WhatsApp: [clique aqui](https://wa.me/5592991168442)
 - Assunto: "Suporte Sistema Admin"
 
 ---
