@@ -3,26 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    
-    <meta name="description" content="Biblioteca Digital Cristã - Livros, estudos e materiais bíblicos gratuitos escritos pelos irmãos da Igreja de Cristo do Centro.">
-    <meta name="keywords" content="biblioteca cristã, livros evangélicos, estudos bíblicos pdf, material cristão gratuito">
+    <meta name="description" content="Cursos bíblicos gratuitos da Igreja de Cristo do Centro - DBF online, estudos temáticos e certificados.">
+    <meta name="keywords" content="cursos bíblicos, DBF online, deixe a bíblia falar, estudos bíblicos gratuitos, manaus, curso online">
     
     <link rel="icon" type="image/svg+xml" href="./assets/logo-igreja.svg">
-    <link rel="canonical" href="https://igrejadecristocentro-manaus.netlify.app/biblioteca.html">
+    <link rel="canonical" href="https://igrejadecristocentro-manaus.netlify.app/cursos.html">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="assets/css/videos.css">
     <link rel="stylesheet" href="assets/css/cookie-consent.css">
     <link rel="stylesheet" href="assets/css/mobile-nav.css">
     <link rel="stylesheet" href="assets/css/mobile-nav-responsive.css">
     <script src="assets/js/cookie-consent.js"></script>
     <script src="assets/js/mobile-nav.js"></script>
     
-    <title>Biblioteca Digital - Igreja de Cristo do Centro</title>
+    <title>Cursos Bíblicos - Igreja de Cristo do Centro</title>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
@@ -61,54 +59,60 @@
                                 </a>
                             </li>
                             <li class="mobile-nav-item">
-                                <a href="biblioteca.html" class="mobile-nav-link active">
+                                <a href="biblioteca.html" class="mobile-nav-link">
                                     <span class="mobile-nav-icon">📚</span>
                                     <span>Biblioteca</span>
                                 </a>
                             </li>
                             <li class="mobile-nav-item">
-                                <a href="cursos.html" class="mobile-nav-link">
+                                <a href="cursos.html" class="mobile-nav-link active">
                                     <span class="mobile-nav-icon">📖</span>
                                     <span>Cursos</span>
                                 </a>
                             </li>
                             <li class="mobile-nav-item">
                                 <button class="mobile-nav-link" id="mobile-more-btn">
-                                    <span class="mobile-nav-icon">⌄</span>
+                                    <span class="mobile-nav-icon">⋮</span>
                                     <span>Mais</span>
                                 </button>
-                                <!-- Dropdown Menu -->
-                                <div class="mobile-dropdown">
-                                    <ul class="mobile-dropdown-list">
-                                        <li class="mobile-dropdown-item">
-                                            <a href="eventos.html" class="mobile-dropdown-link">
-                                                <span class="mobile-dropdown-icon">📅</span>
-                                                <span>Eventos</span>
-                                            </a>
-                                        </li>
-                                        <li class="mobile-dropdown-item">
-                                            <a href="reunioes.html" class="mobile-dropdown-link">
-                                                <span class="mobile-dropdown-icon">👥</span>
-                                                <span>Reuniões</span>
-                                            </a>
-                                        </li>
-                                        <li class="mobile-dropdown-item">
-                                            <a href="contatos.html" class="mobile-dropdown-link">
-                                                <span class="mobile-dropdown-icon">📞</span>
-                                                <span>Contatos</span>
-                                            </a>
-                                        </li>
-                                        <li class="mobile-dropdown-item">
-                                            <a href="links.html" class="mobile-dropdown-link">
-                                                <span class="mobile-dropdown-icon">🔗</span>
-                                                <span>Links</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
                             </li>
                         </ul>
                     </nav>
+
+                    <!-- Menu Mais (Overlay) -->
+                    <div class="mobile-overlay" id="mobile-overlay"></div>
+                    <div class="mobile-more-menu" id="mobile-more-menu">
+                        <div class="mobile-more-menu-header">
+                            <span class="mobile-more-menu-title">Menu</span>
+                            <button class="mobile-more-close" id="mobile-more-close">✕</button>
+                        </div>
+                        <ul class="mobile-more-grid">
+                            <li class="mobile-more-item">
+                                <a href="eventos.html" class="mobile-more-link">
+                                    <span class="mobile-more-icon">📅</span>
+                                    <span class="mobile-more-label">Eventos</span>
+                                </a>
+                            </li>
+                            <li class="mobile-more-item">
+                                <a href="reunioes.html" class="mobile-more-link">
+                                    <span class="mobile-more-icon">�</span>
+                                    <span class="mobile-more-label">Reuniões</span>
+                                </a>
+                            </li>
+                            <li class="mobile-more-item">
+                                <a href="contatos.html" class="mobile-more-link">
+                                    <span class="mobile-more-icon">📞</span>
+                                    <span class="mobile-more-label">Contatos</span>
+                                </a>
+                            </li>
+                            <li class="mobile-more-item">
+                                <a href="links.html" class="mobile-more-link">
+                                    <span class="mobile-more-icon">🔗</span>
+                                    <span class="mobile-more-label">Links</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -121,9 +125,9 @@
                 <li><a href="index.html" class="nav-link">Início</a></li>
                 <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
                 <li><a href="reunioes.html" class="nav-link">Reuniões</a></li>
-                <li><a href="cursos.html" class="nav-link">Cursos</a></li>
+                <li><a href="cursos.html" class="nav-link active" aria-current="page">Cursos</a></li>
                 <li><a href="eventos.html" class="nav-link">Eventos</a></li>
-                <li><a href="biblioteca.html" class="nav-link active" aria-current="page">Biblioteca</a></li>
+                <li><a href="biblioteca.html" class="nav-link">Biblioteca</a></li>
                 <li><a href="contatos.html" class="nav-link">Contatos</a></li>
                 <li><a href="links.html" class="nav-link">Links</a></li>
             </ul>
@@ -133,238 +137,657 @@
     <main id="main-content" class="main-content" role="main">
         <section class="page-hero">
             <div class="container">
-                <h1>📚 Biblioteca Digital Cristã</h1>
-                <p class="hero-description">Livros, estudos e materiais bíblicos gratuitos escritos pelos irmãos da nossa igreja</p>
+                <h1>Cursos Bíblicos Gratuitos</h1>
+                <p class="hero-description">Estude as Escrituras e fortaleça sua fé com nossos cursos baseados na Bíblia</p>
             </div>
         </section>
         
-        <section class="biblioteca-content">
+        <section class="courses-intro">
             <div class="container">
-                
-                <!-- Busca e Filtros -->
-                <div class="biblioteca-controls">
-                    <div class="search-box">
-                        <input type="text" id="busca-livros" placeholder="🔍 Buscar por título, autor ou palavra-chave..." aria-label="Buscar livros">
-                        <button class="btn-search" id="btn-buscar">Buscar</button>
-                    </div>
+                <div class="intro-content">
+                    <h2>Aprenda as Escrituras Sagradas</h2>
+                    <p>Oferecemos cursos bíblicos gratuitos para todos que desejam conhecer mais sobre Deus e Sua palavra. Nossos estudos são baseados exclusivamente na Bíblia, sem influência de tradições humanas ou denominações.</p>
                     
-                    <!-- Categorias em Accordion -->
-                    <div class="biblioteca-accordion" id="categorias-accordion">
-                        <div class="accordion-item active" data-categoria="todas">
-                            <div class="accordion-header">
-                                <span class="accordion-icon">📚</span>
-                                <span class="accordion-title">Todas as Categorias</span>
-                                <span class="accordion-arrow">▼</span>
-                            </div>
-                            <div class="accordion-content active">
-                                <p class="categoria-descricao">Explore todos os materiais disponíveis na biblioteca.</p>
-                                <div class="categoria-conteudo" id="conteudo-todas"></div>
-                            </div>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">📚</div>
+                            <h3>100% Gratuito</h3>
+                            <p>Todos os nossos cursos são completamente gratuitos, sem taxas ocultas.</p>
                         </div>
                         
-                        <div class="accordion-item" data-categoria="pregacoes">
-                            <div class="accordion-header">
-                                <span class="accordion-icon">📖</span>
-                                <span class="accordion-title">Pregações</span>
-                                <span class="accordion-arrow">▶</span>
-                            </div>
-                            <div class="accordion-content">
-                                <p class="categoria-descricao">Vídeos das pregações realizadas na igreja. Cada pregação inclui a data de quando foi ministrada e o tema abordado. Você pode assistir diretamente no site sem precisar sair.</p>
-                                <div class="categoria-conteudo" id="conteudo-pregacoes"></div>
-                            </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">📖</div>
+                            <h3>Baseado na Bíblia</h3>
+                            <p>Estudos focados exclusivamente nas Escrituras Sagradas.</p>
                         </div>
                         
-                        <div class="accordion-item" data-categoria="intensivos">
-                            <div class="accordion-header">
-                                <span class="accordion-icon">📚</span>
-                                <span class="accordion-title">Intensivos/Seminários</span>
-                                <span class="accordion-arrow">▶</span>
-                            </div>
-                            <div class="accordion-content">
-                                <p class="categoria-descricao">Conteúdos dos eventos de intensivos e seminários, incluindo vídeos gravados dos encontros e materiais de apoio (PDFs ou indicação de livros utilizados durante o evento).</p>
-                                <div class="categoria-conteudo" id="conteudo-intensivos"></div>
-                            </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🏆</div>
+                            <h3>Certificado</h3>
+                            <p>Receba certificado de conclusão ao finalizar os cursos.</p>
                         </div>
                         
-                        <div class="accordion-item" data-categoria="cursos">
-                            <div class="accordion-header">
-                                <span class="accordion-icon">📄</span>
-                                <span class="accordion-title">Estudos Bíblicos</span>
-                                <span class="accordion-arrow">▶</span>
-                            </div>
-                            <div class="accordion-content">
-                                <p class="categoria-descricao">Materiais em PDF para estudos individuais ou em grupo. Explore diversos temas bíblicos com profundidade.</p>
-                                <div class="categoria-conteudo" id="conteudo-cursos"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="accordion-item" data-categoria="infantil">
-                            <div class="accordion-header">
-                                <span class="accordion-icon">👶</span>
-                                <span class="accordion-title">Infantil</span>
-                                <span class="accordion-arrow">▶</span>
-                            </div>
-                            <div class="accordion-content">
-                                <p class="categoria-descricao">Materiais especiais desenvolvidos para as crianças aprenderem sobre Deus de forma divertida e didática.</p>
-                                <div class="categoria-conteudo" id="conteudo-infantil"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="accordion-item" data-categoria="casais">
-                            <div class="accordion-header">
-                                <span class="accordion-icon">💑</span>
-                                <span class="accordion-title">Casais</span>
-                                <span class="accordion-arrow">▶</span>
-                            </div>
-                            <div class="accordion-content">
-                                <p class="categoria-descricao">Conteúdos voltados para fortalecer relacionamentos, abençoar casamentos e edificar famílias segundo os princípios bíblicos.</p>
-                                <div class="categoria-conteudo" id="conteudo-casais"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="accordion-item" data-categoria="hinarios">
-                            <div class="accordion-header">
-                                <span class="accordion-icon">🎵</span>
-                                <span class="accordion-title">Hinários</span>
-                                <span class="accordion-arrow">▶</span>
-                            </div>
-                            <div class="accordion-content">
-                                <p class="categoria-descricao">Coleção de hinários em formato PDF e PowerPoint para uso durante os cultos e estudos. Disponibilizados para facilitar a adoração congregacional com cânticos e hinos espirituais.</p>
-                                <div class="categoria-conteudo" id="conteudo-hinarios"></div>
-                            </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">👨‍🏫</div>
+                            <h3>Acompanhamento</h3>
+                            <p>Professores experientes para tirar suas dúvidas.</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="courses-notice-section">
+            <div class="container">
+                <div class="courses-general-notice">
+                    <p style="color: #e74c3c; font-weight: bold; text-align: center; margin: 2rem 0; background: #fff5f5; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                        ℹ️ <strong>IMPORTANTE:</strong> Todas as inscrições e informações de nossos cursos são feitas exclusivamente pelo WhatsApp
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="courses-detailed">
+            <div class="container">
+                <div class="course-detailed" id="dbf-online">
+                    <div class="course-header-detailed">
+                        <div class="course-badge online">Online</div>
+                        <h2>DBF - Deixe a Bíblia Falar</h2>
+                        <p class="course-subtitle">Curso completo online sobre fundamentos bíblicos cristãos</p>
+                    </div>
                     
-                    <div class="biblioteca-sort">
-                        <label for="ordenacao">Ordenar por:</label>
-                        <select id="ordenacao">
-                            <option value="recente">Mais Recentes</option>
-                            <option value="antigo">Mais Antigos</option>
-                            <option value="titulo">Título (A-Z)</option>
-                            <option value="autor">Autor (A-Z)</option>
-                            <option value="popular">Mais Populares</option>
-                        </select>
+                    <div class="course-content-grid">
+                        <div class="course-info-detailed">
+                            <h3>Sobre o Curso</h3>
+                            <p>O curso "Deixe a Bíblia Falar" é um estudo sistemático dos fundamentos da fé cristã. Durante 12 semanas, você estudará online com materiais digitais e suporte completo via WhatsApp sobre temas essenciais como salvação, igreja, batismo, e muito mais, sempre baseado exclusivamente nas Escrituras.</p>
+                            
+                            <div class="course-details">
+                                <div class="detail-item">
+                                    <strong>⏱️ Duração:</strong> 12 semanas
+                                </div>
+                                <div class="detail-item">
+                                    <strong>📅 Frequência:</strong> Estudo no seu ritmo
+                                </div>
+                                <div class="detail-item">
+                                    <strong>⏰ Horário:</strong> Flexível - você escolhe
+                                </div>
+                                <div class="detail-item">
+                                    <strong>💻 Formato:</strong> Online com suporte WhatsApp
+                                </div>
+                                <div class="detail-item">
+                                    <strong>💬 Suporte:</strong> Acompanhamento via WhatsApp
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="course-curriculum">
+                            <h3>Conteúdo Programático</h3>
+                            <ol class="curriculum-list">
+                                <li>Introdução à Bíblia</li>
+                                <li>Deus e Sua Natureza</li>
+                                <li>Jesus Cristo - O Filho de Deus</li>
+                                <li>O Espírito Santo</li>
+                                <li>O Homem e o Pecado</li>
+                                <li>A Salvação</li>
+                                <li>A Igreja de Cristo</li>
+                                <li>O Batismo Bíblico</li>
+                                <li>A Ceia do Senhor</li>
+                                <li>A Adoração Verdadeira</li>
+                                <li>A Vida Cristã</li>
+                                <li>A Segunda Vinda de Cristo</li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <div class="course-actions">
+                        <a href="https://wa.me/5592988357459?text=Olá!%20Gostaria%20de%20me%20inscrever%20no%20curso%20DBF%20presencial.%20Podem%20me%20enviar%20mais%20informações?" target="_blank" class="btn btn-primary">
+                           � Inscrever-se via WhatsApp
+                        </a>
+                        <a href="https://wa.me/5592988357459?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20curso%20DBF." target="_blank" class="btn btn-secondary">Mais Informações</a>
                     </div>
                 </div>
                 
-                <!-- Estatísticas -->
-                <div class="biblioteca-stats">
-                    <div class="stat-item">
-                        <span class="stat-number" id="total-livros">0</span>
-                        <span class="stat-label">Livros</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" id="total-autores">0</span>
-                        <span class="stat-label">Autores</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" id="total-downloads">0</span>
-                        <span class="stat-label">Downloads</span>
-                    </div>
-                </div>
-                
-                <!-- Histórico de Leitura -->
-                <div class="biblioteca-section" id="historico-section" style="display: none;">
-                    <h2>📖 Seu Histórico de Leitura</h2>
-                    <div id="historico-livros" class="livros-grid-small"></div>
-                </div>
-                
-                <!-- Favoritos -->
-                <div class="biblioteca-section" id="favoritos-section" style="display: none;">
-                    <h2>⭐ Seus Favoritos</h2>
-                    <div id="favoritos-livros" class="livros-grid-small"></div>
-                </div>
-                
-                <!-- Seção de Vídeos -->
-                <section class="videos-section">
-                    <h2 class="section-title">📺 Vídeos e Transmissões</h2>
-                    
-                    <!-- Seção de Pregações -->
-                    <div class="pregacoes-section">
-                        <h3 class="video-category-title">Pregações</h3>
-                        <div class="video-grid" id="pregacoes-grid">
-                            <!-- Videos serão inseridos via JavaScript -->
-                        </div>
-                    </div>
-
-                    <!-- Seção de Últimos Vídeos -->
-                    <div class="recent-videos">
-                        <h3 class="video-category-title">Últimos Vídeos</h3>
-                        <div class="video-grid" id="recent-videos-grid">
-                            <!-- Thumbnails serão inseridas via JavaScript -->
-                        </div>
+                <div class="course-detailed" id="biblia-diz">
+                    <div class="course-header-detailed">
+                        <div class="course-badge online">Online</div>
+                        <h2>O que a Bíblia diz</h2>
+                        <p class="course-subtitle">11 Lições em PDF para estudos sobre a doutrina bíblica</p> 
                     </div>
                     
-                    <!-- Seção de Cultos -->
-                    <div class="cultos-section">
-                        <h3 class="video-category-title">Cultos</h3>
-                        <div class="video-grid" id="cultos-grid">
-                            <!-- Videos serão inseridos via JavaScript -->
-                        </div>
-                    </div>
-                    
-                    <!-- Seção de Estudos Bíblicos -->
-                    <div class="estudos-section">
-                        <h3 class="video-category-title">Estudos Bíblicos</h3>
-                        <div class="video-grid" id="estudos-grid">
-                            <!-- Videos serão inseridos via JavaScript -->
-                        </div>
-                    </div>
-
-                    <!-- Seção de E.B.D - Online -->
-                    <div class="ebd-section">
-                        <h3 class="video-category-title">E.B.D - Online</h3>
-                        <div class="video-grid" id="ebd-grid">
-                            <!-- Videos serão inseridos via JavaScript -->
-                        </div>
-                    </div>
-
-                    <!-- Seção de Vigílias -->
-                    <div class="vigilias-section">
-                        <h3 class="video-category-title">Vigílias</h3>
-                        <div class="video-grid" id="vigilias-grid">
-                            <!-- Videos serão inseridos via JavaScript -->
-                        </div>
-                    </div>
-
-                    <!-- Seção de Retiros -->
-                    <div class="retiros-section">
-                        <h3 class="video-category-title">Retiros</h3>
-                        <div class="video-grid" id="retiros-grid">
-                            <!-- Videos serão inseridos via JavaScript -->
-                        </div>
-                    </div>
-                    
-                    <!-- Modal para Vídeos -->
-                    <div class="video-modal" id="video-modal">
-                        <div class="video-modal-content">
-                            <button class="close-modal" id="close-video-modal">&times;</button>
-                            <div class="video-container" id="modal-player">
-                                <!-- Player será inserido via JavaScript -->
+                    <div class="course-content-grid">
+                        <div class="course-info-detailed">
+                            <h3>Sobre o Curso</h3>
+                            <p>Uma coleção completa de 11 lições em PDF, focadas especificamente em temas específicos e dúvidas comuns sobre a fé cristã. Cada lição responde perguntas importantes usando exclusivamente a Bíblia como fonte de autoridade.</p>
+                            
+                            <div class="course-details">
+                                <div class="detail-item">
+                                    <strong>📚 Total:</strong> 11 lições
+                                </div>
+                                <div class="detail-item">
+                                    <strong>📄 Formato:</strong> PDF para download
+                                </div>
+                                <div class="detail-item">
+                                    <strong>⏰ Horário:</strong> Estude no seu ritmo
+                                </div>
+                                <div class="detail-item">
+                                    <strong>💻 Acesso:</strong> Links diretos online
+                                </div>
+                                <div class="detail-item">
+                                    <strong>💬 Suporte:</strong> Via WhatsApp
+                                </div>
                             </div>
+                        </div>
+                        
+                        <div class="course-topics">
+                            <h3 class="collapsible-header">
+                                <span>Lições Disponíveis</span>
+                                <button class="toggle-lessons-btn" aria-expanded="false" aria-label="Expandir lições">
+                                    <span class="toggle-icon">▼</span>
+                                </button>
+                            </h3>
+                            <div class="lessons-grid collapsible-content" id="lessons-igreja" style="display: none;">
+                                <div class="lesson-item unlocked" data-lesson="1">
+                                    <h4>📖 Lição 1</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1hmGP3YIeeL0PVNcpajnwVTqbVKYv6R32/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="hhttps://forms.gle/gL9qqtQftzkKQEab8" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="2">
+                                    <h4>📖 Lição 2</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1bFwUF5reGWQ07AaSOv53g2JW_cMYPurV/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="hhttps://forms.gle/BXsD5t2Bj1ZWtb5V7" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="3">
+                                    <h4>📖 Lição 3</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1w7Aw5DdJPMrUjPw3aBJ9MQZd9QLOo0FL/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/p5pnSMm2ezaobhpf7" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="4">
+                                    <h4>📖 Lição 4</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/15zDR8nkfz5OxJfxwNnxNf8SG5iuv4y_k/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/JhGfcw9nRYYnRaAa6" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="5">
+                                    <h4>📖 Lição 5</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1zPd-tp6tbK2xnG4cJU9bL1-N3xvuQcO3/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/kK2EPPk7oZP9S37Y6" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="6">
+                                    <h4>📖 Lição 6</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1uHT7qkiqPPZJqalH0hWvwnL74azXtWSG/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/X4pvB7GLp3BaPgXU7" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="7">
+                                    <h4>📖 Lição 7</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1IZsEPpmKmxP7D4T6f9sxM1vrB_Dp7Lun/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/YyGbmMmsV3FwVk3C6" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="8">
+                                    <h4>📖 Lição 8</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/17hkApcthJIiRq_qaWQaTb9VpTaS3p8Hn/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/XXVnj7ZqB21Tq2tm6" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="9">
+                                    <h4>📖 Lição 9</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1M-XuTUEGamSid0MCngQLpEt5K-Mx_oWw/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/P66zZjRQDPKGmbh49" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="10">
+                                    <h4>📖 Lição 10</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/10miknK8fcnxgL60pMNorZMWRRr_kAhGQ/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/4uoLb8xU5WW16oJC7" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="11">
+                                    <h4>📖 Lição 11</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1yacCFadYSdrlQdlaFJWYLTZ2Hqvid7n-/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/s88L9xDof6rUHy6D7" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-actions">
+                        <a href="https://wa.me/5592991146877?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20curso%20A%20Igreja%20Bíblica." target="_blank" class="btn btn-primary">
+                            📱 WhatsApp para Dúvidas
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="course-detailed" id="estudos-avancados">
+                    <div class="course-header-detailed">
+                        <div class="course-badge online">Online</div>
+                        <h2>A Igreja Bíblica</h2>
+                        <p class="course-subtitle">15 lições em PDF para estudo aprofundado sobre a Igreja conforme as Escrituras</p>
+                    </div>
+                    
+                    <div class="course-content-grid">
+                        <div class="course-info-detailed">
+                            <h3>Sobre o Curso</h3>
+                            <p>Uma coleção completa de 15 estudos bíblicos em formato PDF, focando especificamente na Igreja conforme revelada no Novo Testamento. Cada lição examina aspectos fundamentais da natureza, organização e propósito da Igreja de Cristo nas Escrituras Sagradas.</p>
+                            
+                            <div class="course-details">
+                                <div class="detail-item">
+                                    <strong>📚 Total:</strong> 15 lições
+                                </div>
+                                <div class="detail-item">
+                                    <strong>📄 Formato:</strong> PDF para download
+                                </div>
+                                <div class="detail-item">
+                                    <strong>⏰ Horário:</strong> Estude no seu ritmo
+                                </div>
+                                <div class="detail-item">
+                                    <strong>💻 Acesso:</strong> Links diretos online
+                                </div>
+                                <div class="detail-item">
+                                    <strong>💬 Suporte:</strong> WhatsApp disponível
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="course-curriculum">
+                            <h3 class="collapsible-header">
+                                <span>Lições Disponíveis</span>
+                                <button class="toggle-lessons-btn" aria-expanded="false" aria-label="Expandir lições">
+                                    <span class="toggle-icon">▼</span>
+                                </button>
+                            </h3>
+                            <div class="lessons-grid collapsible-content" id="lessons-igreja" style="display: none;">
+                                <div class="lesson-item unlocked" data-lesson="1">
+                                    <h4>📖 Lição 1</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1PTmVqBWjsrjuhARZ_4XwSwM4eS7H5zkg/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/LurdBuwVzb4GrGk5A" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="2">
+                                    <h4>📖 Lição 2</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1FYK002AteGAMw6VXGcUTlzreg4A2hHC_/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/FnqNi32wcMtPxmRH8" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="3">
+                                    <h4>📖 Lição 3</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1AIgojoUiQBKSFy1aKNJQ13YBErxyGs9e/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/MyuA6AkR5AWhnZHD6" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="4">
+                                    <h4>📖 Lição 4</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1vvLsJ75mbmFnqKyz55f0BMU4OuHclaRo/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/te4uchzFkUoKCLNB7" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="5">
+                                    <h4>📖 Lição 5</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1OUmw9jEqDCiysT1OptT_vNnGHJglYeT3/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/mDuVc8hhFdiS8PRFA" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="6">
+                                    <h4>📖 Lição 6</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1m4XJ3ZnoWNLx5KZWQsrfLWAEdKGEaqj6/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/5AhEfi5yaHyouRwA8" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="7">
+                                    <h4>📖 Lição 7</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/18ltIzbBLwiIu9qGQy6XsL-5YG3w5q0Oc/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/YoW4nLoxcjscn2qZ6" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="8">
+                                    <h4>📖 Lição 8</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/10YC-EQ2cuh-jYohM8qHu8t_0YldhforT/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/TiGJKDZ8sLgHjfoQA" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="9">
+                                    <h4>📖 Lição 9</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1dDc6FgvTCaS3yJFPzH11MxYqF9GR6Dt3/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/4CtDZPX7dwZ39bLR9" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="10">
+                                    <h4>📖 Lição 10</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1_0JuBy96TTWYTuuMFwmU2JRF5864I1he/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/7ANGbT7x2PgYtWMT7" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="11">
+                                    <h4>📖 Lição 11</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1zpaRYyzIXBiEgaYCIac8kT7wDelVyPyi/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/ZSMbK54NbNW9CnTJ6" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="12">
+                                    <h4>📖 Lição 12</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1IDpFiSgwAeDk5-MyxCYdJjeTV9_Tl9Uv/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/PFC8s8ijvZmu4Cs57" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="13">
+                                    <h4>📖 Lição 13</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1kAIVCvWiAYRLdXo5L05OEvM_caD6C7ck/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/MVEsiTGtByMhxaZf6" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="14">
+                                    <h4>📖 Lição 14</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1Lp40FpxtPF6PPlezdSZVAThmpaeYlMB4/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/cGv1pr8UYscDZV4q9" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                <div class="lesson-item unlocked" data-lesson="15">
+                                    <h4>📖 Lição 15</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1VZ_K_YKexifGkyyq8BXhxnUa3JXvFZp0/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/mdG9mdTTqVDHE7Y39" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-actions">
+                        <a href="https://wa.me/5592991146877?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20curso%20A%20Igreja%20Bíblica." target="_blank" class="btn btn-primary">
+                           📱 WhatsApp para Dúvidas
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="course-detailed" id="fundamentos-fe">
+                    <div class="course-header-detailed">
+                        <div class="course-badge online">Online</div>
+                        <h2>Revelações de Cristo</h2>
+                        <p class="course-subtitle">7 lições essenciais sobre as revelações e ensinamentos de Jesus Cristo</p>
+                    </div>
+                    
+                    <div class="course-content-grid">
+                        <div class="course-info-detailed">
+                            <h3>Sobre o Curso</h3>
+                            <p>Um curso fundamental com 7 lições essenciais que abordam as revelações e ensinamentos diretos de Jesus Cristo. Ideal para compreender a mensagem central do Novo Testamento e os ensinamentos do Mestre, proporcionando uma base sólida na Palavra de Cristo.</p>
+                            
+                            <div class="course-details">
+                                <div class="detail-item">
+                                    <strong>📚 Total:</strong> 7 lições fundamentais
+                                </div>
+                                <div class="detail-item">
+                                    <strong>📄 Formato:</strong> PDF para download
+                                </div>
+                                <div class="detail-item">
+                                    <strong>👶 Nível:</strong> Iniciante a Intermediário
+                                </div>
+                                <div class="detail-item">
+                                    <strong>⏰ Duração:</strong> Estude no seu ritmo
+                                </div>
+                                <div class="detail-item">
+                                    <strong>📱 Suporte:</strong> WhatsApp disponível
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="course-curriculum">
+                            <h3 class="collapsible-header">
+                                <span>Revelações Disponíveis</span>
+                                <button class="toggle-lessons-btn" aria-expanded="false" aria-label="Expandir revelações">
+                                    <span class="toggle-icon">▼</span>
+                                </button>
+                            </h3>
+                            <div id="lessons-revelacoes" class="lessons-container collapsible-content" style="display: none;">
+                                <div class="lesson-item unlocked" data-lesson="1">
+                                    <h4>📖 Revelação 1</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1B5g1b6YymwN7Fi7RHQEG93nsbr0hpIlJ/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/mh98NyoV2uJ4Qu1S9" data-quiz="revelacoes-1" class="btn btn-primary btn-small quiz-btn">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="lesson-item unlocked" data-lesson="2">
+                                    <h4>📖 Revelação 2</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1zc4CDMcyEmWMNVzgeSobnKLZjIFaFils/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/RpB8QUn8N9wbzLnWA" data-quiz="revelacoes-2" class="btn btn-primary btn-small quiz-btn">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="lesson-item unlocked" data-lesson="3">
+                                    <h4>📖 Revelação 3</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1po4pxMp8vMHJOHcu0V7ID0rm7xUPd0bB/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/B652zvy5PN23EwdP6" data-quiz="revelacoes-3" class="btn btn-primary btn-small quiz-btn">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="lesson-item unlocked" data-lesson="4">
+                                    <h4>📖 Revelação 4</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/18w89iGYNqLewG1rr1C_9_8G3Wx4aHG7c/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/xVXrTNEzRrYi6jdA6" data-quiz="revelacoes-4" class="btn btn-primary btn-small quiz-btn">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="lesson-item unlocked" data-lesson="5">
+                                    <h4>📖 Revelação 5</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1yhk-4FRfDySM__5T9JFMjSNHoBJ4nclC/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/ncZvtFkoZhJo9oiR7" data-quiz="revelacoes-5" class="btn btn-primary btn-small quiz-btn">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="lesson-item unlocked" data-lesson="6">
+                                    <h4>📖 Revelação 6</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/17C5NTk_kg8QOfl63jaP--wyBokowdLxk/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/JudZUW2nYrNrqMso7" data-quiz="revelacoes-6" class="btn btn-primary btn-small quiz-btn">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="lesson-item unlocked" data-lesson="7">
+                                    <h4>📖 Revelação 7</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1iHXPnFk0pkBvrsOVw-LjQ3rskVzSaGux/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/pUYdUuSdUYMJHPE96" data-quiz="revelacoes-7" class="btn btn-primary btn-small quiz-btn">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-actions">
+                        <a href="https://wa.me/5592991146877?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20curso%20Revelações%20de%20Cristo." target="_blank" class="btn btn-primary">
+                           📱 WhatsApp para Dúvidas
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="course-detailed" id="doutrinas-essenciais">
+                    <div class="course-header-detailed">
+                        <div class="course-badge online">Online</div>
+                        <h2>Simplesmente Cristão</h2>
+                        <p class="course-subtitle">7 estudos sobre a simplicidade e pureza da fé cristã original</p>
+                    </div>
+                    
+                    <div class="course-content-grid">
+                        <div class="course-info-detailed">
+                            <h3>Sobre o Curso</h3>
+                            <p>Este curso aborda a simplicidade e pureza da fé cristã conforme revelada no Novo Testamento. Cada estudo examina aspectos da vida cristã simples e autêntica, livre de tradições humanas e complicações denominacionais, voltando às raízes do cristianismo original.</p>
+                            
+                            <div class="course-details">
+                                <div class="detail-item">
+                                    <strong>📚 Total:</strong> 7 estudos essenciais
+                                </div>
+                                <div class="detail-item">
+                                    <strong>📄 Formato:</strong> PDF para estudo individual
+                                </div>
+                                <div class="detail-item">
+                                    <strong>🎯 Foco:</strong> Simplicidade cristã
+                                </div>
+                                <div class="detail-item">
+                                    <strong>⏰ Duração:</strong> Estude no seu ritmo
+                                </div>
+                                <div class="detail-item">
+                                    <strong>📱 Suporte:</strong> WhatsApp para esclarecimentos
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="course-curriculum">
+                            <h3 class="collapsible-header">
+                                <span>Estudos Disponíveis</span>
+                                <button class="toggle-lessons-btn" aria-expanded="false" aria-label="Expandir estudos">
+                                    <span class="toggle-icon">▼</span>
+                                </button>
+                            </h3>
+                            <div id="lessons-cristao" class="lessons-container collapsible-content" style="display: none;">
+                                <div class="lesson-item unlocked" data-lesson="1">
+                                    <h4>� Estudo 1</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1DazuVwv_7Ph69fbh60FEfkx6DTJ1Hx2f/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/2FhaMbNvA4QGAmWW9" data-quiz="cristao-1" class="btn btn-primary btn-small quiz-btn">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="lesson-item unlocked" data-lesson="2">
+                                    <h4>📖 Estudo 2</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1sgtW4F0ToqRcNg2o2OmKjilUAtmdFC71/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/3miqLE9t6EMuUfhWA" data-quiz="cristao-2" class="btn btn-primary btn-small quiz-btn">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="lesson-item unlocked" data-lesson="3">
+                                    <h4>📖 Estudo 3</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1tgZH9cQ4Z-YJyaosvGfbjg1tjotlajeo/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/srPX38diqKKdzRVZ6" data-quiz="cristao-3" class="btn btn-primary btn-small quiz-btn">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="lesson-item unlocked" data-lesson="4">
+                                    <h4>📖 Estudo 4</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1lxt8Y_qIOYx0NERx4zi1ICVC1BsKtVsu/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/D4td6nAHpPHu6b2j7" data-quiz="cristao-4" class="btn btn-primary btn-small quiz-btn">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="lesson-item unlocked" data-lesson="5">
+                                    <h4>📖 Estudo 5</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1Y7eNdDhQgVwEf8G5CUkEsu04mW10HYbO/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/RYZ1xqtStpBczCQG9" data-quiz="cristao-5" class="btn btn-primary btn-small quiz-btn">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="lesson-item unlocked" data-lesson="6">
+                                    <h4>📖 Estudo 6</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1iCNqqB_ZQaLGHVw4x8FzBXtNb9dsrkjG/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/TJib6cwriUvufNQC9" data-quiz="cristao-6" class="btn btn-primary btn-small quiz-btn">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="lesson-item unlocked" data-lesson="7">
+                                    <h4>📖 Estudo 7</h4>
+                                    <div class="lesson-content">
+                                        <a href="https://drive.google.com/file/d/1SGuQwaczIAVfKw5nr7S2tYAafunEcJ_8/view?usp=sharing" target="_blank" class="btn btn-outline btn-small">📄 Abrir PDF</a>
+                                        <a href="https://forms.gle/dcQmHndRq3FBeNRz8" data-quiz="cristao-7" class="btn btn-primary btn-small quiz-btn">📝 Fazer Prova</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-actions">
+                        <a href="https://wa.me/5592991146877?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20curso%20Simplesmente%20Cristão." target="_blank" class="btn btn-primary">
+                           📱 WhatsApp para Dúvidas
+                        </a>
+                    </div>
+                </div>
+                
+                <section class="additional-resources">
+                    <h2>Recursos Adicionais</h2>
+                    <div class="resources-grid">
+                        <div class="resource-card">
+                            <div class="resource-icon">❓</div>
+                            <h3>Perguntas e Respostas</h3>
+                            <p>Envie suas dúvidas bíblicas e receba respostas baseadas nas Escrituras.</p>
+                            <a href="https://wa.me/5592991146877?text=Tenho%20uma%20dúvida%20bíblica" 
+                               target="_blank" rel="noopener noreferrer" class="btn btn-outline">Fazer Pergunta</a>
                         </div>
                     </div>
                 </section>
                 
+                <section class="testimonials">
+                    <h2>Depoimentos</h2>
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"O curso DBF online foi perfeito para mim! Pude estudar no meu próprio ritmo e o suporte via WhatsApp foi excelente. Aprendi sobre a verdadeira igreja de Cristo e fui batizado!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <strong>- João Silva</strong>
+                                <span>Curso DBF Online</span>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"O suporte e acompanhamento pelo WhatsApp foi excelente. Material muito bem estruturado e professores sempre disponíveis!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <strong>- Maria Santos</strong>
+                                <span>Curso DBF</span>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"Os temas do curso 'O que a Bíblia diz' esclareceram muitas dúvidas que eu tinha sobre doutrina. Material muito bem elaborado!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <strong>- Pedro Oliveira</strong>
+                                <span>O que a Bíblia diz</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </section>
-        
-        <!-- Modal de Visualização de PDF -->
-        <div id="pdf-modal" class="pdf-modal" style="display: none;">
-            <div class="pdf-modal-content">
-                <div class="pdf-modal-header">
-                    <button class="btn-close-modal" id="close-pdf-modal">← Voltar</button>
-                    <h3 id="pdf-titulo">Título do Livro</h3>
-                    <div class="pdf-actions">
-                        <button class="btn btn-sm" id="btn-favoritar">⭐ Favoritar</button>
-                        <a class="btn btn-sm btn-primary" id="btn-download-pdf" target="_blank">📥 Download</a>
-                    </div>
-                </div>
-                <div class="pdf-viewer">
-                    <iframe id="pdf-frame" frameborder="0"></iframe>
-                </div>
-            </div>
-        </div>
     </main>
     
     <footer class="site-footer" role="contentinfo">
@@ -375,7 +798,7 @@
             </div>
             
             <div class="footer-section">
-                <h3>Contatos</h3>
+                <h3>Contato</h3>
                 <div class="contact-info">
                     <p>📍 Av. Sete de Setembro, 1801 - Centro</p>
                     <a href="https://wa.me/5592991146877?text=Olá!%20Gostaria%20de%20entrar%20em%20contato%20com%20a%20secretaria." class="btn btn-whatsapp-secretaria" target="_blank" style="font-size: 0.8rem; padding: 0.4rem 0.8rem; margin: 0.5rem 0.5rem 0.5rem 0;">
@@ -433,7 +856,98 @@
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
-    <script src="biblioteca.js"></script>
-    <script src="assets/js/simple-video-player.js"></script>
-</body>
-</html>
+    <script>
+        // 📋 URLs dos Google Forms - CONFIGURE AQUI COM SEUS FORMULÁRIOS!
+        const GOOGLE_FORMS = {
+            'dbf-online': 'https://forms.gle/SEU_FORM_DBF_ONLINE',  // ← Substitua pela URL do seu form
+            'biblia-diz': 'https://forms.gle/SEU_FORM_BIBLIA_DIZ'          // ← Substitua pela URL do seu form
+        };
+        
+        // Configurar links dos Google Forms automaticamente
+        document.addEventListener('DOMContentLoaded', function() {
+            const formLinks = document.querySelectorAll('.google-form-link');
+            
+            formLinks.forEach(link => {
+                const curso = link.getAttribute('data-curso');
+                const formUrl = GOOGLE_FORMS[curso];
+                
+                if (formUrl && formUrl !== 'https://forms.gle/SEU_FORM_' + curso.toUpperCase().replace('-', '_')) {
+                    // URL configurada corretamente
+                    link.href = formUrl;
+                    
+                    // Adicionar evento de clique para analytics (opcional)
+                    link.addEventListener('click', function() {
+                        console.log(`📊 Inscrição iniciada: ${curso}`);
+                        
+                        // Analytics opcional - descomente se usar Google Analytics
+                        // gtag('event', 'click', {
+                        //     event_category: 'Cursos',
+                        //     event_label: curso,
+                        //     value: 1
+                        // });
+                    });
+                } else {
+                    // URL não configurada ainda - mostrar alerta
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        showNotification('info', '⚠️ Formulário em Configuração', 
+                            'Este formulário ainda não foi configurado. Entre em contato pelo WhatsApp para se inscrever.');
+                        
+                        // Fallback: abrir WhatsApp
+                        setTimeout(() => {
+                            const courseNames = {
+                                'dbf-online': 'DBF Online',
+                                'biblia-diz': 'O que a Bíblia diz'
+                            };
+                            const courseName = courseNames[curso] || curso;
+                            const message = `Olá! Gostaria de me inscrever no curso "${courseName}".`;
+                            const whatsappUrl = `https://wa.me/5592991146877?text=${encodeURIComponent(message)}`;
+                            window.open(whatsappUrl, '_blank');
+                        }, 2000);
+                    });
+                }
+            });
+        });
+        
+        // Sistema de notificações (mantido para feedback visual)
+        function showNotification(type, title, message) {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `
+                <h4>${title}</h4>
+                <p>${message}</p>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Remover após 5 segundos
+            setTimeout(() => {
+                notification.remove();
+            }, 5000);
+        }
+        
+        // Funções para download de amostras (mantidas)
+        function downloadSamplePDF() {
+            showNotification('info', '📚 Amostra Disponível', 
+                'Em breve disponibilizaremos uma amostra do curso DBF. Entre em contato pelo WhatsApp para mais informações.');
+            
+            setTimeout(() => {
+                window.open('https://wa.me/5592988357459?text=Gostaria%20de%20receber%20uma%20amostra%20do%20curso%20DBF', '_blank');
+            }, 2000);
+        }
+        
+        function downloadTopicList() {
+            showNotification('info', '📋 Lista de Temas', 
+                'A lista completa de temas será enviada pelo WhatsApp. Entre em contato conosco.');
+            
+            setTimeout(() => {
+                window.open('https://wa.me/5592991146877?text=Gostaria%20de%20receber%20a%20lista%20completa%20de%20temas%20do%20curso', '_blank');
+            }, 2000);
+        }
+        
+        // Log para debug
+        console.log('📋 Sistema de Google Forms carregado!');
+        console.log('🔧 Para configurar: edite as URLs em GOOGLE_FORMS no código');
+    </script>
+
+    <!-- Back to Top Button -->
