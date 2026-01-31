@@ -1,6 +1,9 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
+# Bloqueia acesso de robôs (Google/Bing) às áreas administrativas
 Disallow: /admin-login.html
+Disallow: /admin-dashboard.html
+Disallow: /assets/pdfs/  # Opcional: Se não quiser que os PDFs apareçam no Google
 
+# Garanta que esta URL é a URL final exata do seu site
 Sitemap: https://igreja-de-cristo.github.io/Centro/sitemap.xml

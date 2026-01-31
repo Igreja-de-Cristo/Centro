@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de manutenção - Igreja de Cristo do Centro">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="icon" type="image/svg+xml" href="./assets/logo-igreja.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Página em Manutenção - Igreja de Cristo do Centro</title>
+
+    <style>
+        .maintenance-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            color: white;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .maintenance-content {
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            gap: 1rem;
+        }
+
+        .logo-img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .maintenance-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .maintenance-message {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s ease, background 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-whatsapp:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="maintenance-page">
+        <div class="maintenance-content">
+            <div class="logo-container">
+                <img src="./assets/logo-igreja.svg" alt="Igreja de Cristo do Centro" class="logo-img">
+                <div>
+                    <h1 style="margin:0; font-size: 1.5rem;">Igreja de Cristo do Centro</h1>
+                    <small>Manaus - AM</small>
+                </div>
+            </div>
+
+            <h2 class="maintenance-title">PÁGINA EM MANUTENÇÃO</h2>
+            <p class="maintenance-message">
+                Estamos a atualizar o nosso site para melhor o servir. <br>
+                Por favor, entre em contacto connosco pelo WhatsApp para informações imediatas.
+            </p>
+
+            <a href="https://wa.me/5592991146877" class="btn-whatsapp" target="_blank">
+                Falar com a Secretaria
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

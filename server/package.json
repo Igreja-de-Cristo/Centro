@@ -2,13 +2,13 @@
   "name": "igreja-cristo-centro",
   "version": "3.0.0",
   "description": "Site oficial da Igreja de Cristo do Centro - Manaus/AM",
-  "main": "server/index.js",
+  "main": "index.js",
   "scripts": {
     "build": "echo 'Site estático - sem build necessário'",
     "vercel-build": "echo 'Deploy de site estático HTML/CSS/JS'",
-    "start": "node server/index.js",
-    "dev": "nodemon server/index.js",
-    "backup": "node server/tools/backup.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "backup": "node services/backup.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",

@@ -1,777 +1,168 @@
-# 🏛️ Igreja de Cristo do Centro - Site Oficial
+# 🏛️ Igreja de Cristo do Centro - Website
 
-[![Deploy Status](https://img.shields.io/badge/Deploy-Live%20on%20GitHub%20Pages-success?style=for-the-badge&logo=github)](https://igreja-de-cristo.github.io/Centro/)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+> **⚠️ AVISO:** Este site está atualmente **suspenso** por decisão institucional da igreja. A página principal exibe uma mensagem de manutenção.
 
-Site oficial da Igreja de Cristo do Centro - Manaus/AM - Uma comunidade cristã comprometida com os ensinos bíblicos.
+## 📋 Sobre o Projeto
 
-## 🌐 DEMONSTRAÇÃO AO VIVO
+Website institucional desenvolvido para a Igreja de Cristo do Centro, contendo:
 
-### **🎯 [ACESSE O SITE AQUI](https://igreja-de-cristo.github.io/Centro/)**
+- 📖 Biblioteca Digital de estudos bíblicos
+- 🎥 Galeria de vídeos e pregações
+- 📅 Calendário de eventos
+- 👥 Informações sobre a igreja
+- 📚 Cursos bíblicos online
 
-> **✨ Projeto completo funcionando!** Explore todas as funcionalidades implementadas:
-> - 📱 Design 100% responsivo 
-> - 📚 Biblioteca digital com materiais gratuitos
-> - 🎓 Sistema de cursos bíblicos
-> - ⚡ Performance otimizada
-> - 🎨 Interface moderna e profissional
+## 🚀 Demonstração
 
----
+**Site em Produção:** [https://lucasrsouza.github.io/Projeto_ICS/](https://lucasrsouza.github.io/Projeto_ICS/)
 
-## 🌟 Características
-
-- **📱 100% Responsivo** - Funciona perfeitamente em todos os dispositivos
-- **📚 Biblioteca Digital** - Livros, estudos e materiais bíblicos gratuitos
-- **🎓 Cursos Online** - DBF (Deixe a Bíblia Falar) e estudos temáticos
-- **⚡ Performance Otimizada** - Carregamento rápido e experiência fluida
-- **🎨 Design Moderno** - Interface limpa e profissional
-- **♿ Acessível** - Seguindo as melhores práticas de acessibilidade
-
-## 🚀 Deploy
-
-Este site está hospedado no **GitHub Pages** com deploy automático.
-
-**URL de Produção:** `https://igreja-de-cristo.github.io/Centro/`
-
-## 📋 Páginas
-
-### **Públicas:**
-- `index.html` - Página inicial
-- `sobre.html` - Sobre a igreja
-- `cursos.html` - Cursos bíblicos
-- `reunioes.html` - Programação de reuniões
-- `biblioteca.html` - Biblioteca digital
-- `eventos.html` - Eventos e informativos
-- `contatos.html` - Informações de contato
-- `links.html` - Links úteis
-
-### **Páginas Legais:**
-- `politica-privacidade.html` - Política de privacidade (LGPD)
-- `termos-uso.html` - Termos de uso do site
-
-## 🛠️ Tecnologias
-
-- **HTML5** - Estrutura semântica
-- **CSS3** - Design responsivo com CSS Grid e Flexbox
-- **JavaScript** - Interatividade e funcionalidades
-- **GitHub Pages** - Hospedagem gratuita e confiável
-
-## ✨ Destaques Técnicos
-
-### **🎨 Frontend Avançado:**
-- CSS Custom Properties (variáveis responsivas)
-- `clamp()` functions para tipografia fluida
-- Mobile-first approach
-- CSS Grid e Flexbox layouts complexos
-- Animações e transições suaves
-
-### **📚 Sistema de Biblioteca:**
-- Organização por categorias (Livros, Pregações, Estudos)
-- Sistema de busca e filtros
-- Visualização de PDFs integrada
-- Download de materiais
-
-### **⚡ Performance & SEO:**
-- Assets otimizados
-- Meta tags completas e Open Graph
-- URLs semânticos
-- Sitemap.xml configurado
-
-### **🛡️ Conformidade Legal:**
-- Política de Privacidade (LGPD)
-- Termos de Uso
-- Cookie Consent
-
-## 📱 Responsividade
-
-O site é otimizado para todos os dispositivos:
-
-- 📱 **Smartphones** (320px+)
-- 📱 **Tablets** (481px-768px)
-- 💻 **Laptops** (769px-1024px)
-- 🖥️ **Desktops** (1025px-1440px)
-- 🖥️ **Ultra-wide** (1441px+)
-
-## 🔧 Desenvolvimento Local
-
-```bash
-# Clone o repositório
-git clone https://github.com/Igreja-de-Cristo/Centro.git
-
-# Entre na pasta
-cd Centro
-
-# Abra o index.html no navegador
-open index.html
-```
-
-## 🎓 Cursos Disponíveis
-
-### 📚 **DBF - Deixe a Bíblia Falar**
-- **Modalidade:** Presencial ou Online
-- **Duração:** 12 semanas
-- **Conteúdo:** Fundamentos da fé cristã
-- **Material:** 12 lições em PDF
-
-### 🎯 **O que a Bíblia diz**
-- **Modalidade:** Online
-- **Duração:** Estudos temáticos
-- **Conteúdo:** Temas específicos (igreja, batismo, salvação, etc.)
-- **Material:** PDFs temáticos gratuitos
-
-### 📖 **Doutrinas Essenciais**
-- **Modalidade:** Online
-- **Duração:** 7 estudos
-- **Conteúdo:** Doutrinas fundamentais da Igreja de Cristo
-- **Material:** 7 lições em PDF
-
----
-
-## 📁 Estrutura do Projeto
-
-```
-Centro/
-├── 📄 index.html                    # Página inicial
-├── 📄 sobre.html                    # Sobre a igreja
-├── 📄 reunioes.html                 # Horários e reuniões
-├── 📄 cursos.html                   # Cursos bíblicos
-├── 📄 biblioteca.html               # Biblioteca digital
-├── 📄 eventos.html                  # Eventos e informativos
-├── 📄 contatos.html                 # Contato
-├── 📄 links.html                    # Links úteis
-├── 📄 politica-privacidade.html     # LGPD
-├── 📄 termos-uso.html               # Termos legais
-├── 🎨 style.css                     # Estilos principais
-├── ⚡ script.js                     # JavaScript principal
-├── assets/
-│   ├── 📁 css/                      # Estilos adicionais
-│   ├── 📁 js/                       # Scripts auxiliares
-│   ├── 📁 images/                   # Imagens
-│   ├── 📁 cursos/                   # PDFs dos cursos
-│   └── 🖼️ [ícones e logos]
-├── 📋 GUIA_USUARIO.md               # Guia para usuários
-├── 📋 GUIA_TECNICO.md               # Documentação técnica
-└── 📖 README.md                     # Este arquivo
-```
-
----
-
-## 🌟 Funcionalidades
-
-### **✅ Para os Visitantes:**
-- 📖 Acesso gratuito a materiais bíblicos
-- 🎓 Inscrição em cursos online
-- 📅 Consulta de horários e eventos
-- 📍 Localização e contato
-- 📱 Links para redes sociais
-
-### **✅ Para a Igreja:**
-- 📊 Sistema de informativos dinâmicos
-- 📚 Biblioteca digital organizada
-- 🎥 Integração com YouTube
-- 📱 Links diretos para WhatsApp
-- 🔍 SEO otimizado
-
----
-
-## 📞 Contato
-
-### **📍 Localização:**
-Av. Sete de Setembro, 1801 - Centro  
-Manaus/AM - CEP: 69005-141
-
-### **📱 WhatsApp:**
-- **Secretaria:** [(92) 99114-6877](https://wa.me/5592991146877)
-- **DBF Online:** [(92) 98835-7459](https://wa.me/5592988357459)
-
-### **🌐 Redes Sociais:**
-- **Instagram:** [@igrejadecristodasete](https://www.instagram.com/igrejadecristodasete/)
-- **YouTube:** [@igrejadecristonocentro-manaus](https://www.youtube.com/@igrejadecristonocentro-manaus)
-
----
-
-## 👨‍💻 Desenvolvimento
-
-Este projeto demonstra:
-
-- **Frontend Development** - HTML5, CSS3, JavaScript ES6+
-- **Responsive Design** - Mobile-first, CSS Grid, Flexbox
-- **UI/UX Design** - Interface intuitiva e acessível
-- **Performance** - Otimizações e best practices
-- **SEO** - Meta tags, Open Graph, sitemap
-- **Compliance** - LGPD, cookies, termos de uso
-
-### 🏆 **Qualidade:**
-- ✅ **100% Responsivo** em todos os dispositivos
-- ✅ **Performance Otimizada** (carregamento rápido)
-- ✅ **SEO Completo** (meta tags e sitemap)
-- ✅ **Acessibilidade** (WCAG 2.1)
-- ✅ **Código Limpo** e bem documentado
-
----
-
-## 📄 Licença
-
-Este projeto é de propriedade da Igreja de Cristo do Centro - Manaus/AM.
-
----
-
-## 📚 Documentação
-
-- **[GUIA_USUARIO.md](GUIA_USUARIO.md)** - Manual para usuários finais
-- **[GUIA_TECNICO.md](GUIA_TECNICO.md)** - Documentação técnica completa
-
----
-
-**Desenvolvido com ❤️ para a comunidade cristã**
-
-*✨ "Lâmpada para os meus pés é a tua palavra, e luz para o meu caminho." - Salmo 119:105*# 🏛️ Igreja de Cristo do Centro - Sistema Administrativo
-
-[![Deploy Status](https://img.shields.io/badge/Deploy-Live%20on%20Vercel-brightgreen?style=for-the-badge&logo=vercel)](https://igrejadecristo-centro.vercel.app/)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-
-Site oficial da Igreja Cristã Solidária - Uma comunidade de fé, amor e solidariedade.
-
-## 🌐 DEMONSTRAÇÃO AO VIVO
-
-### **🎯 [ACESSE O SITE AQUI](https://igrejadecristo-centro.vercel.app/)**
-
-> **✨ Projeto completo funcionando!** Explore todas as funcionalidades implementadas:
-> - 📱 Design 100% responsivo 
-> - 🔒 Sistema administrativo seguro
-> - ⚡ Performance otimizada
-> - 🎨 Interface moderna e profissional
-
----
-
-## 🌟 Características
-
-- **📱 100% Responsivo** - Funciona perfeitamente em todos os dispositivos
-- **🔒 Sistema Admin Seguro** - Painel administrativo protegido por login
-- **⚡ Performance Otimizada** - Carregamento rápido e experiência fluida
-- **🎨 Design Moderno** - Interface limpa e profissional
-- **♿ Acessível** - Seguindo as melhores práticas de acessibilidade
-
-## � Deploy
-
-Este site está hospedado no **Vercel** com deploy automático a partir do GitHub.
-
-**URL de Produção:** `https://igreja-crista-solidaria.vercel.app`
-
-## 📋 Páginas
-
-### **Públicas:**
-- `index.html` - Página inicial
-- `sobre.html` - Sobre a igreja
-- `cursos.html` - Cursos e estudos
-- `reunioes.html` - Programação de reuniões
-- `links.html` - Links úteis
-
-### **Administrativas (Privadas):**
-- `admin-login.html` - Login administrativo
-- `admin-informativos.html` - Painel de informativos
-
-## 🔐 Acesso Administrativo
-
-O sistema administrativo é **privado e protegido**. Para mais informações sobre acesso, consulte o arquivo `ADMIN_SECRETO.md`.
-
-## 🛠️ Tecnologias
-
-- **HTML5** - Estrutura semântica
-- **CSS3** - Design responsivo com CSS Grid e Flexbox
-- **JavaScript** - Interatividade e funcionalidades
-- **Vercel** - Hospedagem e deploy
-
-## � Destaques Técnicos
-
-### **🎨 Frontend Avançado:**
-- CSS Custom Properties (variáveis responsivas)
-- `clamp()` functions para tipografia fluida
-- Mobile-first approach
-- CSS Grid e Flexbox layouts complexos
-- Animações e transições suaves
-
-### **🔐 Sistema de Autenticação:**
-- Login administrativo com localStorage
-- Controle de sessão e expiração
-- Limite de tentativas e bloqueio temporário
-- Logs de segurança e auditoria
-
-### **⚡ Performance & SEO:**
-- Assets otimizados e compressão
-- Cache headers configurados
-- Meta tags e Open Graph
-- URLs semânticos e limpos
-
-### **🛠️ DevOps & Deploy:**
-- Git workflow com commits semânticos
-- Deploy automático no Vercel
-- Headers de segurança (HTTPS, XSS, etc.)
-- Monitoramento e analytics
-
-## �📱 Responsividade
-
-O site é otimizado para todos os dispositivos:
-
-- 📱 **Smartphones** (320px+)
-- 📱 **Tablets** (481px-768px)
-- 💻 **Laptops** (769px-1024px)
-- 🖥️ **Desktops** (1025px-1440px)
-- 🖥️ **Ultra-wide** (1441px+)
-
-## 🔧 Desenvolvimento Local
-
-```bash
-# Clone o repositório
-git clone https://github.com/souzarlucas/Projeto_ICS.git
-
-# Entre na pasta
-cd Projeto_ICS
-
-# Abra o index.html no navegador
-open index.html
-```
-
-## 📄 Licença
-
-Este projeto é propriedade da Igreja Cristã Solidária.
-
----
-
-**Desenvolvido com ❤️ para a comunidade ICS**
-
----
-
-## ✨ Características Principais
-
-### 🚀 **Para os Usuários (Estudantes)**
-- ✅ **Clique direto** nos botões de inscrição
-- ✅ **Google Forms familiar** - interface conhecida
-- ✅ **Inscrição em segundos** - sem complicações
-- ✅ **Confirmação automática** do Google
-- ✅ **Funciona 100%** - sem bugs ou falhas
-
-### �️ **Para os Administradores**
-- ✅ **Google Sheets automático** - todas as respostas organizadas
-- ✅ **Notificações por email** - saiba na hora de novas inscrições
-- ✅ **Zero manutenção** - Google cuida de tudo
-- ✅ **Backup automático** - dados seguros na nuvem
-- ✅ **Relatórios prontos** - estatísticas no próprio Google
-
----
-
-## 🚀 Configuração Ultra-Rápida (2 minutos)
-
-### **1. Configure as URLs dos seus Google Forms:**
-
-No arquivo `cursos.html`, procure esta seção:
-
-```javascript
-const GOOGLE_FORMS = {
-    'dbf-presencial': 'https://forms.gle/SEU_FORM_DBF_PRESENCIAL',
-    'dbf-online': 'https://forms.gle/SEU_FORM_DBF_ONLINE',
-    'biblia-diz': 'https://forms.gle/SEU_FORM_BIBLIA_DIZ'
-};
-```
-
-**Substitua pelas URLs reais dos seus formulários!**
-
-### **2. Teste:**
-- Abra `index.html` no navegador
-- Vá para "Cursos"
-- Clique em qualquer botão de inscrição
-- Deve abrir seu Google Form!
-
-**🎉 Pronto! Sistema funcionando!**
-
----
-
-## 📁 Estrutura Simplificada
-
-```
-Projeto_ICS/
-├── 📄 index.html               # Página inicial
-├── 📄 sobre.html               # Sobre nós
-├── 📄 reunioes.html            # Reuniões e horários
-├── 📄 cursos.html              # 🎓 Cursos (configurar Google Forms aqui)
-├── 📄 contatos.html             # Contato e localização
-├── 📄 links.html               # Links úteis
-├── 🎨 style.css                # Estilos
-├── ⚡ script.js                # JavaScript básico
-├── assets/                     # Imagens e ícones
-├── 📋 GUIA_GOOGLE_FORMS.md     # 📖 Como configurar (LEIA ESTE!)
-└── 📖 README.md                # Este arquivo
-```
-
----
-
-## 🎓 Fluxo Super Simples
-
-### **Para o Usuário:**
-1. **Acessa** → Site da igreja
-2. **Clica** → "Inscrever-se" no curso
-3. **Abre** → Google Form (nova aba)
-4. **Preenche** → Dados básicos
-5. **Envia** → Confirmação automática
-
-### **Para Você:**
-1. **Recebe** → Email de nova inscrição
-2. **Vê** → Dados no Google Sheets
-3. **Contata** → Via WhatsApp
-4. **Acompanha** → Progresso manual
-
----
-
-## 📊 Vantagens dos Google Forms
-
-### **✅ Zero Problemas Técnicos:**
-- Sem servidor para manter
-- Sem banco de dados para gerenciar
-- Sem bugs para corrigir
-- Sem backups para fazer
-
-### **✅ Confiabilidade 100%:**
-- Google cuida da infraestrutura
-- Disponibilidade 24/7
-- Segurança de dados garantida
-- Backup automático
-
-### **✅ Facilidade Total:**
-- Interface familiar para usuários
-- Configuração simples
-- Relatórios automáticos
-- Edição sem programação
-
----
-
-## 📱 Como Funciona na Prática
-
-### **Quando alguém se inscreve:**
-1. **Clica** no botão do curso
-2. **Google Form abre** em nova aba
-3. **Preenche** os dados
-4. **Google salva** automaticamente no Sheets
-5. **Você recebe** notificação por email
-6. **Contata** a pessoa via WhatsApp
-
----
-
-## 🔧 Configuração Detalhada
-
-### **📋 Leia o guia completo:**
-Consulte o arquivo `GUIA_GOOGLE_FORMS.md` para:
-- Como obter URLs dos formulários
-- Configuração passo a passo
-- Campos sugeridos para cada curso
-- Configurações recomendadas
-- Automações possíveis
-
----
-
-## 🎯 Benefícios vs Sistemas Complexos
-
-| **Google Forms** | **Sistema Próprio** |
-|------------------|---------------------|
-| ✅ Configuração: 2 min | ❌ Configuração: horas |
-| ✅ Manutenção: zero | ❌ Manutenção: constante |
-| ✅ Bugs: impossível | ❌ Bugs: frequentes |
-| ✅ Backup: automático | ❌ Backup: manual |
-| ✅ Custo: grátis | ❌ Custo: servidor |
-| ✅ Confiabilidade: 100% | ❌ Confiabilidade: variável |
-
----
-
-## 📞 Próximos Passos
-
-### **Hoje (agora):**
-1. ✅ Configure URLs dos Google Forms
-2. ✅ Teste cada botão de inscrição
-3. ✅ Verifique se emails chegam
-
-### **Esta semana:**
-1. 📊 Configure relatórios no Google Sheets
-2. 📱 Teste fluxo completo com uma inscrição real
-3. 🎯 Treine equipe para usar planilhas
-
-### **Opcional (depois):**
-1. 🤖 Configure automações com Zapier
-2. 📧 Personalize respostas automáticas
-3. 📈 Analise estatísticas de inscrições
-
----
-
-## 📚 Documentação
-
-- **`GUIA_GOOGLE_FORMS.md`** - Configuração completa dos formulários
-- **Google Forms** - Seus formulários (já criados ✅)
-- **Google Sheets** - Respostas automáticas
-- **Site da Igreja** - Interface pública
-
----
-
-## 🎉 Parabéns!
-
-Você escolheu a **solução mais inteligente**:
-
-- ✅ **Simples** para configurar
-- ✅ **Fácil** para usar
-- ✅ **Confiável** para operar
-- ✅ **Gratuito** para manter
-
-**Foque no que importa: evangelizar e ensinar a Palavra de Deus, deixe a tecnologia com o Google!** 🙏
-
----
-
-*✨ "Lâmpada para os meus pés é a tua palavra, e luz para o meu caminho." - Salmo 119:105*
-
----
-
-## ✨ Características Principais
-
-### 🚀 **Para os Usuários (Estudantes)**
-- ✅ **Inscrição instantânea** - apenas nome, email e WhatsApp
-- ✅ **Sem login necessário** - acesso direto aos materiais
-- ✅ **PDFs organizados** por curso e lição
-- ✅ **Acompanhamento via WhatsApp** pessoal
-- ✅ **Certificados digitais** ao concluir
-- ✅ **Interface responsiva** - funciona perfeitamente no celular
-
-### 🎛️ **Para os Administradores**
-- ✅ **Painel de controle simples** - veja todas as inscrições
-- ✅ **Relatórios automáticos** - downloads, progresso, estatísticas
-- ✅ **Gestão de PDFs** - adicione novos materiais facilmente
-- ✅ **Backup automático** - dados seguros
-- ✅ **Email automático** - boas-vindas personalizadas
-- ✅ **WhatsApp integrado** - links diretos para contato
-
----
-
-## 📁 Estrutura do Projeto
-
-```
-Projeto_ICS/
-├── 📄 index.html               # Página inicial
-├── 📄 sobre.html               # Sobre nós
-├── 📄 reunioes.html            # Reuniões e horários
-├── 📄 cursos.html              # 🎓 Cursos bíblicos (PRINCIPAL)
-├── 📄 contatos.html             # Contato e localização
-├── 📄 links.html               # Links úteis e recursos
-├── 🎨 style.css                # Estilos principais
-├── ⚡ script.js                # JavaScript funcional
-├── 🐍 sistema_simples.py       # 🔥 Sistema backend SEM LOGIN
-├── 🐍 igreja_sistema.py        # Sistema original (completo)
-├── assets/
-│   ├── 📁 pdfs/                # 📚 PDFs dos cursos
-│   │   ├── dbf/               # DBF - Deixe a Bíblia Falar
-│   │   ├── biblia-diz/        # O que a Bíblia diz
-│   │   └── EXEMPLO_LICAO.md   # Modelo de lição
-│   └── 🖼️ [imagens e ícones]
-├── 📋 GUIA_COMPLETO.md         # 📖 Guia detalhado de uso
-├── 🚀 INSTALACAO.md            # ⚡ Instalação em 5 minutos
-├── 📁 GUIA_PDFS.md             # 📚 Como organizar PDFs
-└── 📖 README.md                # Este arquivo
-```
-
----
-
-## 🚀 Instalação Rápida (5 minutos)
-
-### **1. Instalar dependências:**
-```bash
-pip install flask flask-cors
-```
-
-### **2. Iniciar o sistema:**
-```bash
-python sistema_simples.py
-```
-
-### **3. Abrir o site:**
-- Abra `index.html` no navegador
-- Vá para "Cursos"
-- Teste uma inscrição!
-
-### **4. Monitorar inscrições:**
-```
-http://localhost:5000/api/admin/inscricoes
-```
-
-**🎉 Pronto! Sistema funcionando!**
-
----
-
-## 🎓 Cursos Disponíveis
-
-### 📚 **DBF - Deixe a Bíblia Falar**
-- **Modalidade:** Presencial ou Online
-- **Duração:** 12 semanas
-- **Conteúdo:** Fundamentos da fé cristã
-- **Material:** 12 lições em PDF + certificado
-
-### 🎯 **O que a Bíblia diz**
-- **Modalidade:** Online
-- **Duração:** 6 semanas  
-- **Conteúdo:** Temas específicos (igreja, batismo, oração, etc.)
-- **Material:** 6 estudos temáticos + certificado
-
----
-
-## 📱 Como Funciona na Prática
-
-### **Para o Usuário:**
-1. **Acessa** → `cursos.html`
-2. **Escolhe** → Curso desejado
-3. **Clica** → "Inscrever-se"
-4. **Preenche** → Nome, email, WhatsApp
-5. **Confirma** → Recebe acesso aos PDFs
-6. **Estuda** → No seu ritmo, com suporte
-
-### **Para Você (Admin):**
-1. **Monitora** → Novas inscrições
-2. **Contata** → Via WhatsApp
-3. **Acompanha** → Progresso via relatórios
-4. **Adiciona** → Novos PDFs quando necessário
-
----
-
-## 📊 Painel Administrativo
-
-### **📋 Ver Inscrições:**
-```
-GET /api/admin/inscricoes
-```
-*Lista todas as inscrições com dados de contato*
-
-### **📈 Relatórios por Curso:**
-```
-GET /api/admin/relatorio/dbf-online
-GET /api/admin/relatorio/biblia-diz
-```
-*Estatísticas detalhadas de cada curso*
-
-### **📁 Listar PDFs:**
-```
-GET /api/pdfs/dbf
-GET /api/pdfs/biblia-diz
-```
-*PDFs disponíveis por curso*
-
----
-
-## 🔧 Personalização
-
-### **🎨 Aparência:**
-- Edite `style.css` para cores e layout
-- Modifique `cursos.html` para conteúdo
-- Ajuste formulários conforme necessário
-
-### **📱 WhatsApp:**
-- Configure seus números em `cursos.html`
-- Personalize mensagens automáticas
-- Defina horários de atendimento
-
-### **📧 Email Automático:**
-- Configure `EMAIL_CONFIG` em `sistema_simples.py`
-- Personalize templates de boas-vindas
-- Defina frequência de comunicação
-
----
-
-## 📚 Documentação Completa
-
-### 📖 **Para Usuários Iniciantes:**
-- `INSTALACAO.md` - Configuração em 5 minutos
-- `GUIA_PDFS.md` - Como organizar materiais
-
-### 🎓 **Para Usuários Avançados:**
-- `GUIA_COMPLETO.md` - Documentação detalhada
-- `sistema_simples.py` - Código comentado
-
-### 📝 **Exemplos:**
-- `EXEMPLO_LICAO.md` - Modelo de lição
-- Formulários prontos para uso
-
----
-
-## 🌟 Vantagens do Sistema
-
-### **✅ Simplicidade:**
-- Sem cadastros complicados
-- Interface intuitiva
-- Processo direto
-
-### **✅ Eficiência:**
-- Inscrições em segundos
-- Materiais organizados
-- Acompanhamento personalizado
-
-### **✅ Escalabilidade:**
-- Suporta muitos usuários
-- Fácil adicionar cursos
-- Relatórios automáticos
-
-### **✅ Acessibilidade:**
-- Funciona no celular
-- Sem barreiras técnicas
-- Suporte via WhatsApp
-
----
+> O site exibe uma mensagem de suspensão. Para ver o projeto funcionando, acesse: [https://lucasrsouza.github.io/Projeto_ICS/index-original.html](https://lucasrsouza.github.io/Projeto_ICS/index-original.html)
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Frontend:** HTML5, CSS3, JavaScript ES6+
-- **Backend:** Python 3.8+ (Flask)
-- **Banco de Dados:** SQLite
-- **Design:** Responsivo, Mobile-First
-- **Acessibilidade:** WCAG 2.1
-- **SEO:** Otimizado para buscadores
+### Frontend
+- HTML5, CSS3, JavaScript (ES6+)
+- Design responsivo mobile-first
+- Animações CSS e Intersection Observer
+- LocalStorage para persistência de dados
+
+### Backend (Opcional)
+- Node.js + Express
+- MongoDB (para versão com banco de dados)
+- JWT para autenticação
+
+### Utilitários
+- Módulos de segurança (XSS prevention)
+- Performance utilities (throttle/debounce)
+- DOM manipulation helpers
+
+## 📁 Estrutura do Projeto
+
+```
+Projeto_ICS/
+├── index.html              # Redirect para manutenção
+├── index-original.html     # Site completo (demonstração)
+├── maintenance.html        # Página de suspensão
+├── assets/
+│   ├── css/               # Estilos modulares
+│   ├── js/
+│   │   ├── utils/         # Utilitários (security, performance, dom)
+│   │   └── *.js           # Scripts específicos
+│   ├── images/            # Imagens e logos
+│   └── pdfs/              # Biblioteca digital
+├── server/                # Backend Node.js
+│   ├── index.js
+│   ├── routes/
+│   ├── models/
+│   └── services/
+└── admin/                 # Painel administrativo
+```
+
+## 🔧 Como Executar Localmente
+
+### Versão Estática (Apenas Frontend)
+
+```bash
+# Clone o repositório
+git clone https://github.com/lucasrsouza/Projeto_ICS.git
+cd Projeto_ICS
+
+# Abra com um servidor local
+python3 -m http.server 8000
+# ou
+npx serve
+
+# Acesse http://localhost:8000/index-original.html
+```
+
+### Versão com Backend
+
+```bash
+# Entre na pasta do servidor
+cd server
+
+# Instale as dependências
+npm install
+
+# Configure as variáveis de ambiente
+cp .env.example .env
+# Edite o .env com suas configurações
+
+# Inicie o servidor
+npm start
+```
+
+## 🔒 Segurança
+
+Este projeto implementa várias camadas de segurança:
+
+- ✅ Sanitização de HTML (prevenção XSS)
+- ✅ Validação de URLs
+- ✅ Content Security Policy
+- ✅ Rate limiting
+- ✅ CORS configurado
+- ✅ Helmet.js para headers seguros
+
+## 📊 Code Review
+
+O projeto passou por um code review técnico completo. Veja os relatórios:
+
+- [Code Review Report](./docs/code_review_report.md) - Análise detalhada
+- [Implementation Plan](./docs/implementation_plan.md) - Plano de correções
+
+## 🎯 Roadmap
+
+- [x] Code review e identificação de problemas
+- [x] Criação de módulos de utilitários
+- [x] Correção de vulnerabilidades XSS
+- [/] Migração progressiva para código refatorado
+- [ ] Implementação de testes unitários
+- [ ] CI/CD com GitHub Actions
+- [ ] PWA (Progressive Web App)
+
+## 👨‍💻 Desenvolvimento
+
+### Abordagem de Refatoração
+
+Estamos usando a **Abordagem 2 - Migração Progressiva**:
+
+1. Manter código original funcionando
+2. Criar versões refatoradas (`*-refactored.js`)
+3. Testar isoladamente
+4. Substituir gradualmente
+
+### Padrões de Código
+
+- ES6+ modules
+- Nomenclatura em português (contexto brasileiro)
+- Comentários explicativos
+- JSDoc para funções públicas
+
+## 📝 Licença
+
+Este projeto é de propriedade da Igreja de Cristo do Centro e está disponível apenas para fins de portfólio e demonstração.
+
+## 📧 Contato
+
+- **Desenvolvedor:** Lucas Souza
+- **GitHub:** [@lucasrsouza](https://github.com/lucasrsouza)
 
 ---
 
-## 📞 Suporte e Contato
+## ⚙️ Configuração GitHub Pages
 
-### **🔧 Suporte Técnico:**
-- Consulte `GUIA_COMPLETO.md`
-- Verifique `INSTALACAO.md`
-- Teste com dados de exemplo
+Este site está configurado para GitHub Pages:
 
-### **📱 Igreja de Cristo do Centro:**
-- **WhatsApp:** (92) 99114-6877
-- **Endereço:** Av. Sete de Setembro, 1801 - Centro, Manaus/AM
-- **Site:** [Em desenvolvimento]
+1. Acesse: Settings → Pages
+2. Source: Deploy from a branch
+3. Branch: `main` / `root`
+4. URL: `https://lucasrsouza.github.io/Projeto_ICS/`
 
----
+### Arquivos Importantes
 
-## 👨‍💻 Sobre o Desenvolvedor
-
-Este projeto demonstra habilidades avançadas em:
-
-- **Frontend Development** - HTML5, CSS3, JavaScript moderno
-- **Responsive Design** - Mobile-first, CSS Grid, Flexbox
-- **UI/UX Design** - Interface intuitiva e acessível
-- **Security** - Sistema de autenticação robusto
-- **DevOps** - Git workflow, deploy automatizado
-- **Performance** - Otimizações e best practices
-
-### 🏆 **Resultados Alcançados:**
-- ✅ **100% Responsivo** em todos os dispositivos
-- ✅ **Sistema Admin Seguro** com controle de acesso
-- ✅ **Performance Otimizada** (Core Web Vitals)
-- ✅ **Deploy Automatizado** no Vercel
-- ✅ **Código Limpo** e bem documentado
+- `.nojekyll` - Desabilita processamento Jekyll
+- `CNAME` - (Opcional) Para domínio customizado
 
 ---
 
-## 📄 Licença
-
-Este projeto é propriedade da Igreja Cristã Solidária.
-
----
-
-**Desenvolvido com ❤️ e expertise técnica para a comunidade ICS**
-
-*✨ "Lâmpada para os meus pés é a tua palavra, e luz para o meu caminho." - Salmo 119:105*
+**Última atualização:** Janeiro 2026

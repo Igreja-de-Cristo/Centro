@@ -11,32 +11,13 @@
 
 ## 🏗️ Arquitetura
 
-### Estrutura do Sistema
-```
-projeto/
-├── frontend/
-│   ├── public/
-│   │   └── assets/
-│   └── src/
-│       ├── components/
-│       ├── services/
-│       └── utils/
-├── server/
-│   ├── routes/
-│   ├── models/
-│   └── services/
-└── docs/
-    ├── README.md
-    ├── GUIA_USUARIO.md
-    └── GUIA_TECNICO.md
-```
+### Estrutura Real do Sistema
+O projeto utiliza uma estrutura plana (flat structure) hospedada no GitHub Pages.
 
 ### Tecnologias Utilizadas
-- Frontend: HTML5, CSS3, JavaScript
-- Backend: Node.js (opcional)
-- Storage: LocalStorage, JSON
-- Autenticação: JWT
-- APIs: REST
+- Frontend: HTML5, CSS3, JavaScript Vanilla (ES6+)
+- Backend: Não aplicável (GitHub Pages / Static Hosting)
+- Autenticação: Simulação Client-side via SHA-256
 
 ## 🔒 Segurança
 
