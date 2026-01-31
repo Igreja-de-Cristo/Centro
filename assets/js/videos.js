@@ -51,10 +51,10 @@ function createVideoThumbnail(videoId, title = '', date = '') {
             ${date ? `<div class="video-date">${date}</div>` : ''}
         </div>
     `;
-    
+
     // Adicionar evento de clique para abrir o modal
     thumbnail.addEventListener('click', () => openVideoModal(videoId));
-    
+
     return thumbnail;
 }
 
@@ -62,7 +62,7 @@ function createVideoThumbnail(videoId, title = '', date = '') {
 function openVideoModal(videoId) {
     const modal = document.getElementById('video-modal');
     modal.classList.add('active');
-    
+
     // Criar player no modal se não existir
     if (!modalPlayer) {
         modalPlayer = new YT.Player('modal-player', {
@@ -104,8 +104,12 @@ document.getElementById('close-video-modal').addEventListener('click', closeVide
 function loadVideosToGrid(gridId, videoIds) {
     const grid = document.getElementById(gridId);
     if (!grid || !videoIds.length) return;
-    
+
     grid.innerHTML = ''; // Limpar grid existente
+    // CORREÇÃO XSS: Usar appendChild ao invés de innerHTML +=
+    const cardElement = document.createElement('div');
+    cardElement.innerHTML = card;
+    gridRecentes.appendChild(cardElement.firstElementChild); // Limpar grid existente
     videoIds.forEach(videoId => {
         const thumbnail = createVideoThumbnail(videoId);
         grid.appendChild(thumbnail);
@@ -116,10 +120,10 @@ function loadVideosToGrid(gridId, videoIds) {
 function initializeVideoGrids() {
     // Carregar vídeos recentes
     loadVideosToGrid('recent-videos-grid', videoIds.recent);
-    
+
     // Carregar cultos
     loadVideosToGrid('cultos-grid', videoIds.cultos);
-    
+
     // Carregar estudos bíblicos
     loadVideosToGrid('estudos-grid', videoIds.estudos);
 
